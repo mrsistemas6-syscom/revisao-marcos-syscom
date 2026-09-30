@@ -1,0 +1,3157 @@
+{
+  "schema": "k4-review-public-data@1.0.0",
+  "generated_by": "tools/review/build_k4_public_site_data.py",
+  "classification": "public_site_data",
+  "note": "Dados derivados do lote canario K4.0 (conhecimento estruturado, sem imagem). Nenhum screenshot RAW, caminho local ou razao social esta presente neste arquivo.",
+  "batch": {
+    "title": "Lote canário — Tabelas › Faturamento",
+    "menu_path": [
+      "Tabelas",
+      "Faturamento"
+    ]
+  },
+  "metrics": {
+    "analyzed": 20,
+    "completed": 20,
+    "failed": 0,
+    "auto_pass": 18,
+    "sample_qa": 2,
+    "ai_recheck": 0,
+    "source_gap": 0,
+    "human_decision": 0,
+    "selected_for_review": 4,
+    "knowledge_valid": "20/20",
+    "transfer_valid": "20/20",
+    "open_questions_total": 154,
+    "uncertainties_total": 84
+  },
+  "review_classes": {
+    "AUTO_PASS": {
+      "label": "Fluxo automático",
+      "short": "Fluxo automático",
+      "meaning": "Nada pede julgamento agora. Entra só em auditoria por amostra."
+    },
+    "SAMPLE_QA": {
+      "label": "Verificação por amostra",
+      "short": "Verificação por amostra",
+      "meaning": "Boa, com um ponto menor. Elegível a conferência por amostra."
+    },
+    "AI_RECHECK": {
+      "label": "Nova análise da IA",
+      "short": "Nova análise da IA",
+      "meaning": "Dúvida de leitura que uma segunda análise da mesma captura resolve."
+    },
+    "SOURCE_GAP": {
+      "label": "Falta evidência",
+      "short": "Falta evidência",
+      "meaning": "A informação não está na captura. Vira pedido de nova captura."
+    },
+    "HUMAN_DECISION": {
+      "label": "Decisão humana",
+      "short": "Decisão humana",
+      "meaning": "Precisa de conhecimento que só uma pessoa tem."
+    }
+  },
+  "patterns_overview": [
+    {
+      "id": "FOOTER_GRAVAR",
+      "label": "Gravar",
+      "screens_with": 20,
+      "screens_total": 20,
+      "missing_titles": []
+    },
+    {
+      "id": "FOOTER_CANCELAR",
+      "label": "Cancelar",
+      "screens_with": 19,
+      "screens_total": 20,
+      "missing_titles": [
+        "Números x Letras"
+      ]
+    },
+    {
+      "id": "FOOTER_EXCLUIR",
+      "label": "Excluir",
+      "screens_with": 19,
+      "screens_total": 20,
+      "missing_titles": [
+        "Números x Letras"
+      ]
+    },
+    {
+      "id": "FOOTER_FECHAR",
+      "label": "Fechar",
+      "screens_with": 20,
+      "screens_total": 20,
+      "missing_titles": []
+    }
+  ],
+  "prior_validated_source": {
+    "screen_title": "Cadastro de Fabricante",
+    "note": "Única tela do piloto K3 com revisão humana detalhada, por pessoa nomeada."
+  },
+  "screens": [
+    {
+      "pilot_id": "k4-01",
+      "title": "Cadastro de Classificação de Clientes",
+      "module": "Tabelas",
+      "submodule": "Faturamento",
+      "kind": "form",
+      "kind_label": "Cadastro",
+      "review_class": "AUTO_PASS",
+      "review_class_label": "Fluxo automático",
+      "review_class_meaning": "Nada pede julgamento agora. Entra só em auditoria por amostra.",
+      "counts": {
+        "fields": 4,
+        "buttons": 4,
+        "actions": 6,
+        "lookups": 2,
+        "grids": 0,
+        "components": 13
+      },
+      "open_questions": 8,
+      "uncertainties": 3,
+      "is_candidate": false
+    },
+    {
+      "pilot_id": "k4-02",
+      "title": "Cadastro de Combustível",
+      "module": "Tabelas",
+      "submodule": "Faturamento",
+      "kind": "form",
+      "kind_label": "Cadastro",
+      "review_class": "AUTO_PASS",
+      "review_class_label": "Fluxo automático",
+      "review_class_meaning": "Nada pede julgamento agora. Entra só em auditoria por amostra.",
+      "counts": {
+        "fields": 4,
+        "buttons": 4,
+        "actions": 6,
+        "lookups": 2,
+        "grids": 0,
+        "components": 13
+      },
+      "open_questions": 8,
+      "uncertainties": 3,
+      "is_candidate": false
+    },
+    {
+      "pilot_id": "k4-03",
+      "title": "Cadastro de Cor",
+      "module": "Tabelas",
+      "submodule": "Faturamento",
+      "kind": "form",
+      "kind_label": "Cadastro",
+      "review_class": "AUTO_PASS",
+      "review_class_label": "Fluxo automático",
+      "review_class_meaning": "Nada pede julgamento agora. Entra só em auditoria por amostra.",
+      "counts": {
+        "fields": 2,
+        "buttons": 4,
+        "actions": 5,
+        "lookups": 1,
+        "grids": 0,
+        "components": 10
+      },
+      "open_questions": 7,
+      "uncertainties": 3,
+      "is_candidate": false
+    },
+    {
+      "pilot_id": "k4-04",
+      "title": "Cadastro de Cor DENATRAN",
+      "module": "Tabelas",
+      "submodule": "Faturamento",
+      "kind": "form",
+      "kind_label": "Cadastro",
+      "review_class": "AUTO_PASS",
+      "review_class_label": "Fluxo automático",
+      "review_class_meaning": "Nada pede julgamento agora. Entra só em auditoria por amostra.",
+      "counts": {
+        "fields": 2,
+        "buttons": 4,
+        "actions": 5,
+        "lookups": 1,
+        "grids": 0,
+        "components": 10
+      },
+      "open_questions": 8,
+      "uncertainties": 3,
+      "is_candidate": false
+    },
+    {
+      "pilot_id": "k4-05",
+      "title": "Cadastro de Estado Civil",
+      "module": "Tabelas",
+      "submodule": "Faturamento",
+      "kind": "form",
+      "kind_label": "Cadastro",
+      "review_class": "AUTO_PASS",
+      "review_class_label": "Fluxo automático",
+      "review_class_meaning": "Nada pede julgamento agora. Entra só em auditoria por amostra.",
+      "counts": {
+        "fields": 2,
+        "buttons": 4,
+        "actions": 5,
+        "lookups": 1,
+        "grids": 0,
+        "components": 10
+      },
+      "open_questions": 6,
+      "uncertainties": 2,
+      "is_candidate": true
+    },
+    {
+      "pilot_id": "k4-06",
+      "title": "Cadastro de Tipo de Documento",
+      "module": "Tabelas",
+      "submodule": "Faturamento",
+      "kind": "form",
+      "kind_label": "Cadastro",
+      "review_class": "AUTO_PASS",
+      "review_class_label": "Fluxo automático",
+      "review_class_meaning": "Nada pede julgamento agora. Entra só em auditoria por amostra.",
+      "counts": {
+        "fields": 4,
+        "buttons": 4,
+        "actions": 5,
+        "lookups": 1,
+        "grids": 0,
+        "components": 12
+      },
+      "open_questions": 7,
+      "uncertainties": 4,
+      "is_candidate": false
+    },
+    {
+      "pilot_id": "k4-07",
+      "title": "Cadastro de Tipo de Evento",
+      "module": "Tabelas",
+      "submodule": "Faturamento",
+      "kind": "form",
+      "kind_label": "Cadastro",
+      "review_class": "AUTO_PASS",
+      "review_class_label": "Fluxo automático",
+      "review_class_meaning": "Nada pede julgamento agora. Entra só em auditoria por amostra.",
+      "counts": {
+        "fields": 2,
+        "buttons": 4,
+        "actions": 5,
+        "lookups": 1,
+        "grids": 0,
+        "components": 10
+      },
+      "open_questions": 6,
+      "uncertainties": 2,
+      "is_candidate": false
+    },
+    {
+      "pilot_id": "k4-08",
+      "title": "Cadastro de Tipo de Veículo",
+      "module": "Tabelas",
+      "submodule": "Faturamento",
+      "kind": "form",
+      "kind_label": "Cadastro",
+      "review_class": "AUTO_PASS",
+      "review_class_label": "Fluxo automático",
+      "review_class_meaning": "Nada pede julgamento agora. Entra só em auditoria por amostra.",
+      "counts": {
+        "fields": 2,
+        "buttons": 4,
+        "actions": 5,
+        "lookups": 1,
+        "grids": 0,
+        "components": 10
+      },
+      "open_questions": 6,
+      "uncertainties": 3,
+      "is_candidate": false
+    },
+    {
+      "pilot_id": "k4-09",
+      "title": "Cliente x Classificação de Produto",
+      "module": "Tabelas",
+      "submodule": "Faturamento",
+      "kind": "form",
+      "kind_label": "Cadastro",
+      "review_class": "SAMPLE_QA",
+      "review_class_label": "Verificação por amostra",
+      "review_class_meaning": "Boa, com um ponto menor. Elegível a conferência por amostra.",
+      "counts": {
+        "fields": 5,
+        "buttons": 5,
+        "actions": 7,
+        "lookups": 2,
+        "grids": 1,
+        "components": 17
+      },
+      "open_questions": 9,
+      "uncertainties": 5,
+      "is_candidate": false
+    },
+    {
+      "pilot_id": "k4-10",
+      "title": "Composição de Kits",
+      "module": "Tabelas",
+      "submodule": "Faturamento",
+      "kind": "form",
+      "kind_label": "Cadastro",
+      "review_class": "AUTO_PASS",
+      "review_class_label": "Fluxo automático",
+      "review_class_meaning": "Nada pede julgamento agora. Entra só em auditoria por amostra.",
+      "counts": {
+        "fields": 9,
+        "buttons": 5,
+        "actions": 7,
+        "lookups": 2,
+        "grids": 1,
+        "components": 21
+      },
+      "open_questions": 9,
+      "uncertainties": 7,
+      "is_candidate": false
+    },
+    {
+      "pilot_id": "k4-11",
+      "title": "Configuração de Modelo",
+      "module": "Tabelas",
+      "submodule": "Faturamento",
+      "kind": "configuration",
+      "kind_label": "Configuração",
+      "review_class": "AUTO_PASS",
+      "review_class_label": "Fluxo automático",
+      "review_class_meaning": "Nada pede julgamento agora. Entra só em auditoria por amostra.",
+      "counts": {
+        "fields": 15,
+        "buttons": 5,
+        "actions": 8,
+        "lookups": 3,
+        "grids": 1,
+        "components": 28
+      },
+      "open_questions": 11,
+      "uncertainties": 6,
+      "is_candidate": false
+    },
+    {
+      "pilot_id": "k4-12",
+      "title": "Identificação da Tabela de Preços",
+      "module": "Tabelas",
+      "submodule": "Faturamento",
+      "kind": "form",
+      "kind_label": "Cadastro",
+      "review_class": "AUTO_PASS",
+      "review_class_label": "Fluxo automático",
+      "review_class_meaning": "Nada pede julgamento agora. Entra só em auditoria por amostra.",
+      "counts": {
+        "fields": 4,
+        "buttons": 4,
+        "actions": 5,
+        "lookups": 1,
+        "grids": 0,
+        "components": 12
+      },
+      "open_questions": 8,
+      "uncertainties": 4,
+      "is_candidate": false
+    },
+    {
+      "pilot_id": "k4-13",
+      "title": "Modelo de Documento",
+      "module": "Tabelas",
+      "submodule": "Faturamento",
+      "kind": "form",
+      "kind_label": "Cadastro",
+      "review_class": "AUTO_PASS",
+      "review_class_label": "Fluxo automático",
+      "review_class_meaning": "Nada pede julgamento agora. Entra só em auditoria por amostra.",
+      "counts": {
+        "fields": 9,
+        "buttons": 5,
+        "actions": 6,
+        "lookups": 1,
+        "grids": 1,
+        "components": 20
+      },
+      "open_questions": 10,
+      "uncertainties": 6,
+      "is_candidate": false
+    },
+    {
+      "pilot_id": "k4-14",
+      "title": "Montagem do Trio Fechado",
+      "module": "Tabelas",
+      "submodule": "Faturamento",
+      "kind": "unknown",
+      "kind_label": "Não determinado",
+      "review_class": "SAMPLE_QA",
+      "review_class_label": "Verificação por amostra",
+      "review_class_meaning": "Boa, com um ponto menor. Elegível a conferência por amostra.",
+      "counts": {
+        "fields": 0,
+        "buttons": 5,
+        "actions": 5,
+        "lookups": 0,
+        "grids": 3,
+        "components": 12
+      },
+      "open_questions": 6,
+      "uncertainties": 4,
+      "is_candidate": true
+    },
+    {
+      "pilot_id": "k4-15",
+      "title": "Motivo de Contigência",
+      "module": "Tabelas",
+      "submodule": "Faturamento",
+      "kind": "form",
+      "kind_label": "Cadastro",
+      "review_class": "AUTO_PASS",
+      "review_class_label": "Fluxo automático",
+      "review_class_meaning": "Nada pede julgamento agora. Entra só em auditoria por amostra.",
+      "counts": {
+        "fields": 2,
+        "buttons": 4,
+        "actions": 5,
+        "lookups": 1,
+        "grids": 0,
+        "components": 10
+      },
+      "open_questions": 6,
+      "uncertainties": 3,
+      "is_candidate": false
+    },
+    {
+      "pilot_id": "k4-16",
+      "title": "Números x Letras",
+      "module": "Tabelas",
+      "submodule": "Faturamento",
+      "kind": "configuration",
+      "kind_label": "Configuração",
+      "review_class": "AUTO_PASS",
+      "review_class_label": "Fluxo automático",
+      "review_class_meaning": "Nada pede julgamento agora. Entra só em auditoria por amostra.",
+      "counts": {
+        "fields": 20,
+        "buttons": 3,
+        "actions": 3,
+        "lookups": 0,
+        "grids": 0,
+        "components": 29
+      },
+      "open_questions": 4,
+      "uncertainties": 4,
+      "is_candidate": true
+    },
+    {
+      "pilot_id": "k4-17",
+      "title": "Tabela de Características",
+      "module": "Tabelas",
+      "submodule": "Faturamento",
+      "kind": "form",
+      "kind_label": "Cadastro",
+      "review_class": "AUTO_PASS",
+      "review_class_label": "Fluxo automático",
+      "review_class_meaning": "Nada pede julgamento agora. Entra só em auditoria por amostra.",
+      "counts": {
+        "fields": 6,
+        "buttons": 4,
+        "actions": 5,
+        "lookups": 1,
+        "grids": 0,
+        "components": 14
+      },
+      "open_questions": 9,
+      "uncertainties": 5,
+      "is_candidate": false
+    },
+    {
+      "pilot_id": "k4-18",
+      "title": "Tabela de Composição de Preço",
+      "module": "Tabelas",
+      "submodule": "Faturamento",
+      "kind": "form",
+      "kind_label": "Cadastro",
+      "review_class": "AUTO_PASS",
+      "review_class_label": "Fluxo automático",
+      "review_class_meaning": "Nada pede julgamento agora. Entra só em auditoria por amostra.",
+      "counts": {
+        "fields": 16,
+        "buttons": 5,
+        "actions": 7,
+        "lookups": 2,
+        "grids": 1,
+        "components": 29
+      },
+      "open_questions": 10,
+      "uncertainties": 7,
+      "is_candidate": false
+    },
+    {
+      "pilot_id": "k4-19",
+      "title": "Tabela de Conjuntos de Características",
+      "module": "Tabelas",
+      "submodule": "Faturamento",
+      "kind": "form",
+      "kind_label": "Cadastro",
+      "review_class": "AUTO_PASS",
+      "review_class_label": "Fluxo automático",
+      "review_class_meaning": "Nada pede julgamento agora. Entra só em auditoria por amostra.",
+      "counts": {
+        "fields": 4,
+        "buttons": 5,
+        "actions": 7,
+        "lookups": 2,
+        "grids": 1,
+        "components": 16
+      },
+      "open_questions": 7,
+      "uncertainties": 4,
+      "is_candidate": true
+    },
+    {
+      "pilot_id": "k4-20",
+      "title": "Tabela Oficina",
+      "module": "Tabelas",
+      "submodule": "Faturamento",
+      "kind": "form",
+      "kind_label": "Cadastro",
+      "review_class": "AUTO_PASS",
+      "review_class_label": "Fluxo automático",
+      "review_class_meaning": "Nada pede julgamento agora. Entra só em auditoria por amostra.",
+      "counts": {
+        "fields": 13,
+        "buttons": 4,
+        "actions": 6,
+        "lookups": 2,
+        "grids": 0,
+        "components": 22
+      },
+      "open_questions": 9,
+      "uncertainties": 6,
+      "is_candidate": false
+    }
+  ],
+  "candidates": [
+    {
+      "rank": 1,
+      "pilot_id": "k4-05",
+      "screen_id": "scr-8105",
+      "title": "Cadastro de Estado Civil",
+      "module": "Tabelas",
+      "submodule": "Faturamento",
+      "menu_path": [
+        "Tabelas",
+        "Faturamento"
+      ],
+      "menu_path_source": "filesystem",
+      "review_class": "AUTO_PASS",
+      "review_class_label": "Segue automático",
+      "review_class_meaning": "Nada pede julgamento agora. Entra só em auditoria aleatória.",
+      "review_class_reasons": [
+        "Nenhum gatilho de revisao: sem conflito, sem lacuna de fonte em item critico, sem duvida de leitura em item critico e sem duvida fora dele. Nao significa correto: significa que nada pede julgamento agora."
+      ],
+      "focus": "Generalização do padrão do Cadastro de Fabricante: mesma forma, outra entidade.",
+      "family": "cadastro simples identico a k3-01",
+      "plain_summary": "igual ao Cadastro de Fabricante; mostra se o que foi confirmado lá vale para outras 5 telas iguais.",
+      "why_selected": "Estrutura identica a da k3-01 (Cadastro de Fabricante), a unica tela com revisao humana detalhada: campo \"Código\" com [...], um campo de texto \"Nome\" e o rodape Gravar / Cancelar / Excluir / Fechar, com Gravar, Cancelar e Excluir em cinza na captura. E o teste direto de generalizacao: mesma forma, outra entidade. Representa as 6 telas do lote com essa mesma estrutura (k4-03, k4-04, k4-05, k4-07, k4-08, k4-15). Entre elas, e a que combina o menor numero de itens incertos (2) e de perguntas abertas (6) sem nenhuma pergunta de negocio: a revisao fica concentrada nos padroes.",
+      "gain": {
+        "level": "alto",
+        "summary": "Mede se o que foi confirmado na k3-01 se transfere para uma tela de mesma estrutura. Informa diretamente 6 telas do lote e o arquetipo de cadastro padrao, casado em 17 telas.",
+        "if_confirmed": "Os padroes de rodape, Codigo e [...] passam a ter 2 telas confirmadas por pessoa na mesma variante (k3-01 e k4-05). Ainda nao basta para validated (a biblioteca exige 3 telas de arquetipos diferentes), mas sustenta tratar as outras 5 telas iguais por amostragem.",
+        "if_divergent": "Mostra que o comportamento da k3-01 nao se transfere nem para estrutura identica: os 17 cadastros precisam de confirmacao propria e os padroes da biblioteca precisam ser restringidos.",
+        "screens_informed": [
+          "k4-03",
+          "k4-04",
+          "k4-05",
+          "k4-07",
+          "k4-08",
+          "k4-15"
+        ]
+      },
+      "structure": {
+        "kind": {
+          "value": "form",
+          "label": "cadastro",
+          "confidence": "alta"
+        },
+        "purpose": {
+          "text": "Manter a tabela de estados civis: codigo e nome. Provavelmente usada no cadastro de pessoas, o que nao e observavel nesta captura.",
+          "confidence": "alta"
+        },
+        "fields": [
+          {
+            "label": "Código",
+            "type": "campo com busca [...]",
+            "count": 1,
+            "values": [
+              "0"
+            ],
+            "lookup": true
+          },
+          {
+            "label": "Nome",
+            "type": "texto",
+            "count": 1,
+            "values": [],
+            "lookup": false
+          }
+        ],
+        "buttons": [
+          {
+            "id": "b001",
+            "label": "[...] de “Código”",
+            "state": "habilitado"
+          },
+          {
+            "id": "b002",
+            "label": "Gravar",
+            "state": "em cinza na captura"
+          },
+          {
+            "id": "b003",
+            "label": "Cancelar",
+            "state": "em cinza na captura"
+          },
+          {
+            "id": "b004",
+            "label": "Excluir",
+            "state": "em cinza na captura"
+          },
+          {
+            "id": "b005",
+            "label": "Fechar",
+            "state": "habilitado"
+          }
+        ],
+        "lookups": [
+          {
+            "field": "Código",
+            "target": "destino não observado"
+          }
+        ],
+        "grids": [],
+        "messages": [],
+        "unlabeled_panels": 0,
+        "counts": {
+          "by_type": {
+            "label": 2,
+            "image": 1,
+            "lookup_input": 1,
+            "lookup_button": 1,
+            "text_input": 1,
+            "button": 4
+          },
+          "total": 10,
+          "uncertain_items": 2
+        }
+      },
+      "patterns": [
+        {
+          "pattern_id": "STANDARD_CODE_FIELD",
+          "name": "Campo “Código” de cadastro",
+          "origin": "library",
+          "status_label": "Biblioteca: provisoriamente validado (estrutura). Comportamento confirmado por pessoa só no Cadastro de Fabricante.",
+          "question_ids": [
+            "k4-05.code.enter_empty_new",
+            "k4-05.code.enter_existing_opens",
+            "k4-05.code.enter_absent_creates_with_code"
+          ]
+        },
+        {
+          "pattern_id": "STANDARD_LOOKUP",
+          "name": "Consulta pelo botão [...]",
+          "origin": "library",
+          "status_label": "Biblioteca: provisoriamente validado (estrutura). Comportamento confirmado por pessoa só no Cadastro de Fabricante.",
+          "question_ids": [
+            "k4-05.lookup.opens_query",
+            "k4-05.lookup.select_opens_for_edit"
+          ]
+        },
+        {
+          "pattern_id": "STANDARD_SAVE",
+          "name": "Gravar",
+          "origin": "library",
+          "status_label": "Biblioteca: provisoriamente validado (estrutura). Comportamento confirmado por pessoa só no Cadastro de Fabricante.",
+          "question_ids": [
+            "k4-05.save.persists"
+          ]
+        },
+        {
+          "pattern_id": "STANDARD_CANCEL",
+          "name": "Cancelar",
+          "origin": "library",
+          "status_label": "Biblioteca: candidato. Comportamento confirmado por pessoa só no Cadastro de Fabricante.",
+          "question_ids": [
+            "k4-05.cancel.discards_and_closes"
+          ]
+        },
+        {
+          "pattern_id": "STANDARD_DELETE",
+          "name": "Excluir",
+          "origin": "library",
+          "status_label": "Biblioteca: candidato. Comportamento confirmado por pessoa só no Cadastro de Fabricante.",
+          "question_ids": [
+            "k4-05.delete.removes_permanently"
+          ]
+        },
+        {
+          "pattern_id": "STANDARD_CLOSE",
+          "name": "Fechar",
+          "origin": "library",
+          "status_label": "Biblioteca: provisoriamente validado (estrutura). Comportamento confirmado por pessoa só no Cadastro de Fabricante.",
+          "question_ids": [
+            "k4-05.close.closes_only"
+          ]
+        },
+        {
+          "pattern_id": "FOOTER_GRAY_STATE",
+          "name": "Botões do rodapé em cinza ao abrir",
+          "origin": "k4-structural",
+          "status_label": "Repetição estrutural no lote K4.0. Nunca confirmada por pessoa.",
+          "question_ids": []
+        }
+      ],
+      "comparison": [
+        {
+          "subject": "Código",
+          "confirmed": [
+            "Pressionar Enter sem valor inicia um novo registro.",
+            "Inserir número existente e pressionar Enter abre o registro para edição.",
+            "Inserir número inexistente e pressionar Enter cria um novo registro com esse código."
+          ],
+          "origin": "Cadastro de Fabricante (k3-01)",
+          "reviewed_at": "2026-09-25T19:03:11.197Z",
+          "here": "AINDA NÃO VALIDADO"
+        },
+        {
+          "subject": "Consulta [...] / F12",
+          "confirmed": [
+            "Clicar com o mouse ou pressionar F12 abre a tela de consulta de registros.",
+            "Selecionar um registro com Enter ou duplo clique o abre para edição na tela principal."
+          ],
+          "origin": "Cadastro de Fabricante (k3-01)",
+          "reviewed_at": "2026-09-25T19:03:11.197Z",
+          "here": "AINDA NÃO VALIDADO"
+        },
+        {
+          "subject": "Gravar",
+          "confirmed": [
+            "Salva as informações preenchidas no registro."
+          ],
+          "origin": "Cadastro de Fabricante (k3-01)",
+          "reviewed_at": "2026-09-25T19:03:11.197Z",
+          "here": "AINDA NÃO VALIDADO"
+        },
+        {
+          "subject": "Cancelar",
+          "confirmed": [
+            "Descarta as alterações e fecha a tela sem salvar."
+          ],
+          "origin": "Cadastro de Fabricante (k3-01)",
+          "reviewed_at": "2026-09-25T19:03:11.197Z",
+          "here": "AINDA NÃO VALIDADO"
+        },
+        {
+          "subject": "Excluir",
+          "confirmed": [
+            "Remove o registro permanentemente do sistema, se não estiver em uso em outras tabelas."
+          ],
+          "origin": "Cadastro de Fabricante (k3-01)",
+          "reviewed_at": "2026-09-25T19:03:11.197Z",
+          "here": "AINDA NÃO VALIDADO"
+        },
+        {
+          "subject": "Fechar",
+          "confirmed": [
+            "Fecha a tela atual."
+          ],
+          "origin": "Cadastro de Fabricante (k3-01)",
+          "reviewed_at": "2026-09-25T19:03:11.197Z",
+          "here": "AINDA NÃO VALIDADO"
+        }
+      ],
+      "comparison_note": null,
+      "doubts": {
+        "uncertainties": [
+          {
+            "id": "u001",
+            "seen": "\"Gravar\", \"Cancelar\" e \"Excluir\" em cinza; \"Fechar\" em preto",
+            "why": "o cinza sugere desabilitado, mas o estado vale apenas para esta captura"
+          },
+          {
+            "id": "u002",
+            "seen": "o valor \"0\" de \"Código\" aparece com fundo de selecao azul",
+            "why": "sugere foco e texto selecionado nesta captura; nao e comportamento observado"
+          }
+        ],
+        "open_questions": [
+          {
+            "id": "q001",
+            "text": "Em quais cadastros o estado civil e usado (cliente, funcionario, motorista)?",
+            "priority": "medium",
+            "source": "usar o sistema ou o manual"
+          },
+          {
+            "id": "q002",
+            "text": "Para onde leva o botao [...] do campo \"Código\"? O destino nao aparece na captura.",
+            "priority": "medium",
+            "source": "usar o sistema ou o manual"
+          },
+          {
+            "id": "q003",
+            "text": "Em que condicao \"Gravar\", \"Cancelar\", \"Excluir\" ficam habilitados? Na captura aparecem em cinza.",
+            "priority": "medium",
+            "source": "usar o sistema"
+          },
+          {
+            "id": "q004",
+            "text": "Excluir um registro em uso em outra rotina e bloqueado? Ha confirmacao antes de excluir?",
+            "priority": "medium",
+            "source": "usar o sistema ou o manual"
+          },
+          {
+            "id": "q005",
+            "text": "Quais campos sao obrigatorios e que validacao ocorre ao gravar?",
+            "priority": "medium",
+            "source": "usar o sistema"
+          }
+        ],
+        "deferred_to_firebird": 1
+      },
+      "questions": [
+        {
+          "id": "k4-05.code.enter_empty_new",
+          "key": "code.enter_empty_new",
+          "subject": "Código",
+          "mode": "pattern",
+          "tag": "VALIDATED_ELSEWHERE",
+          "text": "Enter com o “Código” vazio inicia um novo cadastro?",
+          "basis": "O campo “Código” com [...] tem a mesma forma do Cadastro de Fabricante.",
+          "hint": null,
+          "placeholder": null,
+          "detail_prompt": null,
+          "hypothesis": null,
+          "candidate_pattern": {
+            "pattern_id": "STANDARD_CODE_FIELD",
+            "name": "Campo “Código” de cadastro",
+            "origin": "library",
+            "library_status": "provisionally_validated",
+            "claim_ids": [
+              "code.enter_empty_new"
+            ],
+            "claim_status": {
+              "code.enter_empty_new": "candidate"
+            },
+            "related_pattern_ids": []
+          },
+          "source_screen_if_pattern": {
+            "pilot_id": "k3-01",
+            "screen_id": "scr-8001",
+            "screen_title": "Cadastro de Fabricante",
+            "review_id": "k3-01.reviewer_1",
+            "reviewed_at": "2026-09-25T19:03:11.197Z",
+            "confirmed_text": "Pressionar Enter sem valor inicia um novo registro.",
+            "evidence_level_there": "VALIDATED",
+            "status_here": "NOT_VALIDATED"
+          },
+          "covers": [
+            "STANDARD_CODE_FIELD"
+          ],
+          "topic_ids": [],
+          "topic_names": [],
+          "element_ids": [
+            "c004"
+          ],
+          "tag_label": "CONFIRMADO EM OUTRA TELA"
+        },
+        {
+          "id": "k4-05.code.enter_existing_opens",
+          "key": "code.enter_existing_opens",
+          "subject": "Código",
+          "mode": "pattern",
+          "tag": "VALIDATED_ELSEWHERE",
+          "text": "“Código” existente + Enter abre o registro para edição?",
+          "basis": "O campo “Código” com [...] tem a mesma forma do Cadastro de Fabricante.",
+          "hint": null,
+          "placeholder": null,
+          "detail_prompt": null,
+          "hypothesis": null,
+          "candidate_pattern": {
+            "pattern_id": "STANDARD_CODE_FIELD",
+            "name": "Campo “Código” de cadastro",
+            "origin": "library",
+            "library_status": "provisionally_validated",
+            "claim_ids": [
+              "code.enter_existing_opens"
+            ],
+            "claim_status": {
+              "code.enter_existing_opens": "provisionally_validated"
+            },
+            "related_pattern_ids": []
+          },
+          "source_screen_if_pattern": {
+            "pilot_id": "k3-01",
+            "screen_id": "scr-8001",
+            "screen_title": "Cadastro de Fabricante",
+            "review_id": "k3-01.reviewer_1",
+            "reviewed_at": "2026-09-25T19:03:11.197Z",
+            "confirmed_text": "Inserir número existente e pressionar Enter abre o registro para edição.",
+            "evidence_level_there": "VALIDATED",
+            "status_here": "NOT_VALIDATED"
+          },
+          "covers": [
+            "STANDARD_CODE_FIELD"
+          ],
+          "topic_ids": [],
+          "topic_names": [],
+          "element_ids": [
+            "c004"
+          ],
+          "tag_label": "CONFIRMADO EM OUTRA TELA"
+        },
+        {
+          "id": "k4-05.code.enter_absent_creates_with_code",
+          "key": "code.enter_absent_creates_with_code",
+          "subject": "Código",
+          "mode": "pattern",
+          "tag": "VALIDATED_ELSEWHERE",
+          "text": "“Código” que não existe + Enter inicia um novo cadastro com esse código?",
+          "basis": "O campo “Código” com [...] tem a mesma forma do Cadastro de Fabricante.",
+          "hint": "Se o código for sempre gerado pelo sistema, marque FUNCIONA DIFERENTE.",
+          "placeholder": null,
+          "detail_prompt": null,
+          "hypothesis": null,
+          "candidate_pattern": {
+            "pattern_id": "STANDARD_CODE_FIELD",
+            "name": "Campo “Código” de cadastro",
+            "origin": "library",
+            "library_status": "provisionally_validated",
+            "claim_ids": [
+              "code.enter_absent_creates_with_code"
+            ],
+            "claim_status": {
+              "code.enter_absent_creates_with_code": "candidate"
+            },
+            "related_pattern_ids": []
+          },
+          "source_screen_if_pattern": {
+            "pilot_id": "k3-01",
+            "screen_id": "scr-8001",
+            "screen_title": "Cadastro de Fabricante",
+            "review_id": "k3-01.reviewer_1",
+            "reviewed_at": "2026-09-25T19:03:11.197Z",
+            "confirmed_text": "Inserir número inexistente e pressionar Enter cria um novo registro com esse código.",
+            "evidence_level_there": "VALIDATED",
+            "status_here": "NOT_VALIDATED"
+          },
+          "covers": [
+            "STANDARD_CODE_FIELD"
+          ],
+          "topic_ids": [],
+          "topic_names": [],
+          "element_ids": [
+            "c004"
+          ],
+          "tag_label": "CONFIRMADO EM OUTRA TELA"
+        },
+        {
+          "id": "k4-05.lookup.opens_query",
+          "key": "lookup.opens_query",
+          "subject": "Consulta [...] / F12",
+          "mode": "pattern",
+          "tag": "VALIDATED_ELSEWHERE",
+          "text": "O botão [...] ou a tecla F12 abre a consulta de registros?",
+          "basis": "O botão [...] fica encostado no “Código”, como no Cadastro de Fabricante.",
+          "hint": "Se só um dos dois abrir a consulta, marque FUNCIONA DIFERENTE e diga qual.",
+          "placeholder": null,
+          "detail_prompt": null,
+          "hypothesis": null,
+          "candidate_pattern": {
+            "pattern_id": "STANDARD_LOOKUP",
+            "name": "Consulta pelo botão [...]",
+            "origin": "library",
+            "library_status": "provisionally_validated",
+            "claim_ids": [
+              "lookup.opens_query",
+              "lookup.f12"
+            ],
+            "claim_status": {
+              "lookup.opens_query": "provisionally_validated",
+              "lookup.f12": "candidate"
+            },
+            "related_pattern_ids": []
+          },
+          "source_screen_if_pattern": {
+            "pilot_id": "k3-01",
+            "screen_id": "scr-8001",
+            "screen_title": "Cadastro de Fabricante",
+            "review_id": "k3-01.reviewer_1",
+            "reviewed_at": "2026-09-25T19:03:11.197Z",
+            "confirmed_text": "Clicar com o mouse ou pressionar F12 abre a tela de consulta de registros.",
+            "evidence_level_there": "VALIDATED",
+            "status_here": "NOT_VALIDATED"
+          },
+          "covers": [
+            "STANDARD_LOOKUP"
+          ],
+          "topic_ids": [],
+          "topic_names": [],
+          "element_ids": [
+            "b001",
+            "lk001"
+          ],
+          "tag_label": "CONFIRMADO EM OUTRA TELA"
+        },
+        {
+          "id": "k4-05.lookup.select_opens_for_edit",
+          "key": "lookup.select_opens_for_edit",
+          "subject": "Consulta [...] / F12",
+          "mode": "pattern",
+          "tag": "VALIDATED_ELSEWHERE",
+          "text": "Na consulta, escolher um registro (Enter ou duplo clique) abre esse registro para edição?",
+          "basis": "O botão [...] fica encostado no “Código”, como no Cadastro de Fabricante.",
+          "hint": null,
+          "placeholder": null,
+          "detail_prompt": null,
+          "hypothesis": null,
+          "candidate_pattern": {
+            "pattern_id": "STANDARD_LOOKUP",
+            "name": "Consulta pelo botão [...]",
+            "origin": "library",
+            "library_status": "provisionally_validated",
+            "claim_ids": [
+              "lookup.select_returns"
+            ],
+            "claim_status": {
+              "lookup.select_returns": "candidate"
+            },
+            "related_pattern_ids": []
+          },
+          "source_screen_if_pattern": {
+            "pilot_id": "k3-01",
+            "screen_id": "scr-8001",
+            "screen_title": "Cadastro de Fabricante",
+            "review_id": "k3-01.reviewer_1",
+            "reviewed_at": "2026-09-25T19:03:11.197Z",
+            "confirmed_text": "Selecionar um registro com Enter ou duplo clique o abre para edição na tela principal.",
+            "evidence_level_there": "VALIDATED",
+            "status_here": "NOT_VALIDATED"
+          },
+          "covers": [
+            "STANDARD_LOOKUP"
+          ],
+          "topic_ids": [],
+          "topic_names": [],
+          "element_ids": [
+            "b001",
+            "lk001"
+          ],
+          "tag_label": "CONFIRMADO EM OUTRA TELA"
+        },
+        {
+          "id": "k4-05.save.persists",
+          "key": "save.persists",
+          "subject": "Gravar",
+          "mode": "pattern",
+          "tag": "VALIDATED_ELSEWHERE",
+          "text": "“Gravar” salva o registro?",
+          "basis": "A captura mostra “Gravar” em cinza; o efeito não aparece na imagem.",
+          "hint": null,
+          "placeholder": null,
+          "detail_prompt": null,
+          "hypothesis": null,
+          "candidate_pattern": {
+            "pattern_id": "STANDARD_SAVE",
+            "name": "Gravar",
+            "origin": "library",
+            "library_status": "provisionally_validated",
+            "claim_ids": [
+              "save.persists"
+            ],
+            "claim_status": {
+              "save.persists": "provisionally_validated"
+            },
+            "related_pattern_ids": []
+          },
+          "source_screen_if_pattern": {
+            "pilot_id": "k3-01",
+            "screen_id": "scr-8001",
+            "screen_title": "Cadastro de Fabricante",
+            "review_id": "k3-01.reviewer_1",
+            "reviewed_at": "2026-09-25T19:03:11.197Z",
+            "confirmed_text": "Salva as informações preenchidas no registro.",
+            "evidence_level_there": "VALIDATED",
+            "status_here": "NOT_VALIDATED"
+          },
+          "covers": [
+            "STANDARD_SAVE"
+          ],
+          "topic_ids": [],
+          "topic_names": [],
+          "element_ids": [
+            "b002"
+          ],
+          "tag_label": "CONFIRMADO EM OUTRA TELA"
+        },
+        {
+          "id": "k4-05.cancel.discards_and_closes",
+          "key": "cancel.discards_and_closes",
+          "subject": "Cancelar",
+          "mode": "pattern",
+          "tag": "VALIDATED_ELSEWHERE",
+          "text": "“Cancelar” descarta as alterações e fecha a tela?",
+          "basis": "A captura mostra “Cancelar” em cinza; o efeito não aparece na imagem.",
+          "hint": "Se descartar e a tela continuar aberta, marque FUNCIONA DIFERENTE.",
+          "placeholder": null,
+          "detail_prompt": null,
+          "hypothesis": null,
+          "candidate_pattern": {
+            "pattern_id": "STANDARD_CANCEL",
+            "name": "Cancelar",
+            "origin": "library",
+            "library_status": "candidate",
+            "claim_ids": [
+              "cancel.discards",
+              "cancel.closes_window"
+            ],
+            "claim_status": {
+              "cancel.discards": "provisionally_validated",
+              "cancel.closes_window": "candidate"
+            },
+            "related_pattern_ids": []
+          },
+          "source_screen_if_pattern": {
+            "pilot_id": "k3-01",
+            "screen_id": "scr-8001",
+            "screen_title": "Cadastro de Fabricante",
+            "review_id": "k3-01.reviewer_1",
+            "reviewed_at": "2026-09-25T19:03:11.197Z",
+            "confirmed_text": "Descarta as alterações e fecha a tela sem salvar.",
+            "evidence_level_there": "VALIDATED",
+            "status_here": "NOT_VALIDATED"
+          },
+          "covers": [
+            "STANDARD_CANCEL"
+          ],
+          "topic_ids": [],
+          "topic_names": [],
+          "element_ids": [
+            "b003"
+          ],
+          "tag_label": "CONFIRMADO EM OUTRA TELA"
+        },
+        {
+          "id": "k4-05.delete.removes_permanently",
+          "key": "delete.removes_permanently",
+          "subject": "Excluir",
+          "mode": "pattern",
+          "tag": "VALIDATED_ELSEWHERE",
+          "text": "“Excluir” remove o registro de vez, quando ele não está em uso em outro cadastro?",
+          "basis": "A captura mostra “Excluir” em cinza; o efeito não aparece na imagem.",
+          "hint": "Se o registro só ficar inativo, ou se a exclusão nunca for bloqueada, marque FUNCIONA DIFERENTE.",
+          "placeholder": null,
+          "detail_prompt": null,
+          "hypothesis": null,
+          "candidate_pattern": {
+            "pattern_id": "STANDARD_DELETE",
+            "name": "Excluir",
+            "origin": "library",
+            "library_status": "candidate",
+            "claim_ids": [
+              "delete.removes_record",
+              "delete.permanence",
+              "delete.referential_guard"
+            ],
+            "claim_status": {
+              "delete.removes_record": "provisionally_validated",
+              "delete.permanence": "candidate",
+              "delete.referential_guard": "candidate"
+            },
+            "related_pattern_ids": []
+          },
+          "source_screen_if_pattern": {
+            "pilot_id": "k3-01",
+            "screen_id": "scr-8001",
+            "screen_title": "Cadastro de Fabricante",
+            "review_id": "k3-01.reviewer_1",
+            "reviewed_at": "2026-09-25T19:03:11.197Z",
+            "confirmed_text": "Remove o registro permanentemente do sistema, se não estiver em uso em outras tabelas.",
+            "evidence_level_there": "VALIDATED",
+            "status_here": "NOT_VALIDATED"
+          },
+          "covers": [
+            "STANDARD_DELETE"
+          ],
+          "topic_ids": [],
+          "topic_names": [],
+          "element_ids": [
+            "b004"
+          ],
+          "tag_label": "CONFIRMADO EM OUTRA TELA"
+        },
+        {
+          "id": "k4-05.close.closes_only",
+          "key": "close.closes_only",
+          "subject": "Fechar",
+          "mode": "pattern",
+          "tag": "VALIDATED_ELSEWHERE",
+          "text": "“Fechar” apenas fecha a tela?",
+          "basis": "O efeito de “Fechar” não aparece na imagem.",
+          "hint": null,
+          "placeholder": null,
+          "detail_prompt": null,
+          "hypothesis": null,
+          "candidate_pattern": {
+            "pattern_id": "STANDARD_CLOSE",
+            "name": "Fechar",
+            "origin": "library",
+            "library_status": "provisionally_validated",
+            "claim_ids": [
+              "close.closes_screen"
+            ],
+            "claim_status": {
+              "close.closes_screen": "provisionally_validated"
+            },
+            "related_pattern_ids": []
+          },
+          "source_screen_if_pattern": {
+            "pilot_id": "k3-01",
+            "screen_id": "scr-8001",
+            "screen_title": "Cadastro de Fabricante",
+            "review_id": "k3-01.reviewer_1",
+            "reviewed_at": "2026-09-25T19:03:11.197Z",
+            "confirmed_text": "Fecha a tela atual.",
+            "evidence_level_there": "VALIDATED",
+            "status_here": "NOT_VALIDATED"
+          },
+          "covers": [
+            "STANDARD_CLOSE"
+          ],
+          "topic_ids": [],
+          "topic_names": [],
+          "element_ids": [
+            "b005"
+          ],
+          "tag_label": "CONFIRMADO EM OUTRA TELA"
+        }
+      ],
+      "expected_information_gain": {
+        "level": "alto",
+        "summary": "Mede se o que foi confirmado na k3-01 se transfere para uma tela de mesma estrutura. Informa diretamente 6 telas do lote e o arquetipo de cadastro padrao, casado em 17 telas.",
+        "screens_informed": [
+          "k4-03",
+          "k4-04",
+          "k4-05",
+          "k4-07",
+          "k4-08",
+          "k4-15"
+        ],
+        "archetype_screens": 17,
+        "recurrent_questions_informed": {
+          "enable_condition": 18,
+          "delete_guard": 19,
+          "save_validation": 20
+        },
+        "recurrent_questions_note": "numero de telas do lote com a mesma pergunta aberta; uma resposta nesta tela nao fecha a pergunta nas outras, so orienta",
+        "if_confirmed": "Os padroes de rodape, Codigo e [...] passam a ter 2 telas confirmadas por pessoa na mesma variante (k3-01 e k4-05). Ainda nao basta para validated (a biblioteca exige 3 telas de arquetipos diferentes), mas sustenta tratar as outras 5 telas iguais por amostragem.",
+        "if_divergent": "Mostra que o comportamento da k3-01 nao se transfere nem para estrutura identica: os 17 cadastros precisam de confirmacao propria e os padroes da biblioteca precisam ser restringidos."
+      },
+      "is_candidate": true
+    },
+    {
+      "rank": 2,
+      "pilot_id": "k4-19",
+      "screen_id": "scr-8119",
+      "title": "Tabela de Conjuntos de Características",
+      "module": "Tabelas",
+      "submodule": "Faturamento",
+      "menu_path": [
+        "Tabelas",
+        "Faturamento"
+      ],
+      "menu_path_source": "filesystem",
+      "review_class": "AUTO_PASS",
+      "review_class_label": "Segue automático",
+      "review_class_meaning": "Nada pede julgamento agora. Entra só em auditoria aleatória.",
+      "review_class_reasons": [
+        "Nenhum gatilho de revisao: sem conflito, sem lacuna de fonte em item critico, sem duvida de leitura em item critico e sem duvida fora dele. Nao significa correto: significa que nada pede julgamento agora."
+      ],
+      "focus": "Lista de itens com “Confirmar” e busca em campo de referência. Não assumimos que “Confirmar” e “Gravar” façam a mesma coisa.",
+      "family": "cadastro mestre-detalhe com linha de entrada e grid",
+      "plain_summary": "tem lista de itens e o botão \"Confirmar\", que não existe no Cadastro de Fabricante.",
+      "why_selected": "Cadastro mestre-detalhe: \"Código\", nome do conjunto, campo de referencia \"Característica\" com [...] e caixa cinza, botao \"Confirmar\" na linha de entrada e grid de itens. Reune as tres diferencas estruturais mais frequentes em relacao a k3-01: linha de entrada com botao proprio acima de grid (6 telas: \"Confirmar\" em 4, \"Atualizar\" em 2), busca em campo de referencia (10 buscas em 8 telas) e grid com as duas primeiras colunas sem titulo (6 telas). E a menor tela desse grupo (4 campos, 7 perguntas), e a hipotese de destino da sua busca de referencia esta dentro do proprio lote (\"Tabela de Características\", k4-17).",
+      "gain": {
+        "level": "alto",
+        "summary": "Testa a variante mestre-detalhe, que nao existe na k3-01, e a busca em campo de referencia, onde o efeito confirmado na k3-01 (abrir o registro) nao deveria valer.",
+        "if_confirmed": "A variante mestre-detalhe ganha a primeira confirmacao humana, e as 6 telas com linha de entrada passam a ser descritas pelo mesmo modelo (Confirmar/Atualizar inclui a linha, Gravar grava tudo), ainda como hipotese nas demais.",
+        "if_divergent": "Confirmar ou Excluir com papel diferente do suposto obriga a rever o modelo mestre-detalhe antes da escala; uma busca de referencia que abre registro mudaria a leitura de 10 buscas.",
+        "screens_informed": [
+          "k4-01",
+          "k4-02",
+          "k4-09",
+          "k4-10",
+          "k4-11",
+          "k4-13",
+          "k4-18",
+          "k4-19",
+          "k4-20"
+        ]
+      },
+      "structure": {
+        "kind": {
+          "value": "form",
+          "label": "cadastro",
+          "confidence": "alta"
+        },
+        "purpose": {
+          "text": "Manter conjuntos de caracteristicas de produto: um conjunto com nome e a lista das caracteristicas que o compoem. Como o conjunto e aplicado ao produto nao e observavel.",
+          "confidence": "alta"
+        },
+        "fields": [
+          {
+            "label": "Código",
+            "type": "campo com busca [...]",
+            "count": 1,
+            "values": [
+              "0"
+            ],
+            "lookup": true
+          },
+          {
+            "label": "Nome do Conjunto de Características",
+            "type": "texto",
+            "count": 1,
+            "values": [],
+            "lookup": false
+          },
+          {
+            "label": "Característica",
+            "type": "campo com busca [...]",
+            "count": 1,
+            "values": [
+              "0"
+            ],
+            "lookup": true
+          },
+          {
+            "label": "(sem rótulo)",
+            "type": "somente exibição",
+            "count": 1,
+            "values": [],
+            "lookup": false
+          }
+        ],
+        "buttons": [
+          {
+            "id": "b001",
+            "label": "[...] de “Código”",
+            "state": "habilitado"
+          },
+          {
+            "id": "b002",
+            "label": "[...] de “Característica”",
+            "state": "habilitado"
+          },
+          {
+            "id": "b003",
+            "label": "Confirmar",
+            "state": "habilitado"
+          },
+          {
+            "id": "b004",
+            "label": "Gravar",
+            "state": "em cinza na captura"
+          },
+          {
+            "id": "b005",
+            "label": "Cancelar",
+            "state": "em cinza na captura"
+          },
+          {
+            "id": "b006",
+            "label": "Excluir",
+            "state": "em cinza na captura"
+          },
+          {
+            "id": "b007",
+            "label": "Fechar",
+            "state": "habilitado"
+          }
+        ],
+        "lookups": [
+          {
+            "field": "Código",
+            "target": "destino não observado"
+          },
+          {
+            "field": "Característica",
+            "target": "provável: “Tabela de Características” (hipótese, confiança média)"
+          }
+        ],
+        "grids": [
+          {
+            "columns": [
+              "(sem rótulo)",
+              "(sem rótulo)",
+              "Código",
+              "Nome"
+            ],
+            "rows": 0
+          }
+        ],
+        "messages": [
+          "Não existem registros!"
+        ],
+        "unlabeled_panels": 0,
+        "counts": {
+          "by_type": {
+            "label": 2,
+            "image": 1,
+            "lookup_input": 2,
+            "lookup_button": 2,
+            "text_input": 1,
+            "readonly_field": 1,
+            "button": 5,
+            "grid": 1,
+            "message": 1
+          },
+          "total": 16,
+          "uncertain_items": 4
+        }
+      },
+      "patterns": [
+        {
+          "pattern_id": "DIV_ENTRY_ROW_BUTTON",
+          "name": "Linha de entrada com botão próprio sobre uma lista",
+          "origin": "k4-divergence",
+          "status_label": "Diferença estrutural em relação ao Cadastro de Fabricante, vista no lote K4.0. Nunca confirmada por pessoa.",
+          "question_ids": [
+            "k4-19.entry_row.confirm_adds_to_list",
+            "k4-19.save.persists_whole_set"
+          ]
+        },
+        {
+          "pattern_id": "STANDARD_DELETE",
+          "name": "Excluir",
+          "origin": "library",
+          "status_label": "Biblioteca: candidato. Comportamento confirmado por pessoa só no Cadastro de Fabricante.",
+          "question_ids": [
+            "k4-19.delete.removes_whole_set"
+          ]
+        },
+        {
+          "pattern_id": "STANDARD_LOOKUP",
+          "name": "Consulta pelo botão [...]",
+          "origin": "library",
+          "status_label": "Biblioteca: provisoriamente validado (estrutura). Comportamento confirmado por pessoa só no Cadastro de Fabricante.",
+          "question_ids": [
+            "k4-19.reference_lookup.fills_code_and_name"
+          ]
+        },
+        {
+          "pattern_id": "LOOKUP_BUTTON",
+          "name": "Destino do botão [...]",
+          "origin": "k4-structural",
+          "status_label": "Repetição estrutural no lote K4.0. Nunca confirmada por pessoa.",
+          "question_ids": [
+            "k4-19.reference_lookup.target_caracteristicas"
+          ]
+        },
+        {
+          "pattern_id": "REFERENCE_FIELD_GRAY_BOX",
+          "name": "Caixa cinza ao lado de código de referência",
+          "origin": "k4-structural",
+          "status_label": "Repetição estrutural no lote K4.0. Nunca confirmada por pessoa.",
+          "question_ids": [
+            "k4-19.reference_lookup.fills_code_and_name"
+          ]
+        },
+        {
+          "pattern_id": "GRID_FIRST_TWO_UNLABELED",
+          "name": "Lista com as duas primeiras colunas sem título",
+          "origin": "k4-structural",
+          "status_label": "Repetição estrutural no lote K4.0. Nunca confirmada por pessoa.",
+          "question_ids": []
+        },
+        {
+          "pattern_id": "STANDARD_CODE_FIELD",
+          "name": "Campo “Código” de cadastro",
+          "origin": "library",
+          "status_label": "Biblioteca: provisoriamente validado (estrutura). Comportamento confirmado por pessoa só no Cadastro de Fabricante.",
+          "question_ids": [
+            "k4-19.code.enter_existing_opens_with_items"
+          ]
+        },
+        {
+          "pattern_id": "STANDARD_SAVE",
+          "name": "Gravar",
+          "origin": "library",
+          "status_label": "Biblioteca: provisoriamente validado (estrutura). Comportamento confirmado por pessoa só no Cadastro de Fabricante.",
+          "question_ids": [
+            "k4-19.save.persists_whole_set"
+          ]
+        },
+        {
+          "pattern_id": "STANDARD_CANCEL",
+          "name": "Cancelar",
+          "origin": "library",
+          "status_label": "Biblioteca: candidato. Comportamento confirmado por pessoa só no Cadastro de Fabricante.",
+          "question_ids": [
+            "k4-19.cancel.discards_and_closes"
+          ]
+        },
+        {
+          "pattern_id": "STANDARD_CLOSE",
+          "name": "Fechar",
+          "origin": "library",
+          "status_label": "Biblioteca: provisoriamente validado (estrutura). Comportamento confirmado por pessoa só no Cadastro de Fabricante.",
+          "question_ids": [
+            "k4-19.close.closes_only"
+          ]
+        }
+      ],
+      "comparison": [
+        {
+          "subject": "Código",
+          "confirmed": [
+            "Pressionar Enter sem valor inicia um novo registro.",
+            "Inserir número existente e pressionar Enter abre o registro para edição.",
+            "Inserir número inexistente e pressionar Enter cria um novo registro com esse código."
+          ],
+          "origin": "Cadastro de Fabricante (k3-01)",
+          "reviewed_at": "2026-09-25T19:03:11.197Z",
+          "here": "AINDA NÃO VALIDADO"
+        },
+        {
+          "subject": "Consulta [...] / F12",
+          "confirmed": [
+            "Clicar com o mouse ou pressionar F12 abre a tela de consulta de registros.",
+            "Selecionar um registro com Enter ou duplo clique o abre para edição na tela principal."
+          ],
+          "origin": "Cadastro de Fabricante (k3-01)",
+          "reviewed_at": "2026-09-25T19:03:11.197Z",
+          "here": "AINDA NÃO VALIDADO"
+        },
+        {
+          "subject": "Gravar",
+          "confirmed": [
+            "Salva as informações preenchidas no registro."
+          ],
+          "origin": "Cadastro de Fabricante (k3-01)",
+          "reviewed_at": "2026-09-25T19:03:11.197Z",
+          "here": "AINDA NÃO VALIDADO"
+        },
+        {
+          "subject": "Cancelar",
+          "confirmed": [
+            "Descarta as alterações e fecha a tela sem salvar."
+          ],
+          "origin": "Cadastro de Fabricante (k3-01)",
+          "reviewed_at": "2026-09-25T19:03:11.197Z",
+          "here": "AINDA NÃO VALIDADO"
+        },
+        {
+          "subject": "Excluir",
+          "confirmed": [
+            "Remove o registro permanentemente do sistema, se não estiver em uso em outras tabelas."
+          ],
+          "origin": "Cadastro de Fabricante (k3-01)",
+          "reviewed_at": "2026-09-25T19:03:11.197Z",
+          "here": "AINDA NÃO VALIDADO"
+        },
+        {
+          "subject": "Fechar",
+          "confirmed": [
+            "Fecha a tela atual."
+          ],
+          "origin": "Cadastro de Fabricante (k3-01)",
+          "reviewed_at": "2026-09-25T19:03:11.197Z",
+          "here": "AINDA NÃO VALIDADO"
+        }
+      ],
+      "comparison_note": "O [...] de “Característica” não entra nesta tabela: é campo de referência, e o padrão confirmado era o da busca no próprio “Código”.",
+      "doubts": {
+        "uncertainties": [
+          {
+            "id": "u001",
+            "seen": "\"Gravar\", \"Cancelar\" e \"Excluir\" em cinza; \"Fechar\" e \"Confirmar\" em preto",
+            "why": "o cinza sugere desabilitado, mas o estado vale apenas para esta captura"
+          },
+          {
+            "id": "u002",
+            "seen": "o valor \"0\" de \"Código\" aparece com fundo de selecao azul",
+            "why": "sugere foco e texto selecionado nesta captura; nao e comportamento observado"
+          },
+          {
+            "id": "u003",
+            "seen": "as duas primeiras colunas do grid nao tem texto de cabecalho",
+            "why": "podem ser indicador ou marcador de linha; o grid esta vazio"
+          },
+          {
+            "id": "u004",
+            "seen": "caixa cinza sem rotulo a direita do codigo de \"Característica\"",
+            "why": "nao tem rotulo proprio e esta vazia; o que ela exibe nao e visivel"
+          }
+        ],
+        "open_questions": [
+          {
+            "id": "q001",
+            "text": "O conjunto e associado ao produto ou a classificacao de produto?",
+            "priority": "medium",
+            "source": "usar o sistema ou o manual"
+          },
+          {
+            "id": "q002",
+            "text": "Para onde leva o botao [...] do campo \"Código\"? O destino nao aparece na captura.",
+            "priority": "medium",
+            "source": "usar o sistema ou o manual"
+          },
+          {
+            "id": "q003",
+            "text": "O botao [...] do campo \"Característica\" abre \"Tabela de Características\"? O destino e hipotese (rotulo \"Característica\" e existencia de \"Tabela de Características\" no mesmo submenu do acervo (ext-01)), nao observado.",
+            "priority": "medium",
+            "source": "usar o sistema"
+          },
+          {
+            "id": "q004",
+            "text": "Em que condicao \"Gravar\", \"Cancelar\", \"Excluir\" ficam habilitados? Na captura aparecem em cinza.",
+            "priority": "medium",
+            "source": "usar o sistema"
+          },
+          {
+            "id": "q005",
+            "text": "Excluir um registro em uso em outra rotina e bloqueado? Ha confirmacao antes de excluir?",
+            "priority": "medium",
+            "source": "usar o sistema ou o manual"
+          },
+          {
+            "id": "q006",
+            "text": "Quais campos sao obrigatorios e que validacao ocorre ao gravar?",
+            "priority": "medium",
+            "source": "usar o sistema"
+          }
+        ],
+        "deferred_to_firebird": 1
+      },
+      "questions": [
+        {
+          "id": "k4-19.entry_row.confirm_adds_to_list",
+          "key": "entry_row.confirm_adds_to_list",
+          "subject": "Confirmar",
+          "mode": "hypothesis",
+          "tag": "CANDIDATE_PATTERN",
+          "text": "“Confirmar” só inclui a característica na lista, sem gravar o conjunto?",
+          "basis": "Linha de entrada com botão próprio acima de uma lista aparece em 6 telas do lote (“Confirmar” em 4, “Atualizar” em 2). Nenhuma foi confirmada por pessoa.",
+          "hint": "Se “Confirmar” já grava o conjunto, marque FUNCIONA DIFERENTE.",
+          "placeholder": null,
+          "detail_prompt": null,
+          "hypothesis": {
+            "text": "Incluir no grid a caracteristica informada.",
+            "confidence": "medium",
+            "confidence_label": "média",
+            "source": "knowledge.bundle.json · b003.intended_purpose (INFERRED)"
+          },
+          "candidate_pattern": {
+            "pattern_id": "DIV_ENTRY_ROW_BUTTON",
+            "name": "Linha de entrada com botão próprio sobre uma lista",
+            "origin": "k4-divergence",
+            "library_status": null,
+            "claim_ids": [],
+            "claim_status": {},
+            "related_pattern_ids": []
+          },
+          "source_screen_if_pattern": null,
+          "covers": [
+            "DIV_ENTRY_ROW_BUTTON"
+          ],
+          "topic_ids": [],
+          "topic_names": [],
+          "element_ids": [
+            "b003",
+            "g001"
+          ],
+          "tag_label": "PADRÃO CANDIDATO"
+        },
+        {
+          "id": "k4-19.save.persists_whole_set",
+          "key": "save.persists_whole_set",
+          "subject": "Gravar",
+          "mode": "pattern",
+          "tag": "VALIDATED_ELSEWHERE",
+          "text": "“Gravar” salva o conjunto inteiro, com todas as características da lista?",
+          "basis": "Com “Confirmar” e “Gravar” na mesma tela, não assumimos que os dois façam a mesma coisa.",
+          "hint": null,
+          "placeholder": null,
+          "detail_prompt": null,
+          "hypothesis": null,
+          "candidate_pattern": {
+            "pattern_id": "STANDARD_SAVE",
+            "name": "Gravar",
+            "origin": "library",
+            "library_status": "provisionally_validated",
+            "claim_ids": [
+              "save.persists"
+            ],
+            "claim_status": {
+              "save.persists": "provisionally_validated"
+            },
+            "related_pattern_ids": [
+              "DIV_ENTRY_ROW_BUTTON"
+            ]
+          },
+          "source_screen_if_pattern": {
+            "pilot_id": "k3-01",
+            "screen_id": "scr-8001",
+            "screen_title": "Cadastro de Fabricante",
+            "review_id": "k3-01.reviewer_1",
+            "reviewed_at": "2026-09-25T19:03:11.197Z",
+            "confirmed_text": "Salva as informações preenchidas no registro.",
+            "evidence_level_there": "VALIDATED",
+            "status_here": "NOT_VALIDATED"
+          },
+          "covers": [
+            "STANDARD_SAVE",
+            "DIV_ENTRY_ROW_BUTTON"
+          ],
+          "topic_ids": [],
+          "topic_names": [],
+          "element_ids": [
+            "b004",
+            "b003"
+          ],
+          "tag_label": "CONFIRMADO EM OUTRA TELA"
+        },
+        {
+          "id": "k4-19.reference_lookup.fills_code_and_name",
+          "key": "reference_lookup.fills_code_and_name",
+          "subject": "Característica [...]",
+          "mode": "hypothesis",
+          "tag": "CANDIDATE_PATTERN",
+          "text": "Escolher uma característica pelo [...] só preenche o código e a caixa cinza ao lado, sem abrir outro cadastro?",
+          "basis": "No Cadastro de Fabricante a busca confirmada ficava no próprio “Código” e abria o registro. Aqui o [...] está num campo que aponta para outra tabela, como em 10 buscas de 8 telas do lote.",
+          "hint": null,
+          "placeholder": null,
+          "detail_prompt": null,
+          "hypothesis": null,
+          "candidate_pattern": {
+            "pattern_id": "STANDARD_LOOKUP",
+            "name": "Consulta pelo botão [...]",
+            "origin": "library",
+            "library_status": "provisionally_validated",
+            "claim_ids": [
+              "lookup.select_returns"
+            ],
+            "claim_status": {
+              "lookup.select_returns": "candidate"
+            },
+            "related_pattern_ids": [
+              "REFERENCE_FIELD_GRAY_BOX"
+            ]
+          },
+          "source_screen_if_pattern": null,
+          "covers": [
+            "STANDARD_LOOKUP",
+            "REFERENCE_FIELD_GRAY_BOX"
+          ],
+          "topic_ids": [],
+          "topic_names": [],
+          "element_ids": [
+            "b002",
+            "lk002",
+            "c007"
+          ],
+          "tag_label": "PADRÃO CANDIDATO"
+        },
+        {
+          "id": "k4-19.reference_lookup.target_caracteristicas",
+          "key": "reference_lookup.target_caracteristicas",
+          "subject": "Destino do [...] de “Característica”",
+          "mode": "hypothesis",
+          "tag": "INFERRED",
+          "text": "Esse [...] abre a consulta da “Tabela de Características”?",
+          "basis": "Hipótese da IA pelo rótulo e pela rotina “Tabela de Características”, que existe no mesmo menu. A mesma lógica sustenta 5 destinos “prováveis” do lote.",
+          "hint": null,
+          "placeholder": null,
+          "detail_prompt": null,
+          "hypothesis": {
+            "text": "destino provável: Tabela de Características",
+            "target_status": "probable",
+            "confidence": "medium",
+            "confidence_label": "média",
+            "source": "knowledge.bundle.json · lk002.target (INFERRED)"
+          },
+          "candidate_pattern": {
+            "pattern_id": "LOOKUP_BUTTON",
+            "name": "Destino do botão [...]",
+            "origin": "k4-structural",
+            "library_status": null,
+            "claim_ids": [],
+            "claim_status": {},
+            "related_pattern_ids": []
+          },
+          "source_screen_if_pattern": null,
+          "covers": [
+            "LOOKUP_BUTTON"
+          ],
+          "topic_ids": [],
+          "topic_names": [],
+          "element_ids": [
+            "b002",
+            "lk002"
+          ],
+          "tag_label": "INFERIDO"
+        },
+        {
+          "id": "k4-19.code.enter_existing_opens_with_items",
+          "key": "code.enter_existing_opens_with_items",
+          "subject": "Código",
+          "mode": "pattern",
+          "tag": "VALIDATED_ELSEWHERE",
+          "text": "“Código” existente + Enter abre o conjunto já com as características na lista?",
+          "basis": "No Cadastro de Fabricante não havia lista de itens abaixo do cadastro.",
+          "hint": null,
+          "placeholder": null,
+          "detail_prompt": null,
+          "hypothesis": null,
+          "candidate_pattern": {
+            "pattern_id": "STANDARD_CODE_FIELD",
+            "name": "Campo “Código” de cadastro",
+            "origin": "library",
+            "library_status": "provisionally_validated",
+            "claim_ids": [
+              "code.enter_existing_opens"
+            ],
+            "claim_status": {
+              "code.enter_existing_opens": "provisionally_validated"
+            },
+            "related_pattern_ids": []
+          },
+          "source_screen_if_pattern": {
+            "pilot_id": "k3-01",
+            "screen_id": "scr-8001",
+            "screen_title": "Cadastro de Fabricante",
+            "review_id": "k3-01.reviewer_1",
+            "reviewed_at": "2026-09-25T19:03:11.197Z",
+            "confirmed_text": "Inserir número existente e pressionar Enter abre o registro para edição.",
+            "evidence_level_there": "VALIDATED",
+            "status_here": "NOT_VALIDATED"
+          },
+          "covers": [
+            "STANDARD_CODE_FIELD"
+          ],
+          "topic_ids": [],
+          "topic_names": [],
+          "element_ids": [
+            "c004",
+            "g001"
+          ],
+          "tag_label": "CONFIRMADO EM OUTRA TELA"
+        },
+        {
+          "id": "k4-19.delete.removes_whole_set",
+          "key": "delete.removes_whole_set",
+          "subject": "Excluir",
+          "mode": "pattern",
+          "tag": "VALIDATED_ELSEWHERE",
+          "text": "“Excluir” remove o conjunto inteiro, e não só uma linha da lista?",
+          "basis": "Com uma lista de itens na tela, “Excluir” pode valer para o conjunto ou para a linha.",
+          "hint": null,
+          "placeholder": null,
+          "detail_prompt": "Se souber, diga como se retira só uma característica da lista (opcional).",
+          "hypothesis": null,
+          "candidate_pattern": {
+            "pattern_id": "STANDARD_DELETE",
+            "name": "Excluir",
+            "origin": "library",
+            "library_status": "candidate",
+            "claim_ids": [
+              "delete.removes_record"
+            ],
+            "claim_status": {
+              "delete.removes_record": "provisionally_validated"
+            },
+            "related_pattern_ids": []
+          },
+          "source_screen_if_pattern": {
+            "pilot_id": "k3-01",
+            "screen_id": "scr-8001",
+            "screen_title": "Cadastro de Fabricante",
+            "review_id": "k3-01.reviewer_1",
+            "reviewed_at": "2026-09-25T19:03:11.197Z",
+            "confirmed_text": "Remove o registro permanentemente do sistema, se não estiver em uso em outras tabelas.",
+            "evidence_level_there": "VALIDATED",
+            "status_here": "NOT_VALIDATED"
+          },
+          "covers": [
+            "STANDARD_DELETE"
+          ],
+          "topic_ids": [],
+          "topic_names": [],
+          "element_ids": [
+            "b006",
+            "g001"
+          ],
+          "tag_label": "CONFIRMADO EM OUTRA TELA"
+        },
+        {
+          "id": "k4-19.cancel.discards_and_closes",
+          "key": "cancel.discards_and_closes",
+          "subject": "Cancelar",
+          "mode": "pattern",
+          "tag": "VALIDATED_ELSEWHERE",
+          "text": "“Cancelar” descarta o que não foi gravado, inclusive linhas já confirmadas, e fecha a tela?",
+          "basis": "Linhas incluídas por “Confirmar” podem ou não ser descartadas junto.",
+          "hint": null,
+          "placeholder": null,
+          "detail_prompt": null,
+          "hypothesis": null,
+          "candidate_pattern": {
+            "pattern_id": "STANDARD_CANCEL",
+            "name": "Cancelar",
+            "origin": "library",
+            "library_status": "candidate",
+            "claim_ids": [
+              "cancel.discards",
+              "cancel.closes_window"
+            ],
+            "claim_status": {
+              "cancel.discards": "provisionally_validated",
+              "cancel.closes_window": "candidate"
+            },
+            "related_pattern_ids": []
+          },
+          "source_screen_if_pattern": {
+            "pilot_id": "k3-01",
+            "screen_id": "scr-8001",
+            "screen_title": "Cadastro de Fabricante",
+            "review_id": "k3-01.reviewer_1",
+            "reviewed_at": "2026-09-25T19:03:11.197Z",
+            "confirmed_text": "Descarta as alterações e fecha a tela sem salvar.",
+            "evidence_level_there": "VALIDATED",
+            "status_here": "NOT_VALIDATED"
+          },
+          "covers": [
+            "STANDARD_CANCEL"
+          ],
+          "topic_ids": [],
+          "topic_names": [],
+          "element_ids": [
+            "b005",
+            "b003"
+          ],
+          "tag_label": "CONFIRMADO EM OUTRA TELA"
+        },
+        {
+          "id": "k4-19.close.closes_only",
+          "key": "close.closes_only",
+          "subject": "Fechar",
+          "mode": "pattern",
+          "tag": "VALIDATED_ELSEWHERE",
+          "text": "“Fechar” apenas fecha a tela?",
+          "basis": "O efeito de “Fechar” não aparece na imagem.",
+          "hint": null,
+          "placeholder": null,
+          "detail_prompt": null,
+          "hypothesis": null,
+          "candidate_pattern": {
+            "pattern_id": "STANDARD_CLOSE",
+            "name": "Fechar",
+            "origin": "library",
+            "library_status": "provisionally_validated",
+            "claim_ids": [
+              "close.closes_screen"
+            ],
+            "claim_status": {
+              "close.closes_screen": "provisionally_validated"
+            },
+            "related_pattern_ids": []
+          },
+          "source_screen_if_pattern": {
+            "pilot_id": "k3-01",
+            "screen_id": "scr-8001",
+            "screen_title": "Cadastro de Fabricante",
+            "review_id": "k3-01.reviewer_1",
+            "reviewed_at": "2026-09-25T19:03:11.197Z",
+            "confirmed_text": "Fecha a tela atual.",
+            "evidence_level_there": "VALIDATED",
+            "status_here": "NOT_VALIDATED"
+          },
+          "covers": [
+            "STANDARD_CLOSE"
+          ],
+          "topic_ids": [],
+          "topic_names": [],
+          "element_ids": [
+            "b007"
+          ],
+          "tag_label": "CONFIRMADO EM OUTRA TELA"
+        }
+      ],
+      "expected_information_gain": {
+        "level": "alto",
+        "summary": "Testa a variante mestre-detalhe, que nao existe na k3-01, e a busca em campo de referencia, onde o efeito confirmado na k3-01 (abrir o registro) nao deveria valer.",
+        "screens_informed": [
+          "k4-01",
+          "k4-02",
+          "k4-09",
+          "k4-10",
+          "k4-11",
+          "k4-13",
+          "k4-18",
+          "k4-19",
+          "k4-20"
+        ],
+        "recurrent_questions_informed": {
+          "entry_row_with_grid_screens": 6,
+          "reference_lookups": 10,
+          "probable_lookup_targets": 5,
+          "grid_first_two_unlabeled_screens": 6
+        },
+        "recurrent_questions_note": "contagens estruturais do lote; uma resposta nesta tela nao vale como VALIDATED nas outras",
+        "if_confirmed": "A variante mestre-detalhe ganha a primeira confirmacao humana, e as 6 telas com linha de entrada passam a ser descritas pelo mesmo modelo (Confirmar/Atualizar inclui a linha, Gravar grava tudo), ainda como hipotese nas demais.",
+        "if_divergent": "Confirmar ou Excluir com papel diferente do suposto obriga a rever o modelo mestre-detalhe antes da escala; uma busca de referencia que abre registro mudaria a leitura de 10 buscas."
+      },
+      "is_candidate": true
+    },
+    {
+      "rank": 3,
+      "pilot_id": "k4-14",
+      "screen_id": "scr-8114",
+      "title": "Montagem do Trio Fechado",
+      "module": "Tabelas",
+      "submodule": "Faturamento",
+      "menu_path": [
+        "Tabelas",
+        "Faturamento"
+      ],
+      "menu_path_source": "filesystem",
+      "review_class": "SAMPLE_QA",
+      "review_class_label": "Amostragem",
+      "review_class_meaning": "Boa, com um ponto menor. Elegível a conferência por amostra.",
+      "review_class_reasons": [
+        "Componente sem rotulo ou rotulo ambiguo: grp001."
+      ],
+      "focus": "Tela fora do padrão de cadastro: sem “Código”, sem campos e com três listas. Não encaixamos a tela à força no padrão.",
+      "family": "tela fora do arquetipo de cadastro",
+      "plain_summary": "a tela que a IA menos entendeu; mostra se os botões significam o mesmo fora de um cadastro.",
+      "why_selected": "A tela que a IA menos entendeu: tipo nao determinado (confianca baixa) e finalidade com confianca baixa. E a maior divergencia estrutural do lote: sem cabecalho interno, sem nenhum campo, sem \"Código\", tres grids iguais (\"Descrição do Produto\", \"Valor\"), icone X na barra de titulo e os quatro botoes do rodape habilitados na captura, a unica tela assim. Ja esta na fila de amostragem por um componente sem rotulo (grp001).",
+      "gain": {
+        "level": "alto",
+        "summary": "Mede o limite do padrao de rodape: se ele vale onde a tela nao e cadastro. Resolve a unica tela de confianca baixa do lote e o motivo do seu SAMPLE_QA.",
+        "if_confirmed": "O rodape passa a indicar comportamento mesmo fora do arquetipo de cadastro, o que fortalece o padrao para telas de processo e montagem dos proximos modulos.",
+        "if_divergent": "A IA passa a exigir arquetipo casado antes de aplicar padrao de rodape; telas sem Codigo e sem cabecalho vao para analise propria.",
+        "screens_informed": [
+          "k4-14",
+          "k4-16"
+        ]
+      },
+      "structure": {
+        "kind": {
+          "value": "unknown",
+          "label": "não determinado",
+          "confidence": "baixa"
+        },
+        "purpose": {
+          "text": "Montar o que o sistema chama de \"trio fechado\", aparentemente a partir de tres listas de produtos com valor. O significado de \"trio fechado\" e a relacao entre os tres paineis nao estao escritos na tela.",
+          "confidence": "baixa"
+        },
+        "fields": [],
+        "buttons": [
+          {
+            "id": "b005",
+            "label": "ícone X de fechar janela",
+            "state": "habilitado"
+          },
+          {
+            "id": "b001",
+            "label": "Gravar",
+            "state": "habilitado"
+          },
+          {
+            "id": "b002",
+            "label": "Cancelar",
+            "state": "habilitado"
+          },
+          {
+            "id": "b003",
+            "label": "Excluir",
+            "state": "habilitado"
+          },
+          {
+            "id": "b004",
+            "label": "Fechar",
+            "state": "habilitado"
+          }
+        ],
+        "lookups": [],
+        "grids": [
+          {
+            "columns": [
+              "Descrição do Produto",
+              "Valor"
+            ],
+            "rows": 0
+          },
+          {
+            "columns": [
+              "Descrição do Produto",
+              "Valor"
+            ],
+            "rows": 0
+          },
+          {
+            "columns": [
+              "Descrição do Produto",
+              "Valor"
+            ],
+            "rows": 0
+          }
+        ],
+        "messages": [],
+        "unlabeled_panels": 3,
+        "counts": {
+          "by_type": {
+            "image": 1,
+            "button": 5,
+            "group": 3,
+            "grid": 3
+          },
+          "total": 12,
+          "uncertain_items": 4
+        }
+      },
+      "patterns": [
+        {
+          "pattern_id": "FOOTER_FULL_SET",
+          "name": "Rodapé completo em tela que não é cadastro",
+          "origin": "k4-structural",
+          "status_label": "Repetição estrutural no lote K4.0. Nunca confirmada por pessoa.",
+          "question_ids": [
+            "k4-14.save.finalizes",
+            "k4-14.cancel.discards_and_closes",
+            "k4-14.delete.removes_trio",
+            "k4-14.close.closes_only"
+          ]
+        },
+        {
+          "pattern_id": "DIV_ALL_FOOTER_ENABLED",
+          "name": "Rodapé todo habilitado sem registro aberto",
+          "origin": "k4-divergence",
+          "status_label": "Diferença estrutural em relação ao Cadastro de Fabricante, vista no lote K4.0. Nunca confirmada por pessoa.",
+          "question_ids": [
+            "k4-14.flow.build_or_open"
+          ]
+        },
+        {
+          "pattern_id": "DIV_NO_ENTRY_FIELD",
+          "name": "Tela sem campo de entrada",
+          "origin": "k4-divergence",
+          "status_label": "Diferença estrutural em relação ao Cadastro de Fabricante, vista no lote K4.0. Nunca confirmada por pessoa.",
+          "question_ids": [
+            "k4-14.flow.build_or_open"
+          ]
+        },
+        {
+          "pattern_id": "DIV_TITLEBAR_X_ICON",
+          "name": "X vermelho na barra de título",
+          "origin": "k4-divergence",
+          "status_label": "Diferença estrutural em relação ao Cadastro de Fabricante, vista no lote K4.0. Nunca confirmada por pessoa.",
+          "question_ids": [
+            "k4-14.titlebar_x.same_as_close"
+          ]
+        },
+        {
+          "pattern_id": "STANDARD_SAVE",
+          "name": "Gravar",
+          "origin": "library",
+          "status_label": "Biblioteca: provisoriamente validado (estrutura). Comportamento confirmado por pessoa só no Cadastro de Fabricante.",
+          "question_ids": [
+            "k4-14.save.finalizes"
+          ]
+        },
+        {
+          "pattern_id": "STANDARD_CANCEL",
+          "name": "Cancelar",
+          "origin": "library",
+          "status_label": "Biblioteca: candidato. Comportamento confirmado por pessoa só no Cadastro de Fabricante.",
+          "question_ids": [
+            "k4-14.cancel.discards_and_closes"
+          ]
+        },
+        {
+          "pattern_id": "STANDARD_DELETE",
+          "name": "Excluir",
+          "origin": "library",
+          "status_label": "Biblioteca: candidato. Comportamento confirmado por pessoa só no Cadastro de Fabricante.",
+          "question_ids": [
+            "k4-14.delete.removes_trio"
+          ]
+        },
+        {
+          "pattern_id": "STANDARD_CLOSE",
+          "name": "Fechar",
+          "origin": "library",
+          "status_label": "Biblioteca: provisoriamente validado (estrutura). Comportamento confirmado por pessoa só no Cadastro de Fabricante.",
+          "question_ids": [
+            "k4-14.close.closes_only"
+          ]
+        }
+      ],
+      "comparison": [
+        {
+          "subject": "Gravar",
+          "confirmed": [
+            "Salva as informações preenchidas no registro."
+          ],
+          "origin": "Cadastro de Fabricante (k3-01)",
+          "reviewed_at": "2026-09-25T19:03:11.197Z",
+          "here": "AINDA NÃO VALIDADO"
+        },
+        {
+          "subject": "Cancelar",
+          "confirmed": [
+            "Descarta as alterações e fecha a tela sem salvar."
+          ],
+          "origin": "Cadastro de Fabricante (k3-01)",
+          "reviewed_at": "2026-09-25T19:03:11.197Z",
+          "here": "AINDA NÃO VALIDADO"
+        },
+        {
+          "subject": "Excluir",
+          "confirmed": [
+            "Remove o registro permanentemente do sistema, se não estiver em uso em outras tabelas."
+          ],
+          "origin": "Cadastro de Fabricante (k3-01)",
+          "reviewed_at": "2026-09-25T19:03:11.197Z",
+          "here": "AINDA NÃO VALIDADO"
+        },
+        {
+          "subject": "Fechar",
+          "confirmed": [
+            "Fecha a tela atual."
+          ],
+          "origin": "Cadastro de Fabricante (k3-01)",
+          "reviewed_at": "2026-09-25T19:03:11.197Z",
+          "here": "AINDA NÃO VALIDADO"
+        }
+      ],
+      "comparison_note": "Tela fora do padrão de cadastro: a comparação é só referência, não expectativa.",
+      "doubts": {
+        "uncertainties": [
+          {
+            "id": "u001",
+            "seen": "cada um dos tres paineis tem uma faixa cinza no topo, sem texto",
+            "why": "pode ser titulo vazio, area de selecao ou apenas moldura; nada visivel desempata"
+          },
+          {
+            "id": "u002",
+            "seen": "\"Gravar\", \"Cancelar\", \"Excluir\" e \"Fechar\" aparecem todos em preto",
+            "why": "diferente das demais telas do lote, nenhum botao esta em cinza; o estado vale apenas para esta captura"
+          },
+          {
+            "id": "u003",
+            "seen": "os tres grids estao vazios e tem as mesmas duas colunas",
+            "why": "nao ha linha, total nem rotulo que diga o que diferencia um painel do outro"
+          },
+          {
+            "id": "u004",
+            "seen": "a janela nao tem cabecalho interno, campo \"Código\" nem campo de entrada",
+            "why": "nao se sabe como um registro e aberto ou escolhido nesta rotina"
+          }
+        ],
+        "open_questions": [
+          {
+            "id": "q001",
+            "text": "O que e um \"trio fechado\" nesta rotina e o que cada um dos tres paineis representa?",
+            "priority": "high",
+            "source": "pessoa que conhece o negócio"
+          },
+          {
+            "id": "q002",
+            "text": "Como os produtos entram nos grids, se a tela nao tem campo de entrada nem botao de busca?",
+            "priority": "high",
+            "source": "usar o sistema"
+          },
+          {
+            "id": "q003",
+            "text": "Por que \"Gravar\", \"Cancelar\" e \"Excluir\" aparecem habilitados sem registro aberto?",
+            "priority": "medium",
+            "source": "usar o sistema"
+          },
+          {
+            "id": "q004",
+            "text": "Excluir um registro em uso em outra rotina e bloqueado? Ha confirmacao antes de excluir?",
+            "priority": "medium",
+            "source": "usar o sistema ou o manual"
+          },
+          {
+            "id": "q005",
+            "text": "Quais campos sao obrigatorios e que validacao ocorre ao gravar?",
+            "priority": "medium",
+            "source": "usar o sistema"
+          }
+        ],
+        "deferred_to_firebird": 1
+      },
+      "questions": [
+        {
+          "id": "k4-14.purpose.trio_fechado",
+          "key": "purpose.trio_fechado",
+          "subject": "Finalidade da rotina",
+          "mode": "hypothesis",
+          "tag": "INFERRED",
+          "text": "A rotina serve para montar um “trio fechado” a partir de três listas de produtos com valor?",
+          "basis": "A IA entendeu pouco desta tela (confiança baixa): nada escrito diz o que é um trio fechado nem o que diferencia os três painéis.",
+          "hint": null,
+          "placeholder": "Para que serve a rotina, o que é um trio fechado, o que cada painel representa.",
+          "detail_prompt": "Se puder, diga o que é um trio fechado e o que cada painel representa (opcional).",
+          "hypothesis": {
+            "text": "Montar o que o sistema chama de \"trio fechado\", aparentemente a partir de tres listas de produtos com valor. O significado de \"trio fechado\" e a relacao entre os tres paineis nao estao escritos na tela.",
+            "confidence": "low",
+            "confidence_label": "baixa",
+            "source": "knowledge.bundle.json · screen_model.purpose (INFERRED)"
+          },
+          "candidate_pattern": null,
+          "source_screen_if_pattern": null,
+          "covers": [
+            "SCREEN_PURPOSE"
+          ],
+          "topic_ids": [
+            "SCREEN_PURPOSE"
+          ],
+          "topic_names": [
+            "Finalidade da rotina"
+          ],
+          "element_ids": [
+            "g001",
+            "g002",
+            "g003"
+          ],
+          "tag_label": "INFERIDO"
+        },
+        {
+          "id": "k4-14.flow.build_or_open",
+          "key": "flow.build_or_open",
+          "subject": "Como a montagem acontece",
+          "mode": "open",
+          "tag": "OBSERVED",
+          "text": "Como se monta um trio, ou se abre um já montado, nesta tela?",
+          "basis": "A captura não mostra campo “Código”, campo de entrada nem botão de busca, e os quatro botões do rodapé já aparecem habilitados.",
+          "hint": null,
+          "placeholder": "Ex.: onde se escolhe o produto; se algo já vem carregado ao abrir a tela.",
+          "detail_prompt": null,
+          "hypothesis": null,
+          "candidate_pattern": {
+            "pattern_id": "DIV_NO_ENTRY_FIELD",
+            "name": "Tela sem campo de entrada",
+            "origin": "k4-divergence",
+            "library_status": null,
+            "claim_ids": [],
+            "claim_status": {},
+            "related_pattern_ids": [
+              "DIV_ALL_FOOTER_ENABLED"
+            ]
+          },
+          "source_screen_if_pattern": null,
+          "covers": [
+            "DIV_NO_ENTRY_FIELD",
+            "DIV_ALL_FOOTER_ENABLED"
+          ],
+          "topic_ids": [],
+          "topic_names": [],
+          "element_ids": [
+            "g001",
+            "g002",
+            "g003"
+          ],
+          "tag_label": "OBSERVADO"
+        },
+        {
+          "id": "k4-14.save.finalizes",
+          "key": "save.finalizes",
+          "subject": "Gravar",
+          "mode": "pattern",
+          "tag": "VALIDATED_ELSEWHERE",
+          "text": "“Gravar” salva a montagem e é ele que conclui a operação?",
+          "basis": "Tela fora do padrão de cadastro: a comparação com o Cadastro de Fabricante é só referência.",
+          "hint": null,
+          "placeholder": null,
+          "detail_prompt": null,
+          "hypothesis": null,
+          "candidate_pattern": {
+            "pattern_id": "STANDARD_SAVE",
+            "name": "Gravar",
+            "origin": "library",
+            "library_status": "provisionally_validated",
+            "claim_ids": [
+              "save.persists"
+            ],
+            "claim_status": {
+              "save.persists": "provisionally_validated"
+            },
+            "related_pattern_ids": [
+              "FOOTER_FULL_SET"
+            ]
+          },
+          "source_screen_if_pattern": {
+            "pilot_id": "k3-01",
+            "screen_id": "scr-8001",
+            "screen_title": "Cadastro de Fabricante",
+            "review_id": "k3-01.reviewer_1",
+            "reviewed_at": "2026-09-25T19:03:11.197Z",
+            "confirmed_text": "Salva as informações preenchidas no registro.",
+            "evidence_level_there": "VALIDATED",
+            "status_here": "NOT_VALIDATED"
+          },
+          "covers": [
+            "STANDARD_SAVE",
+            "FOOTER_FULL_SET"
+          ],
+          "topic_ids": [],
+          "topic_names": [],
+          "element_ids": [
+            "b001"
+          ],
+          "tag_label": "CONFIRMADO EM OUTRA TELA"
+        },
+        {
+          "id": "k4-14.cancel.discards_and_closes",
+          "key": "cancel.discards_and_closes",
+          "subject": "Cancelar",
+          "mode": "pattern",
+          "tag": "VALIDATED_ELSEWHERE",
+          "text": "“Cancelar” descarta o que não foi gravado e fecha a tela?",
+          "basis": "A IA não soube dizer o efeito exato de “Cancelar” nesta tela.",
+          "hint": null,
+          "placeholder": null,
+          "detail_prompt": null,
+          "hypothesis": null,
+          "candidate_pattern": {
+            "pattern_id": "STANDARD_CANCEL",
+            "name": "Cancelar",
+            "origin": "library",
+            "library_status": "candidate",
+            "claim_ids": [
+              "cancel.discards",
+              "cancel.closes_window"
+            ],
+            "claim_status": {
+              "cancel.discards": "provisionally_validated",
+              "cancel.closes_window": "candidate"
+            },
+            "related_pattern_ids": [
+              "FOOTER_FULL_SET"
+            ]
+          },
+          "source_screen_if_pattern": {
+            "pilot_id": "k3-01",
+            "screen_id": "scr-8001",
+            "screen_title": "Cadastro de Fabricante",
+            "review_id": "k3-01.reviewer_1",
+            "reviewed_at": "2026-09-25T19:03:11.197Z",
+            "confirmed_text": "Descarta as alterações e fecha a tela sem salvar.",
+            "evidence_level_there": "VALIDATED",
+            "status_here": "NOT_VALIDATED"
+          },
+          "covers": [
+            "STANDARD_CANCEL",
+            "FOOTER_FULL_SET"
+          ],
+          "topic_ids": [],
+          "topic_names": [],
+          "element_ids": [
+            "b002"
+          ],
+          "tag_label": "CONFIRMADO EM OUTRA TELA"
+        },
+        {
+          "id": "k4-14.delete.removes_trio",
+          "key": "delete.removes_trio",
+          "subject": "Excluir",
+          "mode": "pattern",
+          "tag": "VALIDATED_ELSEWHERE",
+          "text": "“Excluir” remove o trio inteiro, e não só um produto de um painel?",
+          "basis": "A IA não soube dizer o que “Excluir” remove nesta tela.",
+          "hint": null,
+          "placeholder": null,
+          "detail_prompt": null,
+          "hypothesis": null,
+          "candidate_pattern": {
+            "pattern_id": "STANDARD_DELETE",
+            "name": "Excluir",
+            "origin": "library",
+            "library_status": "candidate",
+            "claim_ids": [
+              "delete.removes_record"
+            ],
+            "claim_status": {
+              "delete.removes_record": "provisionally_validated"
+            },
+            "related_pattern_ids": [
+              "FOOTER_FULL_SET"
+            ]
+          },
+          "source_screen_if_pattern": {
+            "pilot_id": "k3-01",
+            "screen_id": "scr-8001",
+            "screen_title": "Cadastro de Fabricante",
+            "review_id": "k3-01.reviewer_1",
+            "reviewed_at": "2026-09-25T19:03:11.197Z",
+            "confirmed_text": "Remove o registro permanentemente do sistema, se não estiver em uso em outras tabelas.",
+            "evidence_level_there": "VALIDATED",
+            "status_here": "NOT_VALIDATED"
+          },
+          "covers": [
+            "STANDARD_DELETE",
+            "FOOTER_FULL_SET"
+          ],
+          "topic_ids": [],
+          "topic_names": [],
+          "element_ids": [
+            "b003"
+          ],
+          "tag_label": "CONFIRMADO EM OUTRA TELA"
+        },
+        {
+          "id": "k4-14.close.closes_only",
+          "key": "close.closes_only",
+          "subject": "Fechar",
+          "mode": "pattern",
+          "tag": "VALIDATED_ELSEWHERE",
+          "text": "“Fechar” apenas fecha a tela?",
+          "basis": "Tela fora do padrão de cadastro: a comparação é só referência.",
+          "hint": null,
+          "placeholder": null,
+          "detail_prompt": null,
+          "hypothesis": null,
+          "candidate_pattern": {
+            "pattern_id": "STANDARD_CLOSE",
+            "name": "Fechar",
+            "origin": "library",
+            "library_status": "provisionally_validated",
+            "claim_ids": [
+              "close.closes_screen"
+            ],
+            "claim_status": {
+              "close.closes_screen": "provisionally_validated"
+            },
+            "related_pattern_ids": [
+              "FOOTER_FULL_SET"
+            ]
+          },
+          "source_screen_if_pattern": {
+            "pilot_id": "k3-01",
+            "screen_id": "scr-8001",
+            "screen_title": "Cadastro de Fabricante",
+            "review_id": "k3-01.reviewer_1",
+            "reviewed_at": "2026-09-25T19:03:11.197Z",
+            "confirmed_text": "Fecha a tela atual.",
+            "evidence_level_there": "VALIDATED",
+            "status_here": "NOT_VALIDATED"
+          },
+          "covers": [
+            "STANDARD_CLOSE",
+            "FOOTER_FULL_SET"
+          ],
+          "topic_ids": [],
+          "topic_names": [],
+          "element_ids": [
+            "b004"
+          ],
+          "tag_label": "CONFIRMADO EM OUTRA TELA"
+        },
+        {
+          "id": "k4-14.titlebar_x.same_as_close",
+          "key": "titlebar_x.same_as_close",
+          "subject": "X vermelho da barra de título",
+          "mode": "hypothesis",
+          "tag": "CANDIDATE_PATTERN",
+          "text": "O X vermelho da barra de título faz o mesmo que “Fechar”?",
+          "basis": "O mesmo ícone aparece em Números x Letras (k4-16) e em duas telas do piloto K3. Em nenhuma foi confirmado.",
+          "hint": null,
+          "placeholder": null,
+          "detail_prompt": null,
+          "hypothesis": {
+            "text": "Fechar a janela pelo botao da barra de titulo.",
+            "confidence": "medium",
+            "confidence_label": "média",
+            "source": "knowledge.bundle.json · b005.intended_purpose (INFERRED)"
+          },
+          "candidate_pattern": {
+            "pattern_id": "DIV_TITLEBAR_X_ICON",
+            "name": "X vermelho na barra de título",
+            "origin": "k4-divergence",
+            "library_status": null,
+            "claim_ids": [
+              "close.closes_screen"
+            ],
+            "claim_status": {
+              "close.closes_screen": "provisionally_validated"
+            },
+            "related_pattern_ids": []
+          },
+          "source_screen_if_pattern": null,
+          "covers": [
+            "DIV_TITLEBAR_X_ICON"
+          ],
+          "topic_ids": [],
+          "topic_names": [],
+          "element_ids": [
+            "b005",
+            "b004"
+          ],
+          "tag_label": "PADRÃO CANDIDATO"
+        },
+        {
+          "id": "k4-14.panel_header.gray_strip",
+          "key": "panel_header.gray_strip",
+          "subject": "Faixa cinza no topo dos painéis",
+          "mode": "hypothesis",
+          "tag": "OBSERVED",
+          "text": "A faixa cinza no topo de cada painel é só moldura, sem função no uso?",
+          "basis": "É o motivo da amostragem (SAMPLE_QA) desta tela: componente sem rótulo. Nada visível diz se é título vazio, área de seleção ou moldura.",
+          "hint": "Se ela mostra algo (título, total) ou serve para escolher, marque FUNCIONA DIFERENTE.",
+          "placeholder": null,
+          "detail_prompt": null,
+          "hypothesis": null,
+          "candidate_pattern": null,
+          "source_screen_if_pattern": null,
+          "covers": [
+            "SAMPLE_QA_REASON"
+          ],
+          "topic_ids": [
+            "SAMPLE_QA_REASON"
+          ],
+          "topic_names": [
+            "Motivo da amostragem: componente sem rótulo"
+          ],
+          "element_ids": [
+            "grp001",
+            "grp002",
+            "grp003"
+          ],
+          "tag_label": "OBSERVADO"
+        }
+      ],
+      "expected_information_gain": {
+        "level": "alto",
+        "summary": "Mede o limite do padrao de rodape: se ele vale onde a tela nao e cadastro. Resolve a unica tela de confianca baixa do lote e o motivo do seu SAMPLE_QA.",
+        "screens_informed": [
+          "k4-14",
+          "k4-16"
+        ],
+        "recurrent_questions_informed": {
+          "titlebar_x_icon_screens_k4": 2,
+          "footer_enabled_without_record_screens": 1
+        },
+        "recurrent_questions_note": "o icone X tambem aparece em k3-05 e k3-09; os artefatos do K3 nao sao tocados",
+        "if_confirmed": "O rodape passa a indicar comportamento mesmo fora do arquetipo de cadastro, o que fortalece o padrao para telas de processo e montagem dos proximos modulos.",
+        "if_divergent": "A IA passa a exigir arquetipo casado antes de aplicar padrao de rodape; telas sem Codigo e sem cabecalho vao para analise propria."
+      },
+      "is_candidate": true
+    },
+    {
+      "rank": 4,
+      "pilot_id": "k4-16",
+      "screen_id": "scr-8116",
+      "title": "Números x Letras",
+      "module": "Tabelas",
+      "submodule": "Faturamento",
+      "menu_path": [
+        "Tabelas",
+        "Faturamento"
+      ],
+      "menu_path_source": "filesystem",
+      "review_class": "AUTO_PASS",
+      "review_class_label": "Segue automático",
+      "review_class_meaning": "Nada pede julgamento agora. Entra só em auditoria aleatória.",
+      "review_class_reasons": [
+        "Nenhum gatilho de revisao: sem conflito, sem lacuna de fonte em item critico, sem duvida de leitura em item critico e sem duvida fora dele. Nao significa correto: significa que nada pede julgamento agora."
+      ],
+      "focus": "Tela de configuração com só “Gravar” e “Fechar”. Não há pergunta sobre “Cancelar” ou “Excluir”, que não existem aqui.",
+      "family": "tela de parametros",
+      "plain_summary": "a única com botões diferentes (só Gravar e Fechar); mostra como são as telas de configuração.",
+      "why_selected": "Unica tela com rodape diferente: so \"Gravar\" e \"Fechar\", sem \"Cancelar\" e sem \"Excluir\", com \"Gravar\" habilitado na captura e icone X na barra de titulo. E a segunda tela do arquetipo \"tela de parametros\" (a primeira foi k3-05, sem revisao humana), com 20 caixas sem rotulo (os digitos de 0 a 9 e seus substitutos).",
+      "gain": {
+        "level": "medio-alto",
+        "summary": "Da a primeira confirmacao humana do arquetipo de parametros (hoje so inferido, em k3-05 e k4-16) e da unica divergencia de rodape do lote.",
+        "if_confirmed": "Telas de parametros sem Cancelar e sem Excluir podem seguir automaticas na escala, com o arquetipo como hipotese forte.",
+        "if_divergent": "O arquetipo de parametros e revisto antes de ser aplicado em outros modulos.",
+        "screens_informed": [
+          "k4-16",
+          "k4-14"
+        ]
+      },
+      "structure": {
+        "kind": {
+          "value": "configuration",
+          "label": "configuração",
+          "confidence": "alta"
+        },
+        "purpose": {
+          "text": "Configurar uma substituicao de cada digito de 0 a 9 por outro valor, provavelmente uma letra, como sugere o titulo \"Números x Letras\". Onde a codificacao e usada (por exemplo, para esconder preco de custo em etiqueta) nao e observavel.",
+          "confidence": "média"
+        },
+        "fields": [
+          {
+            "label": "(sem rótulo)",
+            "type": "texto",
+            "count": 10,
+            "values": [
+              "0",
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7",
+              "8",
+              "9"
+            ],
+            "lookup": false
+          },
+          {
+            "label": "(sem rótulo)",
+            "type": "texto",
+            "count": 10,
+            "values": [],
+            "lookup": false
+          }
+        ],
+        "buttons": [
+          {
+            "id": "b003",
+            "label": "ícone X de fechar janela",
+            "state": "habilitado"
+          },
+          {
+            "id": "b001",
+            "label": "Gravar",
+            "state": "habilitado"
+          },
+          {
+            "id": "b002",
+            "label": "Fechar",
+            "state": "habilitado"
+          }
+        ],
+        "lookups": [],
+        "grids": [],
+        "messages": [],
+        "unlabeled_panels": 0,
+        "counts": {
+          "by_type": {
+            "image": 2,
+            "button": 3,
+            "label": 4,
+            "text_input": 20
+          },
+          "total": 29,
+          "uncertain_items": 4
+        }
+      },
+      "patterns": [
+        {
+          "pattern_id": "configuration_screen",
+          "name": "Arquétipo “tela de parâmetros”",
+          "origin": "archetype",
+          "status_label": "Arquétipo inferido. Nunca confirmado por pessoa.",
+          "question_ids": [
+            "k4-16.config.single_instance"
+          ]
+        },
+        {
+          "pattern_id": "STANDARD_SAVE",
+          "name": "Gravar",
+          "origin": "library",
+          "status_label": "Biblioteca: provisoriamente validado (estrutura). Comportamento confirmado por pessoa só no Cadastro de Fabricante.",
+          "question_ids": [
+            "k4-16.save.persists_table"
+          ]
+        },
+        {
+          "pattern_id": "DIV_FOOTER_WITHOUT_CANCEL_DELETE",
+          "name": "Rodapé só com “Gravar” e “Fechar”",
+          "origin": "k4-divergence",
+          "status_label": "Diferença estrutural em relação ao Cadastro de Fabricante, vista no lote K4.0. Nunca confirmada por pessoa.",
+          "question_ids": [
+            "k4-16.config.single_instance"
+          ]
+        },
+        {
+          "pattern_id": "DIV_TITLEBAR_X_ICON",
+          "name": "X vermelho na barra de título",
+          "origin": "k4-divergence",
+          "status_label": "Diferença estrutural em relação ao Cadastro de Fabricante, vista no lote K4.0. Nunca confirmada por pessoa.",
+          "question_ids": [
+            "k4-16.titlebar_x.same_as_close"
+          ]
+        },
+        {
+          "pattern_id": "STANDARD_CLOSE",
+          "name": "Fechar",
+          "origin": "library",
+          "status_label": "Biblioteca: provisoriamente validado (estrutura). Comportamento confirmado por pessoa só no Cadastro de Fabricante.",
+          "question_ids": [
+            "k4-16.close.closes_only"
+          ]
+        }
+      ],
+      "comparison": [
+        {
+          "subject": "Gravar",
+          "confirmed": [
+            "Salva as informações preenchidas no registro."
+          ],
+          "origin": "Cadastro de Fabricante (k3-01)",
+          "reviewed_at": "2026-09-25T19:03:11.197Z",
+          "here": "AINDA NÃO VALIDADO"
+        },
+        {
+          "subject": "Fechar",
+          "confirmed": [
+            "Fecha a tela atual."
+          ],
+          "origin": "Cadastro de Fabricante (k3-01)",
+          "reviewed_at": "2026-09-25T19:03:11.197Z",
+          "here": "AINDA NÃO VALIDADO"
+        }
+      ],
+      "comparison_note": "Só “Gravar” e “Fechar” existem nesta tela.",
+      "doubts": {
+        "uncertainties": [
+          {
+            "id": "u001",
+            "seen": "as dez caixas da linha \"Números\" mostram 0 a 9 em caixas brancas",
+            "why": "tem a mesma aparencia das caixas editaveis, mas podem ser so exibicao; tipo registrado com confianca medium"
+          },
+          {
+            "id": "u002",
+            "seen": "as dez caixas da segunda linha estao vazias e a primeira mostra um cursor de texto",
+            "why": "o cursor indica foco nesta captura; nao e comportamento observado"
+          },
+          {
+            "id": "u003",
+            "seen": "o rotulo diz \"corresponte\"",
+            "why": "grafia preservada literalmente; nao corrigida"
+          },
+          {
+            "id": "u004",
+            "seen": "\"Gravar\" aparece em preto, habilitado, com as caixas vazias",
+            "why": "estado desta captura; nao se sabe o que sera gravado com a segunda linha vazia"
+          }
+        ],
+        "open_questions": [
+          {
+            "id": "q001",
+            "text": "Onde a codificacao numero x letra e usada: etiqueta, relatorio ou tela de venda?",
+            "priority": "high",
+            "source": "pessoa que conhece o negócio"
+          },
+          {
+            "id": "q002",
+            "text": "Cada caixa da segunda linha aceita so um caractere? Letras repetidas sao permitidas?",
+            "priority": "medium",
+            "source": "usar o sistema"
+          },
+          {
+            "id": "q003",
+            "text": "Quais campos sao obrigatorios e que validacao ocorre ao gravar?",
+            "priority": "medium",
+            "source": "usar o sistema"
+          }
+        ],
+        "deferred_to_firebird": 1
+      },
+      "questions": [
+        {
+          "id": "k4-16.purpose.digit_substitution",
+          "key": "purpose.digit_substitution",
+          "subject": "Finalidade da configuração",
+          "mode": "hypothesis",
+          "tag": "INFERRED",
+          "text": "Esta tela define um caractere (por exemplo, uma letra) para substituir cada dígito de 0 a 9?",
+          "basis": "Hipótese da IA pelo título e pela linha “Novo valor dos números acima corresponte” (grafia original preservada).",
+          "hint": null,
+          "placeholder": null,
+          "detail_prompt": "Algum detalhe que ajude a entender a configuração (opcional)?",
+          "hypothesis": {
+            "text": "Configurar uma substituicao de cada digito de 0 a 9 por outro valor, provavelmente uma letra, como sugere o titulo \"Números x Letras\". Onde a codificacao e usada (por exemplo, para esconder preco de custo em etiqueta) nao e observavel.",
+            "confidence": "medium",
+            "confidence_label": "média",
+            "source": "knowledge.bundle.json · screen_model.purpose (INFERRED)"
+          },
+          "candidate_pattern": null,
+          "source_screen_if_pattern": null,
+          "covers": [
+            "SCREEN_PURPOSE"
+          ],
+          "topic_ids": [
+            "SCREEN_PURPOSE"
+          ],
+          "topic_names": [
+            "Finalidade da rotina"
+          ],
+          "element_ids": [
+            "c005"
+          ],
+          "tag_label": "INFERIDO"
+        },
+        {
+          "id": "k4-16.usage.where_used",
+          "key": "usage.where_used",
+          "subject": "Quando a configuração é usada",
+          "mode": "open",
+          "tag": "INFERRED",
+          "text": "Onde ou quando essa codificação aparece no sistema?",
+          "basis": "A tela não mostra onde a codificação é usada. Palpite da IA, sem evidência: esconder preço de custo em etiqueta.",
+          "hint": null,
+          "placeholder": "Ex.: etiqueta de produto, relatório, tela de venda.",
+          "detail_prompt": null,
+          "hypothesis": null,
+          "candidate_pattern": null,
+          "source_screen_if_pattern": null,
+          "covers": [
+            "SCREEN_PURPOSE"
+          ],
+          "topic_ids": [
+            "SCREEN_PURPOSE"
+          ],
+          "topic_names": [
+            "Finalidade da rotina"
+          ],
+          "element_ids": [],
+          "tag_label": "INFERIDO"
+        },
+        {
+          "id": "k4-16.save.persists_table",
+          "key": "save.persists_table",
+          "subject": "Gravar",
+          "mode": "pattern",
+          "tag": "VALIDATED_ELSEWHERE",
+          "text": "“Gravar” salva a tabela de substituição inteira?",
+          "basis": "Aqui “Gravar” já aparece habilitado ao abrir a tela, diferente dos cadastros do lote.",
+          "hint": null,
+          "placeholder": null,
+          "detail_prompt": null,
+          "hypothesis": null,
+          "candidate_pattern": {
+            "pattern_id": "STANDARD_SAVE",
+            "name": "Gravar",
+            "origin": "library",
+            "library_status": "provisionally_validated",
+            "claim_ids": [
+              "save.persists"
+            ],
+            "claim_status": {
+              "save.persists": "provisionally_validated"
+            },
+            "related_pattern_ids": []
+          },
+          "source_screen_if_pattern": {
+            "pilot_id": "k3-01",
+            "screen_id": "scr-8001",
+            "screen_title": "Cadastro de Fabricante",
+            "review_id": "k3-01.reviewer_1",
+            "reviewed_at": "2026-09-25T19:03:11.197Z",
+            "confirmed_text": "Salva as informações preenchidas no registro.",
+            "evidence_level_there": "VALIDATED",
+            "status_here": "NOT_VALIDATED"
+          },
+          "covers": [
+            "STANDARD_SAVE"
+          ],
+          "topic_ids": [],
+          "topic_names": [],
+          "element_ids": [
+            "b001"
+          ],
+          "tag_label": "CONFIRMADO EM OUTRA TELA"
+        },
+        {
+          "id": "k4-16.close.closes_only",
+          "key": "close.closes_only",
+          "subject": "Fechar",
+          "mode": "pattern",
+          "tag": "VALIDATED_ELSEWHERE",
+          "text": "“Fechar” apenas fecha a tela?",
+          "basis": "Tela de configuração: só há “Gravar” e “Fechar” no rodapé.",
+          "hint": null,
+          "placeholder": null,
+          "detail_prompt": null,
+          "hypothesis": null,
+          "candidate_pattern": {
+            "pattern_id": "STANDARD_CLOSE",
+            "name": "Fechar",
+            "origin": "library",
+            "library_status": "provisionally_validated",
+            "claim_ids": [
+              "close.closes_screen"
+            ],
+            "claim_status": {
+              "close.closes_screen": "provisionally_validated"
+            },
+            "related_pattern_ids": []
+          },
+          "source_screen_if_pattern": {
+            "pilot_id": "k3-01",
+            "screen_id": "scr-8001",
+            "screen_title": "Cadastro de Fabricante",
+            "review_id": "k3-01.reviewer_1",
+            "reviewed_at": "2026-09-25T19:03:11.197Z",
+            "confirmed_text": "Fecha a tela atual.",
+            "evidence_level_there": "VALIDATED",
+            "status_here": "NOT_VALIDATED"
+          },
+          "covers": [
+            "STANDARD_CLOSE"
+          ],
+          "topic_ids": [],
+          "topic_names": [],
+          "element_ids": [
+            "b002"
+          ],
+          "tag_label": "CONFIRMADO EM OUTRA TELA"
+        },
+        {
+          "id": "k4-16.config.single_instance",
+          "key": "config.single_instance",
+          "subject": "Configuração única",
+          "mode": "hypothesis",
+          "tag": "CANDIDATE_PATTERN",
+          "text": "Existe uma só tabela Números x Letras, e a tela sempre abre essa mesma configuração?",
+          "basis": "Arquétipo “tela de parâmetros”, só inferido: sem “Código”, sem “Cancelar” e sem “Excluir”. A outra tela desse tipo (k3-05) também não teve revisão humana.",
+          "hint": null,
+          "placeholder": null,
+          "detail_prompt": null,
+          "hypothesis": null,
+          "candidate_pattern": {
+            "pattern_id": "configuration_screen",
+            "name": "Arquétipo “tela de parâmetros”",
+            "origin": "archetype",
+            "library_status": "archetype (INFERRED)",
+            "claim_ids": [],
+            "claim_status": {},
+            "related_pattern_ids": [
+              "DIV_FOOTER_WITHOUT_CANCEL_DELETE"
+            ]
+          },
+          "source_screen_if_pattern": null,
+          "covers": [
+            "configuration_screen",
+            "DIV_FOOTER_WITHOUT_CANCEL_DELETE"
+          ],
+          "topic_ids": [],
+          "topic_names": [],
+          "element_ids": [],
+          "tag_label": "PADRÃO CANDIDATO"
+        },
+        {
+          "id": "k4-16.digits_row.fixed",
+          "key": "digits_row.fixed",
+          "subject": "Linha “Números”",
+          "mode": "hypothesis",
+          "tag": "OBSERVED",
+          "text": "A linha “Números” (0 a 9) é fixa, e só a segunda linha é preenchida?",
+          "basis": "As caixas de 0 a 9 têm a mesma aparência das caixas editáveis.",
+          "hint": null,
+          "placeholder": null,
+          "detail_prompt": null,
+          "hypothesis": null,
+          "candidate_pattern": null,
+          "source_screen_if_pattern": null,
+          "covers": [
+            "FIELD_EDITABILITY"
+          ],
+          "topic_ids": [
+            "FIELD_EDITABILITY"
+          ],
+          "topic_names": [
+            "Caixas editáveis ou só exibição"
+          ],
+          "element_ids": [
+            "c005"
+          ],
+          "tag_label": "OBSERVADO"
+        },
+        {
+          "id": "k4-16.titlebar_x.same_as_close",
+          "key": "titlebar_x.same_as_close",
+          "subject": "X vermelho da barra de título",
+          "mode": "hypothesis",
+          "tag": "CANDIDATE_PATTERN",
+          "text": "O X vermelho da barra de título faz o mesmo que “Fechar”?",
+          "basis": "O mesmo ícone aparece em Montagem do Trio Fechado (k4-14) e em duas telas do piloto K3. Em nenhuma foi confirmado.",
+          "hint": null,
+          "placeholder": null,
+          "detail_prompt": null,
+          "hypothesis": {
+            "text": "Fechar a janela pelo botao da barra de titulo.",
+            "confidence": "medium",
+            "confidence_label": "média",
+            "source": "knowledge.bundle.json · b003.intended_purpose (INFERRED)"
+          },
+          "candidate_pattern": {
+            "pattern_id": "DIV_TITLEBAR_X_ICON",
+            "name": "X vermelho na barra de título",
+            "origin": "k4-divergence",
+            "library_status": null,
+            "claim_ids": [
+              "close.closes_screen"
+            ],
+            "claim_status": {
+              "close.closes_screen": "provisionally_validated"
+            },
+            "related_pattern_ids": []
+          },
+          "source_screen_if_pattern": null,
+          "covers": [
+            "DIV_TITLEBAR_X_ICON"
+          ],
+          "topic_ids": [],
+          "topic_names": [],
+          "element_ids": [
+            "b003",
+            "b002"
+          ],
+          "tag_label": "PADRÃO CANDIDATO"
+        }
+      ],
+      "expected_information_gain": {
+        "level": "medio-alto",
+        "summary": "Da a primeira confirmacao humana do arquetipo de parametros (hoje so inferido, em k3-05 e k4-16) e da unica divergencia de rodape do lote.",
+        "screens_informed": [
+          "k4-16",
+          "k4-14"
+        ],
+        "recurrent_questions_informed": {
+          "footer_without_cancel_delete_screens": 1,
+          "titlebar_x_icon_screens_k4": 2
+        },
+        "recurrent_questions_note": "o arquetipo de parametros deve reaparecer em modulos com configuracoes; neste lote so ha 1 tela",
+        "if_confirmed": "Telas de parametros sem Cancelar e sem Excluir podem seguir automaticas na escala, com o arquetipo como hipotese forte.",
+        "if_divergent": "O arquetipo de parametros e revisto antes de ser aplicado em outros modulos."
+      },
+      "is_candidate": true
+    }
+  ],
+  "export_contract": {
+    "schema": "k4-human-review@1.0.0",
+    "file_name": "k4-human-review.json"
+  },
+  "answer_labels": {
+    "SAME": "FUNCIONA ASSIM",
+    "DIFFERENT": "FUNCIONA DIFERENTE",
+    "UNKNOWN": "NÃO SEI",
+    "NOT_APPLICABLE": "NÃO SE APLICA",
+    "EXPLAINED": "SEI EXPLICAR"
+  },
+  "tag_labels": {
+    "OBSERVED": "OBSERVADO",
+    "INFERRED": "INFERIDO",
+    "CANDIDATE_PATTERN": "PADRÃO CANDIDATO",
+    "VALIDATED_ELSEWHERE": "CONFIRMADO EM OUTRA TELA"
+  }
+}

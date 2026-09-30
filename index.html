@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>SYSCOM · Inteligência de Documentação · K4.1 Validação Humana</title>
+<meta name="description" content="Painel de acompanhamento e validação humana do projeto de documentação inteligente do SYSCOM. K4.1 — 20 telas analisadas, 4 selecionadas para revisão estratégica.">
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="topbar" role="banner">
+  <div class="wrap topbar-inner">
+    <div class="brand">
+      <span class="brand-mark">SYSCOM</span>
+      <span class="brand-sub">Inteligência de Documentação</span>
+    </div>
+    <nav class="topnav" aria-label="Seções da página">
+      <a href="#visao-geral">Visão Geral</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#telas">20 telas</a>
+      <a href="#padroes">Padrões</a>
+      <a href="#preciso-fazer">O que eu preciso fazer</a>
+      <a href="#revisar">Revisar 4 telas</a>
+    </nav>
+    <div class="header-cta">
+      <button type="button" class="btn btn-outline" id="btn-open-guide">
+        <span>Guia do Gestor</span>
+      </button>
+      <button type="button" class="btn btn-ghost boss-toggle-btn" id="boss-toggle" aria-pressed="false">
+        <span>Modo Chefe</span>
+      </button>
+      <a href="#revisar" class="btn btn-primary" id="cta-start-review">
+        <span>Iniciar Revisão</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="conteudo" tabindex="-1">
+
+  <!-- ============================================================ HERO -->
+  <section class="hero" id="topo">
+    <div class="wrap hero-inner">
+      <span class="badge"><span class="badge-dot" aria-hidden="true"></span>K4.1 — Validação Humana</span>
+      <h1 class="hero-title">SYSCOM<br><span>Inteligência de Documentação</span></h1>
+      <p class="hero-subtitle">Análise automática + validação humana estratégica</p>
+      <p class="hero-lede">
+        20 telas foram analisadas automaticamente. A IA selecionou 4 casos que
+        trazem maior ganho de conhecimento.
+      </p>
+      <div class="hero-actions">
+        <a href="#revisar" class="btn btn-primary">Iniciar Revisão</a>
+        <a href="#visao-geral" class="btn btn-ghost">Ver visão geral</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ EM UMA FRASE -->
+  <div class="wrap">
+    <div class="one-liner" role="note">
+      <span class="one-liner-tag">Em uma frase</span>
+      <p>Estamos ensinando a IA a transformar as telas do SYSCOM em conhecimento documentado, usando revisão humana apenas onde ela realmente agrega valor.</p>
+    </div>
+  </div>
+
+  <!-- ============================================================ MÉTRICAS -->
+  <section class="section" id="visao-geral" aria-labelledby="t-metricas">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="section-eyebrow">Visão Geral</p>
+        <h2 class="section-title" id="t-metricas">O que a análise automática encontrou</h2>
+        <p class="section-lead">Números tirados diretamente do lote processado. Nada aqui foi arredondado ou estimado.</p>
+      </div>
+      <div class="grid grid-6" id="metrics-grid" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================ COMO FUNCIONA -->
+  <section class="section section-alt" id="como-funciona" aria-labelledby="t-como-funciona">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="section-eyebrow">Como funciona</p>
+        <h2 class="section-title" id="t-como-funciona">Da tela à confirmação humana</h2>
+        <p class="section-lead">Passe o mouse ou clique em cada etapa para entender o que ela faz.</p>
+      </div>
+      <div class="flow-rail" id="flow-rail" role="list"></div>
+      <div class="flow-detail" id="flow-detail" aria-live="polite">Escolha uma etapa acima para ver o detalhe.</div>
+    </div>
+  </section>
+
+  <!-- ============================================================ O CONCEITO MAIS IMPORTANTE -->
+  <section class="section" id="conceito" aria-labelledby="t-conceito">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="section-eyebrow">O conceito mais importante</p>
+        <h2 class="section-title" id="t-conceito">Quatro níveis, nunca misturados</h2>
+        <p class="section-lead">Toda informação carrega a sua origem. Repetição não é confirmação.</p>
+      </div>
+      <div class="grid grid-4">
+        <article class="card concept-card" data-tone="observed">
+          <span class="concept-tag">Observado</span>
+          <h3>O que a IA viu</h3>
+          <p>Está visível na captura: um campo, um botão, um rótulo. Fato de leitura, não de comportamento.</p>
+        </article>
+        <article class="card concept-card" data-tone="inferred">
+          <span class="concept-tag">Inferido</span>
+          <h3>O que a IA inferiu</h3>
+          <p>Hipótese sobre para que a tela serve ou como um botão deve se comportar. Ainda não é fato.</p>
+        </article>
+        <article class="card concept-card" data-tone="validated">
+          <span class="concept-tag">Confirmado</span>
+          <h3>O que já foi confirmado</h3>
+          <p>Uma pessoa nomeada confirmou o comportamento, com data. Vale só para a tela onde foi confirmado.</p>
+        </article>
+        <article class="card concept-card" data-tone="unknown">
+          <span class="concept-tag">Desconhecido</span>
+          <h3>O que ainda não sabemos</h3>
+          <p>Pergunta aberta ou lacuna de evidência. Resultado legítimo — melhor do que adivinhar.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ PADRÕES CANDIDATOS -->
+  <section class="section section-alt" id="padroes" aria-labelledby="t-padroes">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="section-eyebrow">Padrões que estão aparecendo</p>
+        <h2 class="section-title" id="t-padroes">Repetição visual não é validação</h2>
+        <p class="section-lead">Os mesmos quatro botões aparecem quase em todas as telas. Isso não prova como eles funcionam.</p>
+      </div>
+      <div class="help-box">
+        <span class="help-tag">Entenda esta seção</span>
+        <p>Repetição indica um possível padrão, não uma regra já validada.</p>
+      </div>
+      <div class="grid grid-4" id="patterns-grid"></div>
+      <div class="pattern-callout">
+        <p><strong>Repetição visual não significa validação automática.</strong> Um comportamento só é fato confirmado quando uma pessoa nomeada o testou, com data.</p>
+        <div class="callout-grid">
+          <div><b>Validado por humano em</b><span id="pattern-validated-source">—</span></div>
+          <div><b>Nas telas novas</b><span>ainda em validação</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ AS 20 TELAS -->
+  <section class="section" id="telas" aria-labelledby="t-telas">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="section-eyebrow">O lote analisado</p>
+        <h2 class="section-title" id="t-telas">As 20 telas</h2>
+        <p class="section-lead">Tabelas › Faturamento. Visão compacta — sem abrir cada detalhe.</p>
+      </div>
+      <div class="help-box">
+        <span class="help-tag">Por que isso importa?</span>
+        <p>Estas são telas analisadas automaticamente. Isso não significa que todos os seus comportamentos já foram confirmados.</p>
+      </div>
+      <div class="screens-toolbar" id="screens-filters" role="group" aria-label="Filtrar telas por classe de revisão"></div>
+      <div class="grid grid-4" id="screens-grid"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================ O QUE EU PRECISO FAZER -->
+  <section class="section" id="preciso-fazer" aria-labelledby="t-preciso-fazer">
+    <div class="wrap">
+      <div class="card todo-card">
+        <h2 class="todo-title" id="t-preciso-fazer">O que eu preciso fazer?</h2>
+        <p class="todo-text">Você não precisa revisar as 20 telas. Apenas abra as 4 selecionadas, responda o que souber e, ao final, clique em <strong>Exportar Revisão</strong>.</p>
+        <div class="todo-stats">
+          <div class="todo-stat"><b>4</b><span>telas</span></div>
+          <div class="todo-stat"><b>32</b><span>perguntas no total</span></div>
+        </div>
+        <p class="todo-footnote">Você pode marcar <strong>NÃO SEI</strong> quando necessário.</p>
+        <a href="#revisar" class="btn btn-primary" id="cta-go-to-review-from-todo">Ir para a revisão</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ AS 4 CANDIDATAS -->
+  <section class="section section-alt" id="candidatas" aria-labelledby="t-candidatas">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="section-eyebrow">Selecionadas para validação estratégica</p>
+        <h2 class="section-title" id="t-candidatas">As 4 telas escolhidas para revisão</h2>
+        <p class="section-lead">Cada uma testa um limite diferente do que já foi confirmado em outra tela.</p>
+      </div>
+      <div id="candidates-list"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================ REVISÃO HUMANA -->
+  <section class="section" id="revisar" aria-labelledby="t-revisar">
+    <div class="wrap">
+
+      <div id="review-intro">
+        <div class="section-head">
+          <p class="section-eyebrow">Revisão humana</p>
+          <h2 class="section-title" id="t-revisar">Revisar as 4 telas</h2>
+          <p class="section-lead">Modo focado: uma tela por vez, com a representação esquemática ao lado das perguntas.</p>
+        </div>
+        <div class="help-box">
+          <span class="help-tag">Entenda esta seção</span>
+          <p>Você só precisa responder o que realmente conhece. Se não souber, marque "NÃO SEI".</p>
+        </div>
+        <button type="button" class="btn btn-primary" id="btn-open-review">Iniciar Revisão</button>
+      </div>
+
+      <div class="review-shell" id="review-shell">
+        <div class="review-top">
+          <div>
+            <p class="review-progress-text" id="review-progress-text" aria-live="polite">Tela 1 de 4</p>
+            <div class="review-progress-bar" aria-hidden="true"><span id="review-progress-fill"></span></div>
+          </div>
+          <div class="autosave-status">
+            <span class="dot" aria-hidden="true"></span>
+            <span id="autosave-text">Respostas salvas neste navegador ✓</span>
+          </div>
+        </div>
+
+        <nav class="review-tabs" id="review-tabs" aria-label="Telas da revisão"></nav>
+
+        <div class="review-layout" id="review-screen-panel"></div>
+
+        <div class="review-nav">
+          <button type="button" class="btn btn-ghost" id="btn-prev-screen">← Tela anterior</button>
+          <button type="button" class="btn btn-outline" id="btn-next-screen">Próxima tela →</button>
+        </div>
+
+        <div class="card export-summary" id="export-summary">
+          <h3>Resumo e exportação</h3>
+          <div class="export-grid">
+            <div class="export-stat"><b id="exp-screens">4</b><span class="muted">telas</span></div>
+            <div class="export-stat"><b id="exp-answered">0</b><span class="muted">respondidas</span></div>
+            <div class="export-stat"><b id="exp-pending">32</b><span class="muted">pendentes</span></div>
+          </div>
+          <div class="export-warning" id="export-warning">Ainda há perguntas pendentes. Você pode exportar assim mesmo — o arquivo mostra o que falta.</div>
+          <div class="reviewer-field">
+            <label for="reviewer-name">Nome de quem está revisando (obrigatório para exportar)</label>
+            <input type="text" id="reviewer-name" placeholder="Nome completo">
+          </div>
+          <button type="button" class="btn btn-primary btn-block" id="btn-export">Exportar Revisão</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ MODO CHEFE (conteúdo alternativo) -->
+  <section class="section boss-only" id="modo-chefe-resumo" aria-labelledby="t-chefe">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="section-eyebrow">Modo Chefe</p>
+        <h2 class="section-title" id="t-chefe">Resumo executivo</h2>
+      </div>
+      <div class="card boss-summary-card">
+        <div class="boss-step">
+          <span class="boss-step-n">1</span>
+          <div><h4>O problema</h4><p>O conhecimento sobre as telas do SYSCOM existe, mas está espalhado e não documentado de forma estruturada.</p></div>
+        </div>
+        <div class="boss-step">
+          <span class="boss-step-n">2</span>
+          <div><h4>O que a IA já fez</h4><p>Analisou 20 telas do módulo Tabelas › Faturamento e estruturou campos, botões e comportamentos observados, sempre distinguindo fato de hipótese.</p></div>
+        </div>
+        <div class="boss-step">
+          <span class="boss-step-n">3</span>
+          <div><h4>O que encontramos nas 20 telas</h4><p>18 seguem fluxo automático, 2 pedem verificação por amostra. Nenhuma falhou. Nenhuma exige decisão humana obrigatória.</p></div>
+        </div>
+        <div class="boss-step">
+          <span class="boss-step-n">4</span>
+          <div><h4>Por que revisar só 4</h4><p>Cada uma testa um padrão que se repete nas outras telas. Confirmar aqui informa o grupo inteiro, sem revisar uma por uma.</p></div>
+        </div>
+        <div class="boss-step">
+          <span class="boss-step-n">5</span>
+          <div><h4>O que acontece depois</h4><p>Sua resposta vale como confirmado só na tela revisada. Nas demais, o padrão continua como hipótese até ser testado de novo.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ DEMONSTRAÇÃO -->
+  <section class="section hide-on-boss" id="demonstracao" aria-labelledby="t-demo">
+    <div class="wrap text-center">
+      <p class="section-eyebrow">Não sabe por onde começar?</p>
+      <h2 class="section-title" id="t-demo">Veja como o projeto funciona em 6 passos</h2>
+      <button type="button" class="btn btn-outline mt-lg" id="btn-open-demo">Ver Demonstração</button>
+    </div>
+  </section>
+
+</main>
+
+<div class="context-strip">
+  Painel interno de acompanhamento e validação. Não corresponde à documentação web final do SYSCOM.
+</div>
+
+<footer class="foot" role="contentinfo">
+  <div class="wrap foot-grid">
+    <p>MR Consultoria e Sistemas · SYSCOM · K4.1</p>
+    <p class="gap-links">Nenhum dado é enviado a servidor. As respostas ficam salvas apenas neste navegador.</p>
+  </div>
+</footer>
+
+<!-- ============================================================ MODAL GUIA DO GESTOR -->
+<div class="demo-overlay" id="guide-overlay" role="dialog" aria-modal="true" aria-labelledby="guide-title" hidden>
+  <div class="demo-panel guide-panel">
+    <div class="demo-head">
+      <h3 id="guide-title" style="margin:0;font-size:15px;color:var(--ink-muted)">Guia do Gestor</h3>
+      <div style="display:flex;align-items:center;gap:14px">
+        <span class="demo-step-count" id="guide-step-count">1 de 7</span>
+        <button type="button" class="btn btn-small btn-ghost" id="btn-skip-guide">Pular guia</button>
+        <button type="button" class="btn btn-small btn-ghost" id="btn-close-guide">Fechar</button>
+      </div>
+    </div>
+    <div class="guide-progress-bar" aria-hidden="true"><span id="guide-progress-fill"></span></div>
+    <div class="demo-slide guide-slide" id="guide-slide"></div>
+    <div class="demo-nav">
+      <button type="button" class="btn btn-ghost" id="btn-guide-prev">← Anterior</button>
+      <button type="button" class="btn btn-primary" id="btn-guide-next">Próximo →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ MODAL DEMONSTRAÇÃO -->
+<div class="demo-overlay" id="demo-overlay" role="dialog" aria-modal="true" aria-labelledby="demo-title" hidden>
+  <div class="demo-panel">
+    <div class="demo-head">
+      <h3 id="demo-title" style="margin:0;font-size:15px;color:var(--ink-muted)">Demonstração</h3>
+      <div style="display:flex;align-items:center;gap:14px">
+        <span class="demo-step-count" id="demo-step-count">1 / 6</span>
+        <button type="button" class="btn btn-small btn-ghost" id="btn-close-demo">Fechar</button>
+      </div>
+    </div>
+    <div class="demo-slide" id="demo-slide"></div>
+    <div class="demo-dots" id="demo-dots"></div>
+    <div class="demo-nav">
+      <button type="button" class="btn btn-ghost" id="btn-demo-prev">← Voltar</button>
+      <button type="button" class="btn btn-primary" id="btn-demo-next">Avançar →</button>
+    </div>
+  </div>
+</div>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
