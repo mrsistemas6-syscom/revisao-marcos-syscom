@@ -476,22 +476,26 @@ body {
   background: #eff6ff;
 }
 
-.explanation-field {
+.explanation-field,
+.condition-field {
   display: none;
   margin-top: 1rem;
 }
 
-.explanation-field.visible {
+.explanation-field.visible,
+.condition-field.visible {
   display: block;
 }
 
-.explanation-field label {
+.explanation-field label,
+.condition-field label {
   display: block;
   font-weight: 500;
   margin-bottom: 0.5rem;
 }
 
-.explanation-field textarea {
+.explanation-field textarea,
+.condition-field textarea {
   width: 100%;
   min-height: 6rem;
   padding: 0.75rem;
@@ -500,6 +504,99 @@ body {
   font-family: var(--font-sans);
   font-size: 0.9375rem;
   resize: vertical;
+}
+
+.condition-field textarea {
+  min-height: 4rem;
+}
+
+.field-optional {
+  font-weight: 400;
+  color: var(--color-gray-600);
+  font-size: 0.875rem;
+}
+
+.explanation-hint {
+  margin-top: 0.5rem;
+  font-size: 0.8125rem;
+  color: var(--color-gray-600);
+  font-style: italic;
+}
+
+/* OPEN QUESTIONS (NOVEL / SCREEN_SPECIFIC) */
+.open-question-badge {
+  display: inline-block;
+  background: #eef2ff;
+  color: #4338ca;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.open-question-subtext {
+  font-size: 0.875rem;
+  color: var(--color-gray-600);
+  margin-top: 0.25rem;
+}
+
+.answer-options-open {
+  margin-bottom: 0.5rem;
+}
+
+/* VALIDATION MESSAGE */
+.validation-message {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #991b1b;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+}
+
+/* COMPLETION BREAKDOWN */
+.completion-breakdown {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.completion-stat {
+  text-align: center;
+}
+
+.completion-stat b {
+  display: block;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.completion-stat span {
+  display: block;
+  font-size: 0.8125rem;
+  color: var(--color-gray-600);
+  margin-top: 0.25rem;
+}
+
+/* GUIDE FOOTNOTE */
+.guide-footnote {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.9375rem;
+  color: var(--color-gray-600);
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .completion-breakdown {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* PROGRESS BAR */

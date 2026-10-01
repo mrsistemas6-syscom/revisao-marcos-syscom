@@ -114,6 +114,7 @@
         <p><strong>Você não está documentando tela por tela.</strong></p>
         <p>Você está ensinando padrões importantes para a IA.</p>
       </div>
+      <p class="guide-footnote">Quando houver uma condição ou exceção importante, conte para a IA. Não é necessário escrever detalhes quando o comportamento for exatamente o esperado.</p>
     </div>
   </section>
 
@@ -159,6 +160,12 @@
         <h3>Revisão Concluída!</h3>
         <p>Você respondeu <span id="final-answered-count">—</span> perguntas.</p>
         <p>Conhecimentos esclarecidos: <span id="knowledge-cleared-count">—</span></p>
+        <div class="completion-breakdown">
+          <div class="completion-stat"><b id="final-objective-count">—</b><span>respostas objetivas</span></div>
+          <div class="completion-stat"><b id="final-explanations-count">—</b><span>explicações adicionais</span></div>
+          <div class="completion-stat"><b id="final-open-count">—</b><span>perguntas abertas respondidas</span></div>
+          <div class="completion-stat"><b id="final-pending-count">—</b><span>pendências</span></div>
+        </div>
         <button type="button" class="btn btn-primary btn-lg" id="btn-export-final">Exportar Revisão</button>
         <button type="button" class="btn btn-outline" id="btn-copy-final">Copiar para Área de Transferência</button>
       </div>

@@ -119,6 +119,14 @@
     document.getElementById('revisao-rapida').scrollIntoView({ behavior: 'smooth' });
   }
 
+  // Modos sem hipótese estrutural para comparar: resposta é texto livre
+  // ("open" = conhecimento novo; "screen_specific" = pergunta de negócio/identidade).
+  const OPEN_MODES = ['open', 'screen_specific'];
+
+  function isOpenMode(mode) {
+    return OPEN_MODES.indexOf(mode) !== -1;
+  }
+
   function renderQuestion() {
     if (!allQuestions[currentQuestionIndex]) {
       showCompletion();
@@ -127,8 +135,9 @@
 
     const q = allQuestions[currentQuestionIndex];
     const card = document.getElementById('question-card');
-    
-    const existingKnowledge = q.existing_knowledge 
+    const openMode = isOpenMode(q.mode);
+
+    const existingKnowledge = q.existing_knowledge
       ? `<div class="question-learned">
            <strong>Já aprendemos:</strong> ${q.existing_knowledge.source}
          </div>`
@@ -140,33 +149,37 @@
          </div>`
       : '';
 
+    const headerBadge = openMode
+      ? `<div class="open-question-badge">Precisamos do seu conhecimento</div>`
+      : '';
+
+    const bodyHtml = openMode
+      ? renderOpenQuestionBody(q)
+      : renderClosedQuestionBody(q);
+
     card.innerHTML = `
       <div class="question-header">
         <div class="question-context">
           <strong>${q.screen_name}</strong> (${q.pilot_id}) · ${q.subject}
         </div>
+        ${headerBadge}
         ${existingKnowledge}
         <div class="question-text">${q.question}</div>
+        ${openMode ? '<p class="open-question-subtext">A IA não conseguiu concluir isso pelas telas.</p>' : ''}
         ${impact}
       </div>
       <div class="question-body">
-        <div class="answer-options" id="answer-options">
-          ${renderAnswerOptions(q)}
-        </div>
-        <div class="explanation-field" id="explanation-field">
-          <label for="explanation-text">Como funciona aqui?</label>
-          <textarea id="explanation-text" placeholder="Explique do seu jeito..."></textarea>
-        </div>
+        ${bodyHtml}
+        <div class="validation-message" id="validation-message" style="display:none;"></div>
       </div>
     `;
 
     updateProgress();
-    restoreAnswer(q.question_id);
-    setupAnswerListeners();
+    restoreAnswer(q.question_id, openMode);
+    setupAnswerListeners(openMode);
   }
 
-  function renderAnswerOptions(q) {
-    // Simplified answer set
+  function renderClosedQuestionBody(q) {
     const options = [
       { code: 'SAME', label: 'SIM, FUNCIONA ASSIM' },
       { code: 'DIFFERENT', label: 'FUNCIONA DIFERENTE' },
@@ -174,34 +187,64 @@
       { code: 'NOT_APPLICABLE', label: 'NÃO SE APLICA' }
     ];
 
-    return options.map(opt => `
+    const optionsHtml = options.map(opt => `
       <div class="answer-option" data-code="${opt.code}">
         <input type="radio" name="answer" value="${opt.code}" id="answer-${opt.code}">
         <label for="answer-${opt.code}">${opt.label}</label>
       </div>
     `).join('');
+
+    return `
+      <div class="answer-options" id="answer-options">
+        ${optionsHtml}
+      </div>
+      <div class="condition-field" id="condition-field">
+        <label for="condition-text">Existe alguma condição, exceção ou detalhe importante? <span class="field-optional">(opcional)</span></label>
+        <textarea id="condition-text" placeholder="Ex.: só funciona depois de selecionar o cliente, pede confirmação, depende de outro campo..."></textarea>
+      </div>
+      <div class="explanation-field" id="explanation-field">
+        <label for="explanation-text">Explique como funciona nesta tela.</label>
+        <textarea id="explanation-text" placeholder="Explique do seu jeito..."></textarea>
+      </div>
+    `;
   }
 
-  function setupAnswerListeners() {
+  function renderOpenQuestionBody(q) {
+    return `
+      <div class="answer-options answer-options-open" id="answer-options">
+        <div class="answer-option" data-code="EXPLAINED">
+          <input type="radio" name="answer" value="EXPLAINED" id="answer-EXPLAINED">
+          <label for="answer-EXPLAINED">SEI EXPLICAR</label>
+        </div>
+        <div class="answer-option" data-code="UNKNOWN">
+          <input type="radio" name="answer" value="UNKNOWN" id="answer-UNKNOWN">
+          <label for="answer-UNKNOWN">NÃO SEI</label>
+        </div>
+        <div class="answer-option" data-code="NOT_APPLICABLE">
+          <input type="radio" name="answer" value="NOT_APPLICABLE" id="answer-NOT_APPLICABLE">
+          <label for="answer-NOT_APPLICABLE">NÃO SE APLICA</label>
+        </div>
+      </div>
+      <div class="explanation-field" id="explanation-field">
+        <label for="explanation-text">Explique do seu jeito.</label>
+        <textarea id="explanation-text" placeholder="Explique do seu jeito..."></textarea>
+        <p class="explanation-hint">Não precisa escrever muito. Uma ou duas frases claras já ajudam.</p>
+      </div>
+    `;
+  }
+
+  function setupAnswerListeners(openMode) {
     const options = document.querySelectorAll('.answer-option');
     options.forEach(opt => {
       opt.addEventListener('click', () => {
         const radio = opt.querySelector('input[type="radio"]');
         radio.checked = true;
-        
+
         options.forEach(o => o.classList.remove('selected'));
         opt.classList.add('selected');
 
         const code = opt.dataset.code;
-        const needsExplanation = code === 'DIFFERENT';
-        const explanationField = document.getElementById('explanation-field');
-        
-        if (needsExplanation) {
-          explanationField.classList.add('visible');
-        } else {
-          explanationField.classList.remove('visible');
-        }
-
+        updateFieldVisibility(code, openMode);
         saveCurrentAnswer();
       });
     });
@@ -210,6 +253,43 @@
     if (explanationText) {
       explanationText.addEventListener('input', saveCurrentAnswer);
     }
+
+    const conditionText = document.getElementById('condition-text');
+    if (conditionText) {
+      conditionText.addEventListener('input', saveCurrentAnswer);
+    }
+  }
+
+  // Mostra/esconde os campos de texto conforme a resposta escolhida:
+  // - SAME: campo de condição/exceção opcional
+  // - DIFFERENT / EXPLAINED: campo de explicação (obrigatório para concluir)
+  // - UNKNOWN / NOT_APPLICABLE: nenhum campo obrigatório
+  function updateFieldVisibility(code, openMode) {
+    const conditionField = document.getElementById('condition-field');
+    const explanationField = document.getElementById('explanation-field');
+
+    if (conditionField) {
+      conditionField.classList.toggle('visible', code === 'SAME');
+    }
+    if (explanationField) {
+      const needsExplanation = openMode ? code === 'EXPLAINED' : code === 'DIFFERENT';
+      explanationField.classList.toggle('visible', needsExplanation);
+    }
+
+    hideValidationMessage();
+  }
+
+  function showValidationMessage(text) {
+    const el = document.getElementById('validation-message');
+    if (!el) return;
+    el.textContent = text;
+    el.style.display = 'block';
+  }
+
+  function hideValidationMessage() {
+    const el = document.getElementById('validation-message');
+    if (!el) return;
+    el.style.display = 'none';
   }
 
   function saveCurrentAnswer() {
@@ -219,22 +299,38 @@
     const selectedOption = document.querySelector('input[name="answer"]:checked');
     if (!selectedOption) return;
 
+    const answerCode = selectedOption.value;
+    const explanationValue = (document.getElementById('explanation-text')?.value || '').trim();
+    const conditionValue = (document.getElementById('condition-text')?.value || '').trim();
+
     const answer = {
       question_id: q.question_id,
       knowledge_key: q.knowledge_key,
       screen_id: q.screen_id,
       pilot_id: q.pilot_id,
-      answer_code: selectedOption.value,
-      explanation: document.getElementById('explanation-text')?.value || '',
+      mode: q.mode,
+      answer_code: answerCode,
       answered_at: new Date().toISOString()
     };
+
+    // condition_or_exception só se aplica à resposta SAME, e só é gravado se preenchido.
+    if (answerCode === 'SAME' && conditionValue) {
+      answer.condition_or_exception = conditionValue;
+    }
+
+    // human_explanation vale para DIFFERENT (fechada) e EXPLAINED (aberta); só grava se preenchido.
+    const explanationModeNeedsIt = (isOpenMode(q.mode) && answerCode === 'EXPLAINED') ||
+      (!isOpenMode(q.mode) && answerCode === 'DIFFERENT');
+    if (explanationModeNeedsIt && explanationValue) {
+      answer.human_explanation = explanationValue;
+    }
 
     answers[q.question_id] = answer;
     localStorage.setItem(STORAGE_ANSWERS, JSON.stringify(answers));
     localStorage.setItem(STORAGE_POSITION, currentQuestionIndex.toString());
   }
 
-  function restoreAnswer(questionId) {
+  function restoreAnswer(questionId, openMode) {
     const answer = answers[questionId];
     if (!answer) return;
 
@@ -243,13 +339,30 @@
       radio.checked = true;
       const option = radio.closest('.answer-option');
       option.classList.add('selected');
+      updateFieldVisibility(answer.answer_code, openMode);
 
-      if (answer.answer_code === 'DIFFERENT') {
-        const explanationField = document.getElementById('explanation-field');
-        explanationField.classList.add('visible');
-        document.getElementById('explanation-text').value = answer.explanation || '';
+      const conditionText = document.getElementById('condition-text');
+      if (conditionText && answer.condition_or_exception) {
+        conditionText.value = answer.condition_or_exception;
+      }
+
+      const explanationText = document.getElementById('explanation-text');
+      if (explanationText && answer.human_explanation) {
+        explanationText.value = answer.human_explanation;
       }
     }
+  }
+
+  // Avalia se a resposta atual (se houver) está completa, segundo a regra:
+  // DIFFERENT/EXPLAINED exigem human_explanation; os demais códigos não exigem nada.
+  function isAnswerComplete(answer) {
+    if (!answer) return false;
+    const needsExplanation = (isOpenMode(answer.mode) && answer.answer_code === 'EXPLAINED') ||
+      (!isOpenMode(answer.mode) && answer.answer_code === 'DIFFERENT');
+    if (needsExplanation) {
+      return !!(answer.human_explanation && answer.human_explanation.trim());
+    }
+    return true;
   }
 
   function restoreFromLocalStorage() {
@@ -285,16 +398,38 @@
 
   function showCompletion() {
     document.getElementById('question-card').style.display = 'none';
-    document.getElementById('review-actions').style.display = 'none';
-    
+    document.querySelector('.review-actions').style.display = 'none';
+
     const completionMsg = document.getElementById('completion-message');
     completionMsg.style.display = 'block';
-    
-    const answered = Object.keys(answers).length;
-    const knowledgeCleared = new Set(Object.values(answers).map(a => a.knowledge_key)).size;
-    
+
+    const answeredList = Object.values(answers);
+    const answered = answeredList.length;
+    const knowledgeCleared = new Set(answeredList.map(a => a.knowledge_key)).size;
+    const pending = allQuestions.length - answered;
+
+    // X respostas objetivas: SAME/UNKNOWN/NOT_APPLICABLE em perguntas fechadas (sem explicação exigida).
+    const objectiveCount = answeredList.filter(a =>
+      !isOpenMode(a.mode) && a.answer_code !== 'DIFFERENT'
+    ).length;
+    // Y explicações adicionais: toda resposta com human_explanation ou condition_or_exception preenchidos.
+    const explanationsCount = answeredList.filter(a =>
+      a.human_explanation || a.condition_or_exception
+    ).length;
+    // Z perguntas abertas respondidas: modo open/screen_specific com resposta registrada.
+    const openAnsweredCount = answeredList.filter(a => isOpenMode(a.mode)).length;
+
     document.getElementById('final-answered-count').textContent = answered;
     document.getElementById('knowledge-cleared-count').textContent = knowledgeCleared;
+
+    const objectiveEl = document.getElementById('final-objective-count');
+    if (objectiveEl) objectiveEl.textContent = objectiveCount;
+    const explanationsEl = document.getElementById('final-explanations-count');
+    if (explanationsEl) explanationsEl.textContent = explanationsCount;
+    const openEl = document.getElementById('final-open-count');
+    if (openEl) openEl.textContent = openAnsweredCount;
+    const pendingEl = document.getElementById('final-pending-count');
+    if (pendingEl) pendingEl.textContent = pending;
   }
 
   function setupEventListeners() {
@@ -315,6 +450,17 @@
     });
 
     document.getElementById('btn-next-question')?.addEventListener('click', () => {
+      const q = allQuestions[currentQuestionIndex];
+      const currentAnswer = q ? answers[q.question_id] : null;
+
+      // Se a pessoa já começou a responder (marcou uma opção) mas a explicação
+      // obrigatória de FUNCIONA DIFERENTE / SEI EXPLICAR está vazia, não avança.
+      if (currentAnswer && !isAnswerComplete(currentAnswer)) {
+        showValidationMessage('Explique como funciona nesta tela antes de continuar.');
+        document.getElementById('explanation-text')?.focus();
+        return;
+      }
+
       if (currentQuestionIndex < allQuestions.length - 1) {
         currentQuestionIndex++;
         renderQuestion();
@@ -341,12 +487,14 @@
     document.getElementById('btn-copy-final')?.addEventListener('click', copyReview);
   }
 
-  function exportReview() {
-    const reviewExport = {
+  // Monta o objeto de export. baseline_knowledge_sources cita k3-01 como fonte
+  // de conhecimento prévio; as respostas novas de K4 ficam só em "answers" (sem duplicar k3-01 ali).
+  function buildReviewExport(reviewerInput) {
+    return {
       schema: 'syscom-human-review-k4@1.0.0',
       batch_id: reviewData.batch_id,
       stage: reviewData.stage,
-      reviewer: reviewerName || prompt('Seu nome (para identificação):') || 'Anonymous',
+      reviewer: reviewerInput || 'Anonymous',
       reviewed_at: new Date().toISOString(),
       baseline_knowledge_sources: [reviewData.baseline_knowledge],
       answers: Object.values(answers),
@@ -356,9 +504,15 @@
         knowledge_keys_cleared: new Set(Object.values(answers).map(a => a.knowledge_key)).size
       }
     };
+  }
 
-    if (reviewExport.reviewer !== 'Anonymous') {
-      localStorage.setItem(STORAGE_REVIEWER, reviewExport.reviewer);
+  function exportReview() {
+    const reviewer = reviewerName || prompt('Seu nome (para identificação):') || 'Anonymous';
+    const reviewExport = buildReviewExport(reviewer);
+
+    if (reviewer !== 'Anonymous') {
+      reviewerName = reviewer;
+      localStorage.setItem(STORAGE_REVIEWER, reviewer);
     }
 
     const blob = new Blob([JSON.stringify(reviewExport, null, 2)], { type: 'application/json' });
@@ -375,21 +529,7 @@
   }
 
   function copyReview() {
-    const reviewExport = {
-      schema: 'syscom-human-review-k4@1.0.0',
-      batch_id: reviewData.batch_id,
-      stage: reviewData.stage,
-      reviewer: reviewerName || 'Anonymous',
-      reviewed_at: new Date().toISOString(),
-      baseline_knowledge_sources: [reviewData.baseline_knowledge],
-      answers: Object.values(answers),
-      metrics: {
-        total_questions: allQuestions.length,
-        answered: Object.keys(answers).length,
-        knowledge_keys_cleared: new Set(Object.values(answers).map(a => a.knowledge_key)).size
-      }
-    };
-
+    const reviewExport = buildReviewExport(reviewerName);
     const text = JSON.stringify(reviewExport, null, 2);
     navigator.clipboard.writeText(text)
       .then(() => alert('Revisão copiada para a área de transferência!'))
