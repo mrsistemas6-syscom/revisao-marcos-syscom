@@ -72,11 +72,18 @@
       const questionCount = screen.questions.length;
       const knowledgeCount = screen.reusable_knowledge_count;
 
-      let actionButton = '';
-      if (questionCount > 0) {
-        actionButton = `<button class="btn btn-primary btn-sm btn-answer-screen" data-pilot-id="${screen.pilot_id}">Responder</button>`;
+      let actionButtons = '';
+      if (screen.status === 'APRENDIDO') {
+        actionButtons = `<button class="btn btn-outline btn-sm btn-view-screen" data-pilot-id="${screen.pilot_id}">Ver</button>`;
+      } else if (questionCount > 0) {
+        // PRECISA DE VOCÊ: tem pergunta nova para responder, além do detalhe.
+        actionButtons = `
+          <button class="btn btn-primary btn-sm btn-answer-screen" data-pilot-id="${screen.pilot_id}">Responder</button>
+          <button class="btn btn-outline btn-sm btn-view-details" data-pilot-id="${screen.pilot_id}">Ver detalhes</button>
+        `;
       } else {
-        actionButton = `<button class="btn btn-outline btn-sm" disabled>Ver</button>`;
+        // PARCIAL (ou qualquer estado sem pergunta nova e sem status APRENDIDO): só o detalhe.
+        actionButtons = `<button class="btn btn-outline btn-sm btn-view-details" data-pilot-id="${screen.pilot_id}">Ver detalhes</button>`;
       }
 
       return `
@@ -90,7 +97,7 @@
             <div>${knowledgeCount} ${knowledgeCount === 1 ? 'conhecimento reaproveitado' : 'conhecimentos reaproveitados'}</div>
           </div>
           <div class="screen-card-actions">
-            ${actionButton}
+            ${actionButtons}
           </div>
         </div>
       `;
@@ -103,6 +110,195 @@
         startReviewForScreen(pilotId);
       });
     });
+
+    // Event listeners para "Ver" (APRENDIDO) e "Ver detalhes" (PRECISA DE VOCÊ / PARCIAL)
+    document.querySelectorAll('.btn-view-screen, .btn-view-details').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const pilotId = btn.dataset.pilotId;
+        openScreenDetailModal(pilotId);
+      });
+    });
+  }
+
+  // ============================================================================
+  // MODAL DE DETALHE DA TELA
+  // ============================================================================
+
+  function findScreenByPilotId(pilotId) {
+    return reviewData.screens.find(s => s.pilot_id === pilotId) || null;
+  }
+
+  function escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text == null ? '' : String(text);
+    return div.innerHTML;
+  }
+
+  function renderSchematicSection(schematic) {
+    if (!schematic) return '<p class="schematic-empty">Sem representação estrutural disponível para esta tela.</p>';
+
+    const hasAnything = (schematic.fields && schematic.fields.length) ||
+      (schematic.actions && schematic.actions.length) ||
+      (schematic.grids && schematic.grids.length) ||
+      (schematic.tabs && schematic.tabs.length) ||
+      (schematic.groups && schematic.groups.length);
+
+    if (!hasAnything) {
+      return '<p class="schematic-empty">Sem representação estrutural disponível para esta tela.</p>';
+    }
+
+    let rows = '';
+
+    if (schematic.tabs && schematic.tabs.length) {
+      rows += `<div class="schematic-row">
+        <span class="schematic-row-label">Abas</span>
+        ${schematic.tabs.map(t => `<span class="schematic-chip">${escapeHtml(t)}</span>`).join('')}
+      </div>`;
+    }
+
+    if (schematic.groups && schematic.groups.length) {
+      rows += `<div class="schematic-row">
+        <span class="schematic-row-label">Grupos</span>
+        ${schematic.groups.map(g => `<span class="schematic-chip">${escapeHtml(g)}</span>`).join('')}
+      </div>`;
+    }
+
+    if (schematic.fields && schematic.fields.length) {
+      rows += `<div class="schematic-row">
+        <span class="schematic-row-label">Campos</span>
+        ${schematic.fields.map(f => `<span class="schematic-chip schematic-chip-field">${escapeHtml(f.label)}
+          ${f.type ? `<span class="schematic-chip-type">${escapeHtml(f.type)}</span>` : ''}</span>`).join('')}
+      </div>`;
+    }
+
+    if (schematic.actions && schematic.actions.length) {
+      rows += `<div class="schematic-row">
+        <span class="schematic-row-label">Botões</span>
+        ${schematic.actions.map(a => `<span class="schematic-chip schematic-chip-action">${escapeHtml(a.label)}</span>`).join('')}
+      </div>`;
+    }
+
+    if (schematic.grids && schematic.grids.length) {
+      rows += schematic.grids.map(g => `<div class="schematic-row">
+        <span class="schematic-row-label">Lista</span>
+        ${(g.columns || []).map(c => `<span class="schematic-chip schematic-chip-grid">${escapeHtml(c)}</span>`).join('')}
+      </div>`).join('');
+    }
+
+    return `<div class="schematic-box">${rows}</div>`;
+  }
+
+  function renderLearnedKnowledgeSection(learnedKnowledge) {
+    if (!learnedKnowledge || learnedKnowledge.length === 0) {
+      return '<p class="schematic-empty">Nenhum conhecimento reaproveitado nesta tela ainda.</p>';
+    }
+    return `<ul class="learned-list">
+      ${learnedKnowledge.map(item => `
+        <li class="learned-item">
+          <div class="learned-item-subject">${escapeHtml(item.subject)}</div>
+          <div class="learned-item-origin">${escapeHtml(item.origin)}</div>
+          ${item.note ? `<div class="learned-item-note">${escapeHtml(item.note)}</div>` : ''}
+        </li>
+      `).join('')}
+    </ul>`;
+  }
+
+  function renderUnknownsSection(unknowns) {
+    if (!unknowns || unknowns.length === 0) return '';
+    return `
+      <div class="modal-section">
+        <div class="modal-section-title">Ainda não sabemos</div>
+        <ul class="unknowns-list">
+          ${unknowns.map(u => `<li class="unknowns-item">${escapeHtml(u)}</li>`).join('')}
+        </ul>
+      </div>
+    `;
+  }
+
+  function renderPendingQuestionsSection(screen) {
+    if (!screen.questions || screen.questions.length === 0) return '';
+    return `
+      <div class="modal-section">
+        <div class="modal-section-title">O que ainda precisamos confirmar</div>
+        <ul class="pending-questions-list">
+          ${screen.questions.map(q => `<li class="pending-questions-item">${escapeHtml(q.question)}</li>`).join('')}
+        </ul>
+        <div class="modal-footer-actions">
+          <button type="button" class="btn btn-primary btn-sm btn-modal-responder" data-pilot-id="${screen.pilot_id}">Responder agora</button>
+        </div>
+      </div>
+    `;
+  }
+
+  function renderWhyNoQuestionSection(screen) {
+    if (!screen.why_no_question_needed) return '';
+    return `
+      <div class="modal-section">
+        <div class="modal-section-title">Por que não precisamos perguntar agora?</div>
+        <div class="why-no-question-box">${escapeHtml(screen.why_no_question_needed)}</div>
+      </div>
+    `;
+  }
+
+  function statusDisplayLabel(status) {
+    const labels = {
+      'APRENDIDO': 'A IA já entende esta tela',
+      'PRECISA DE VOCÊ': 'Precisa da sua ajuda',
+      'PARCIAL': 'Entendimento parcial'
+    };
+    return labels[status] || status;
+  }
+
+  function openScreenDetailModal(pilotId) {
+    const screen = findScreenByPilotId(pilotId);
+    if (!screen) return;
+
+    const overlay = document.getElementById('screen-modal-overlay');
+    const titleEl = document.getElementById('screen-modal-title');
+    const statusEl = document.getElementById('screen-modal-status');
+    const bodyEl = document.getElementById('screen-modal-body');
+
+    titleEl.textContent = screen.name;
+
+    const statusClass = `status-${screen.status.toLowerCase().replace(/ /g, '-')}`;
+    statusEl.className = `modal-status ${statusClass}`;
+    statusEl.textContent = statusDisplayLabel(screen.status);
+
+    const focusHtml = screen.focus
+      ? `<p class="modal-focus-text">${escapeHtml(screen.focus)}</p>`
+      : '';
+
+    bodyEl.innerHTML = `
+      ${focusHtml}
+      <div class="modal-section">
+        <div class="modal-section-title">O que a IA identificou</div>
+        ${renderSchematicSection(screen.schematic)}
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">O que já aprendemos</div>
+        ${renderLearnedKnowledgeSection(screen.learned_knowledge)}
+      </div>
+      ${renderUnknownsSection(screen.unknowns)}
+      ${renderWhyNoQuestionSection(screen)}
+      ${renderPendingQuestionsSection(screen)}
+    `;
+
+    overlay.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+
+    const responderBtn = bodyEl.querySelector('.btn-modal-responder');
+    if (responderBtn) {
+      responderBtn.addEventListener('click', () => {
+        closeScreenDetailModal();
+        startReviewForScreen(pilotId);
+      });
+    }
+  }
+
+  function closeScreenDetailModal() {
+    const overlay = document.getElementById('screen-modal-overlay');
+    overlay.style.display = 'none';
+    document.body.style.overflow = '';
   }
 
   function startReviewForScreen(pilotId) {
@@ -485,6 +681,22 @@
     // Copy buttons
     document.getElementById('btn-copiar')?.addEventListener('click', copyReview);
     document.getElementById('btn-copy-final')?.addEventListener('click', copyReview);
+
+    // Modal de detalhe da tela: fechar pelo X, pelo clique fora, ou por Esc
+    document.getElementById('screen-modal-close')?.addEventListener('click', closeScreenDetailModal);
+    document.getElementById('screen-modal-overlay')?.addEventListener('click', (e) => {
+      if (e.target.id === 'screen-modal-overlay') {
+        closeScreenDetailModal();
+      }
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        const overlay = document.getElementById('screen-modal-overlay');
+        if (overlay && overlay.style.display !== 'none') {
+          closeScreenDetailModal();
+        }
+      }
+    });
   }
 
   // Monta o objeto de export. baseline_knowledge_sources cita k3-01 como fonte

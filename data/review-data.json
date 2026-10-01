@@ -1,6 +1,6 @@
 {
   "schema": "k4-adaptive-review-data@1.0.0",
-  "generated_at": "2026-10-01T11:52:59.576669",
+  "generated_at": "2026-10-01T16:52:32.356478",
   "generated_by": "build_k4_adaptive_portal.py",
   "batch_id": "k4-0-canary",
   "stage": "K4.1",
@@ -46,7 +46,87 @@
       ],
       "questions": [],
       "reusable_knowledge_count": 9,
-      "focus": ""
+      "focus": "",
+      "schematic": {
+        "fields": [
+          {
+            "label": "Código",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Nome",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "Tabela de Preço",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "(sem rótulo)",
+            "type": "Campo de exibição"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Gravar"
+          },
+          {
+            "label": "Cancelar"
+          },
+          {
+            "label": "Excluir"
+          },
+          {
+            "label": "Fechar"
+          }
+        ],
+        "grids": [],
+        "tabs": [],
+        "groups": []
+      },
+      "learned_knowledge": [
+        {
+          "subject": "Pressionar Enter sem valor inicia um novo registro.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Inserir número existente e pressionar Enter abre o registro para edição.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Inserir número inexistente e pressionar Enter cria um novo registro com esse código.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Clicar com o mouse ou pressionar F12 abre a tela de consulta de registros.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Selecionar um registro com Enter ou duplo clique o abre para edição na tela principal.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Salva as informações preenchidas no registro.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Descarta as alterações e fecha a tela sem salvar.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Remove o registro permanentemente do sistema, se não estiver em uso em outras tabelas.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Fecha a tela atual.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        }
+      ],
+      "unknowns": [
+        "lk002 (Tabela de Preço): destino provavel k4-12, nunca confirmado",
+        "relacao entre a classificacao de cliente e a tabela de preco associada, na venda"
+      ],
+      "why_no_question_needed": "Esta tela segue a mesma estrutura já respondida pela sua equipe em outra tela do lote. Perguntar de novo seria repetir algo que você já ensinou."
     },
     {
       "screen_id": "scr-8102",
@@ -74,7 +154,87 @@
       ],
       "questions": [],
       "reusable_knowledge_count": 9,
-      "focus": ""
+      "focus": "",
+      "schematic": {
+        "fields": [
+          {
+            "label": "Código",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Nome",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "Produto",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "(sem rótulo)",
+            "type": "Campo de exibição"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Gravar"
+          },
+          {
+            "label": "Cancelar"
+          },
+          {
+            "label": "Excluir"
+          },
+          {
+            "label": "Fechar"
+          }
+        ],
+        "grids": [],
+        "tabs": [],
+        "groups": []
+      },
+      "learned_knowledge": [
+        {
+          "subject": "Pressionar Enter sem valor inicia um novo registro.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Inserir número existente e pressionar Enter abre o registro para edição.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Inserir número inexistente e pressionar Enter cria um novo registro com esse código.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Clicar com o mouse ou pressionar F12 abre a tela de consulta de registros.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Selecionar um registro com Enter ou duplo clique o abre para edição na tela principal.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Salva as informações preenchidas no registro.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Descarta as alterações e fecha a tela sem salvar.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Remove o registro permanentemente do sistema, se não estiver em uso em outras tabelas.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Fecha a tela atual.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        }
+      ],
+      "unknowns": [
+        "lk002 (Produto): destino totalmente desconhecido, sem palpite",
+        "relacao entre o combustivel e o produto associado (ex.: produto vendido na bomba)"
+      ],
+      "why_no_question_needed": "Esta tela segue a mesma estrutura já respondida pela sua equipe em outra tela do lote. Perguntar de novo seria repetir algo que você já ensinou."
     },
     {
       "screen_id": "scr-8103",
@@ -102,7 +262,78 @@
       ],
       "questions": [],
       "reusable_knowledge_count": 9,
-      "focus": ""
+      "focus": "",
+      "schematic": {
+        "fields": [
+          {
+            "label": "Código",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Nome",
+            "type": "Campo de texto"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Gravar"
+          },
+          {
+            "label": "Cancelar"
+          },
+          {
+            "label": "Excluir"
+          },
+          {
+            "label": "Fechar"
+          }
+        ],
+        "grids": [],
+        "tabs": [],
+        "groups": []
+      },
+      "learned_knowledge": [
+        {
+          "subject": "Pressionar Enter sem valor inicia um novo registro.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Inserir número existente e pressionar Enter abre o registro para edição.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Inserir número inexistente e pressionar Enter cria um novo registro com esse código.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Clicar com o mouse ou pressionar F12 abre a tela de consulta de registros.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Selecionar um registro com Enter ou duplo clique o abre para edição na tela principal.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Salva as informações preenchidas no registro.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Descarta as alterações e fecha a tela sem salvar.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Remove o registro permanentemente do sistema, se não estiver em uso em outras tabelas.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Fecha a tela atual.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        }
+      ],
+      "unknowns": [
+        "par com k4-04: pergunta feita em k4-04 (xf003), nao duplicada aqui"
+      ],
+      "why_no_question_needed": "Esta tela segue a mesma estrutura já respondida pela sua equipe em outra tela do lote. Perguntar de novo seria repetir algo que você já ensinou."
     },
     {
       "screen_id": "scr-8104",
@@ -155,7 +386,79 @@
         }
       ],
       "reusable_knowledge_count": 9,
-      "focus": "Par quase idêntico ao Cadastro de Cor, e finalidade específica (DENATRAN) nunca confirmada."
+      "focus": "Par quase idêntico ao Cadastro de Cor, e finalidade específica (DENATRAN) nunca confirmada.",
+      "schematic": {
+        "fields": [
+          {
+            "label": "Código",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Nome",
+            "type": "Campo de texto"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Gravar"
+          },
+          {
+            "label": "Cancelar"
+          },
+          {
+            "label": "Excluir"
+          },
+          {
+            "label": "Fechar"
+          }
+        ],
+        "grids": [],
+        "tabs": [],
+        "groups": []
+      },
+      "learned_knowledge": [
+        {
+          "subject": "Pressionar Enter sem valor inicia um novo registro.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Inserir número existente e pressionar Enter abre o registro para edição.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Inserir número inexistente e pressionar Enter cria um novo registro com esse código.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Clicar com o mouse ou pressionar F12 abre a tela de consulta de registros.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Selecionar um registro com Enter ou duplo clique o abre para edição na tela principal.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Salva as informações preenchidas no registro.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Descarta as alterações e fecha a tela sem salvar.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Remove o registro permanentemente do sistema, se não estiver em uso em outras tabelas.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Fecha a tela atual.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        }
+      ],
+      "unknowns": [
+        "se os codigos seguem a tabela oficial DENATRAN e se sao digitados ou pre-carregados (q001, priority high na extracao)",
+        "diferenca real com Cadastro de Cor (q002 na extracao)"
+      ],
+      "why_no_question_needed": null
     },
     {
       "screen_id": "scr-8105",
@@ -333,7 +636,39 @@
         }
       ],
       "reusable_knowledge_count": 0,
-      "focus": "Generalização do padrão do Cadastro de Fabricante: mesma forma, outra entidade."
+      "focus": "Generalização do padrão do Cadastro de Fabricante: mesma forma, outra entidade.",
+      "schematic": {
+        "fields": [
+          {
+            "label": "Código",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Nome",
+            "type": "Campo de texto"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Gravar"
+          },
+          {
+            "label": "Cancelar"
+          },
+          {
+            "label": "Excluir"
+          },
+          {
+            "label": "Fechar"
+          }
+        ],
+        "grids": [],
+        "tabs": [],
+        "groups": []
+      },
+      "learned_knowledge": [],
+      "unknowns": [],
+      "why_no_question_needed": null
     },
     {
       "screen_id": "scr-8106",
@@ -361,7 +696,86 @@
       ],
       "questions": [],
       "reusable_knowledge_count": 9,
-      "focus": ""
+      "focus": "",
+      "schematic": {
+        "fields": [
+          {
+            "label": "Código",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Nome do Tipo de Documento",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "Sigla",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "Modelo",
+            "type": "numeric_input"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Gravar"
+          },
+          {
+            "label": "Cancelar"
+          },
+          {
+            "label": "Excluir"
+          },
+          {
+            "label": "Fechar"
+          }
+        ],
+        "grids": [],
+        "tabs": [],
+        "groups": []
+      },
+      "learned_knowledge": [
+        {
+          "subject": "Pressionar Enter sem valor inicia um novo registro.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Inserir número existente e pressionar Enter abre o registro para edição.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Inserir número inexistente e pressionar Enter cria um novo registro com esse código.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Clicar com o mouse ou pressionar F12 abre a tela de consulta de registros.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Selecionar um registro com Enter ou duplo clique o abre para edição na tela principal.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Salva as informações preenchidas no registro.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Descarta as alterações e fecha a tela sem salvar.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Remove o registro permanentemente do sistema, se não estiver em uso em outras tabelas.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Fecha a tela atual.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        }
+      ],
+      "unknowns": [
+        "campo numerico 'Modelo' sem botao de busca visivel: pode ou nao referenciar outra tabela (u003 da extracao)"
+      ],
+      "why_no_question_needed": "Esta tela segue a mesma estrutura já respondida pela sua equipe em outra tela do lote. Perguntar de novo seria repetir algo que você já ensinou."
     },
     {
       "screen_id": "scr-8107",
@@ -402,7 +816,78 @@
         }
       ],
       "reusable_knowledge_count": 9,
-      "focus": "Relação com a rotina “Controle de Eventos”, nunca confirmada."
+      "focus": "Relação com a rotina “Controle de Eventos”, nunca confirmada.",
+      "schematic": {
+        "fields": [
+          {
+            "label": "Código",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Nome",
+            "type": "Campo de texto"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Gravar"
+          },
+          {
+            "label": "Cancelar"
+          },
+          {
+            "label": "Excluir"
+          },
+          {
+            "label": "Fechar"
+          }
+        ],
+        "grids": [],
+        "tabs": [],
+        "groups": []
+      },
+      "learned_knowledge": [
+        {
+          "subject": "Pressionar Enter sem valor inicia um novo registro.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Inserir número existente e pressionar Enter abre o registro para edição.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Inserir número inexistente e pressionar Enter cria um novo registro com esse código.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Clicar com o mouse ou pressionar F12 abre a tela de consulta de registros.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Selecionar um registro com Enter ou duplo clique o abre para edição na tela principal.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Salva as informações preenchidas no registro.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Descarta as alterações e fecha a tela sem salvar.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Remove o registro permanentemente do sistema, se não estiver em uso em outras tabelas.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Fecha a tela atual.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        }
+      ],
+      "unknowns": [
+        "se o tipo de evento se relaciona com a rotina 'Controle de Eventos' do modulo Faturamento (q001, priority high na extracao)"
+      ],
+      "why_no_question_needed": null
     },
     {
       "screen_id": "scr-8108",
@@ -430,7 +915,78 @@
       ],
       "questions": [],
       "reusable_knowledge_count": 9,
-      "focus": ""
+      "focus": "",
+      "schematic": {
+        "fields": [
+          {
+            "label": "Código",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Nome",
+            "type": "Campo de texto"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Gravar"
+          },
+          {
+            "label": "Cancelar"
+          },
+          {
+            "label": "Excluir"
+          },
+          {
+            "label": "Fechar"
+          }
+        ],
+        "grids": [],
+        "tabs": [],
+        "groups": []
+      },
+      "learned_knowledge": [
+        {
+          "subject": "Pressionar Enter sem valor inicia um novo registro.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Inserir número existente e pressionar Enter abre o registro para edição.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Inserir número inexistente e pressionar Enter cria um novo registro com esse código.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Clicar com o mouse ou pressionar F12 abre a tela de consulta de registros.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Selecionar um registro com Enter ou duplo clique o abre para edição na tela principal.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Salva as informações preenchidas no registro.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Descarta as alterações e fecha a tela sem salvar.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Remove o registro permanentemente do sistema, se não estiver em uso em outras tabelas.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Fecha a tela atual.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        }
+      ],
+      "unknowns": [
+        "titulo interno da janela ('Tipo de Veículo') diverge do nome de arquivo do acervo ('Cadastro de Tipo de Veículo') — observacao de nomenclatura, nao pergunta de comportamento"
+      ],
+      "why_no_question_needed": "Esta tela segue a mesma estrutura já respondida pela sua equipe em outra tela do lote. Perguntar de novo seria repetir algo que você já ensinou."
     },
     {
       "screen_id": "scr-8109",
@@ -490,7 +1046,78 @@
         }
       ],
       "reusable_knowledge_count": 2,
-      "focus": "Única tela sem campo “Código”: testa o limite oposto do padrão, e um terceiro contexto de “Confirmar”."
+      "focus": "Única tela sem campo “Código”: testa o limite oposto do padrão, e um terceiro contexto de “Confirmar”.",
+      "schematic": {
+        "fields": [
+          {
+            "label": "Cliente",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "(sem rótulo)",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Classificação do Produto",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "(sem rótulo)",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Período Revisão (Meses)",
+            "type": "numeric_input"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Confirmar"
+          },
+          {
+            "label": "Gravar"
+          },
+          {
+            "label": "Cancelar"
+          },
+          {
+            "label": "Excluir"
+          },
+          {
+            "label": "Fechar"
+          }
+        ],
+        "grids": [
+          {
+            "columns": [
+              "(sem rótulo)",
+              "(sem rótulo)",
+              "Classificação",
+              "(sem rótulo)",
+              "Revisão"
+            ]
+          }
+        ],
+        "tabs": [],
+        "groups": []
+      },
+      "learned_knowledge": [
+        {
+          "subject": "Clicar com o mouse ou pressionar F12 abre a tela de consulta de registros.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante",
+          "note": "aplicavel aos dois lookups, campo Cliente e campo Classificação do Produto"
+        },
+        {
+          "subject": "Salva as informações preenchidas no registro.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante",
+          "note": "com ressalva: Gravar salva o que exatamente, com Confirmar tambem presente"
+        }
+      ],
+      "unknowns": [
+        "lk001 (Cliente) e lk002 (Classificação do Produto): destino totalmente desconhecido",
+        "coluna larga sem titulo no grid, entre 'Classificação' e 'Revisão' (motivo do SAMPLE_QA desta tela)"
+      ],
+      "why_no_question_needed": null
     },
     {
       "screen_id": "scr-8110",
@@ -552,7 +1179,108 @@
         }
       ],
       "reusable_knowledge_count": 5,
-      "focus": "Segundo cadastro com grade de itens (kit → produtos), com uma caixa “Ativo” nunca perguntada."
+      "focus": "Segundo cadastro com grade de itens (kit → produtos), com uma caixa “Ativo” nunca perguntada.",
+      "schematic": {
+        "fields": [
+          {
+            "label": "Código",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Descrição",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "Produto",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "(sem rótulo)",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Quantidade",
+            "type": "numeric_input"
+          },
+          {
+            "label": "Valor",
+            "type": "numeric_input"
+          },
+          {
+            "label": "Valor Total",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Ativo",
+            "type": "Caixa de marcação"
+          },
+          {
+            "label": "Total:",
+            "type": "Campo de exibição"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Confirmar"
+          },
+          {
+            "label": "Gravar"
+          },
+          {
+            "label": "Cancelar"
+          },
+          {
+            "label": "Excluir"
+          },
+          {
+            "label": "Fechar"
+          }
+        ],
+        "grids": [
+          {
+            "columns": [
+              "(sem rótulo)",
+              "(sem rótulo)",
+              "Produto",
+              "Nome",
+              "Quantidade",
+              "Valor Unit.",
+              "Total"
+            ]
+          }
+        ],
+        "tabs": [],
+        "groups": [
+          "Itens"
+        ]
+      },
+      "learned_knowledge": [
+        {
+          "subject": "Pressionar Enter sem valor inicia um novo registro.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Inserir número existente e pressionar Enter abre o registro para edição.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Inserir número inexistente e pressionar Enter cria um novo registro com esse código.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Clicar com o mouse ou pressionar F12 abre a tela de consulta de registros.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Fecha a tela atual.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        }
+      ],
+      "unknowns": [
+        "lk001 (Código) e lk002 (Produto): destino desconhecido",
+        "como 'Valor Total' e 'Total:' sao calculados (formula nao observavel)"
+      ],
+      "why_no_question_needed": null
     },
     {
       "screen_id": "scr-8111",
@@ -615,7 +1343,117 @@
         }
       ],
       "reusable_knowledge_count": 1,
-      "focus": "Tela de configuração mais densa do lote, com uma grade e o verbo “Atualizar” em vez de “Confirmar”."
+      "focus": "Tela de configuração mais densa do lote, com uma grade e o verbo “Atualizar” em vez de “Confirmar”.",
+      "schematic": {
+        "fields": [
+          {
+            "label": "Código",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Nome",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "Modelo de Documento",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "(sem rótulo)",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Linhas",
+            "type": "numeric_input"
+          },
+          {
+            "label": "Colunas",
+            "type": "numeric_input"
+          },
+          {
+            "label": "Faturas",
+            "type": "numeric_input"
+          },
+          {
+            "label": "Item",
+            "type": "numeric_input"
+          },
+          {
+            "label": "Campo",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "(sem rótulo)",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Linha",
+            "type": "numeric_input"
+          },
+          {
+            "label": "Coluna",
+            "type": "numeric_input"
+          },
+          {
+            "label": "Tamanho",
+            "type": "numeric_input"
+          },
+          {
+            "label": "Repetição",
+            "type": "numeric_input"
+          },
+          {
+            "label": "Produtos e Serviços Juntos",
+            "type": "Caixa de marcação"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Atualizar"
+          },
+          {
+            "label": "Gravar"
+          },
+          {
+            "label": "Cancelar"
+          },
+          {
+            "label": "Excluir"
+          },
+          {
+            "label": "Fechar"
+          }
+        ],
+        "grids": [
+          {
+            "columns": [
+              "(sem rótulo)",
+              "(sem rótulo)",
+              "Item",
+              "Código",
+              "Nome",
+              "Linha",
+              "Coluna",
+              "Tamanho",
+              "Repetições"
+            ]
+          }
+        ],
+        "tabs": [],
+        "groups": []
+      },
+      "learned_knowledge": [
+        {
+          "subject": "Clicar com o mouse ou pressionar F12 abre a tela de consulta de registros.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        }
+      ],
+      "unknowns": [
+        "lk_Código, lk_Modelo de Documento, lk_Campo: nenhum destino confirmado",
+        "checkbox 'Produtos e Serviços Juntos': efeito nao observavel",
+        "rotulo 'Repetição' no campo de entrada vs 'Repetições' na coluna do grid (mesma coisa, plural diferente)"
+      ],
+      "why_no_question_needed": null
     },
     {
       "screen_id": "scr-8112",
@@ -643,7 +1481,86 @@
       ],
       "questions": [],
       "reusable_knowledge_count": 9,
-      "focus": ""
+      "focus": "",
+      "schematic": {
+        "fields": [
+          {
+            "label": "Código",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Nome",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "Comissão %",
+            "type": "numeric_input"
+          },
+          {
+            "label": "Ativo",
+            "type": "Caixa de marcação"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Gravar"
+          },
+          {
+            "label": "Cancelar"
+          },
+          {
+            "label": "Excluir"
+          },
+          {
+            "label": "Fechar"
+          }
+        ],
+        "grids": [],
+        "tabs": [],
+        "groups": []
+      },
+      "learned_knowledge": [
+        {
+          "subject": "Pressionar Enter sem valor inicia um novo registro.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Inserir número existente e pressionar Enter abre o registro para edição.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Inserir número inexistente e pressionar Enter cria um novo registro com esse código.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Clicar com o mouse ou pressionar F12 abre a tela de consulta de registros.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Selecionar um registro com Enter ou duplo clique o abre para edição na tela principal.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Salva as informações preenchidas no registro.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Descarta as alterações e fecha a tela sem salvar.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Remove o registro permanentemente do sistema, se não estiver em uso em outras tabelas.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Fecha a tela atual.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        }
+      ],
+      "unknowns": [
+        "checkbox 'Ativo': mesma pergunta ja coberta pela pergunta feita em k4-10 (xf002); nao repetida aqui"
+      ],
+      "why_no_question_needed": "Esta tela segue a mesma estrutura já respondida pela sua equipe em outra tela do lote. Perguntar de novo seria repetir algo que você já ensinou."
     },
     {
       "screen_id": "scr-8113",
@@ -692,7 +1609,105 @@
         }
       ],
       "reusable_knowledge_count": 4,
-      "focus": "Provável fonte de campos para “Configuração de Modelo”, com um rótulo “Campo” que muda de tipo entre as duas telas."
+      "focus": "Provável fonte de campos para “Configuração de Modelo”, com um rótulo “Campo” que muda de tipo entre as duas telas.",
+      "schematic": {
+        "fields": [
+          {
+            "label": "Código",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Nome",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "Item",
+            "type": "numeric_input"
+          },
+          {
+            "label": "Nome",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "Campo",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "Grupo",
+            "type": "numeric_input"
+          },
+          {
+            "label": "Tipo",
+            "type": "Lista de opções"
+          },
+          {
+            "label": "Máscara",
+            "type": "Lista de opções"
+          },
+          {
+            "label": "Decimais",
+            "type": "numeric_input"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Atualizar"
+          },
+          {
+            "label": "Gravar"
+          },
+          {
+            "label": "Cancelar"
+          },
+          {
+            "label": "Excluir"
+          },
+          {
+            "label": "Fechar"
+          }
+        ],
+        "grids": [
+          {
+            "columns": [
+              "(sem rótulo)",
+              "(sem rótulo)",
+              "Item",
+              "Nome",
+              "Campo",
+              "Grupo",
+              "Tipo",
+              "Máscara",
+              "Decimais"
+            ]
+          }
+        ],
+        "tabs": [],
+        "groups": []
+      },
+      "learned_knowledge": [
+        {
+          "subject": "Pressionar Enter sem valor inicia um novo registro.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Inserir número existente e pressionar Enter abre o registro para edição.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Inserir número inexistente e pressionar Enter cria um novo registro com esse código.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Clicar com o mouse ou pressionar F12 abre a tela de consulta de registros.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        }
+      ],
+      "unknowns": [
+        "lk_Código: destino desconhecido",
+        "'Tipo' e 'Máscara' (combobox): dominio fechado, opcoes nao visiveis",
+        "dois rotulos 'Nome' na mesma tela, um para o modelo e outro para o item (u004 da extracao)"
+      ],
+      "why_no_question_needed": null
     },
     {
       "screen_id": "scr-8114",
@@ -826,7 +1841,56 @@
         }
       ],
       "reusable_knowledge_count": 0,
-      "focus": "Tela fora do padrão de cadastro: sem “Código”, sem campos e com três listas. Não encaixamos a tela à força no padrão."
+      "focus": "Tela fora do padrão de cadastro: sem “Código”, sem campos e com três listas. Não encaixamos a tela à força no padrão.",
+      "schematic": {
+        "fields": [],
+        "actions": [
+          {
+            "label": "ícone X de fechar janela"
+          },
+          {
+            "label": "Gravar"
+          },
+          {
+            "label": "Cancelar"
+          },
+          {
+            "label": "Excluir"
+          },
+          {
+            "label": "Fechar"
+          }
+        ],
+        "grids": [
+          {
+            "columns": [
+              "Descrição do Produto",
+              "Valor"
+            ]
+          },
+          {
+            "columns": [
+              "Descrição do Produto",
+              "Valor"
+            ]
+          },
+          {
+            "columns": [
+              "Descrição do Produto",
+              "Valor"
+            ]
+          }
+        ],
+        "tabs": [],
+        "groups": [
+          "(sem rótulo)",
+          "(sem rótulo)",
+          "(sem rótulo)"
+        ]
+      },
+      "learned_knowledge": [],
+      "unknowns": [],
+      "why_no_question_needed": null
     },
     {
       "screen_id": "scr-8115",
@@ -867,7 +1931,78 @@
         }
       ],
       "reusable_knowledge_count": 9,
-      "focus": "Uso da tela na emissão de NF-e em contingência, nunca confirmado."
+      "focus": "Uso da tela na emissão de NF-e em contingência, nunca confirmado.",
+      "schematic": {
+        "fields": [
+          {
+            "label": "Código",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Nome",
+            "type": "Campo de texto"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Gravar"
+          },
+          {
+            "label": "Cancelar"
+          },
+          {
+            "label": "Excluir"
+          },
+          {
+            "label": "Fechar"
+          }
+        ],
+        "grids": [],
+        "tabs": [],
+        "groups": []
+      },
+      "learned_knowledge": [
+        {
+          "subject": "Pressionar Enter sem valor inicia um novo registro.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Inserir número existente e pressionar Enter abre o registro para edição.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Inserir número inexistente e pressionar Enter cria um novo registro com esse código.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Clicar com o mouse ou pressionar F12 abre a tela de consulta de registros.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Selecionar um registro com Enter ou duplo clique o abre para edição na tela principal.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Salva as informações preenchidas no registro.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Descarta as alterações e fecha a tela sem salvar.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Remove o registro permanentemente do sistema, se não estiver em uso em outras tabelas.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Fecha a tela atual.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        }
+      ],
+      "unknowns": [
+        "se o motivo de contigencia e exigido na emissao de NF-e em contingencia (q001, priority high na extracao)"
+      ],
+      "why_no_question_needed": null
     },
     {
       "screen_id": "scr-8116",
@@ -981,7 +2116,108 @@
         }
       ],
       "reusable_knowledge_count": 0,
-      "focus": "Tela de configuração com só “Gravar” e “Fechar”. Não há pergunta sobre “Cancelar” ou “Excluir”, que não existem aqui."
+      "focus": "Tela de configuração com só “Gravar” e “Fechar”. Não há pergunta sobre “Cancelar” ou “Excluir”, que não existem aqui.",
+      "schematic": {
+        "fields": [
+          {
+            "label": "(sem rótulo)",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "(sem rótulo)",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "(sem rótulo)",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "(sem rótulo)",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "(sem rótulo)",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "(sem rótulo)",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "(sem rótulo)",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "(sem rótulo)",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "(sem rótulo)",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "(sem rótulo)",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "(sem rótulo)",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "(sem rótulo)",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "(sem rótulo)",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "(sem rótulo)",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "(sem rótulo)",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "(sem rótulo)",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "(sem rótulo)",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "(sem rótulo)",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "(sem rótulo)",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "(sem rótulo)",
+            "type": "Campo de texto"
+          }
+        ],
+        "actions": [
+          {
+            "label": "ícone X de fechar janela"
+          },
+          {
+            "label": "Gravar"
+          },
+          {
+            "label": "Fechar"
+          }
+        ],
+        "grids": [],
+        "tabs": [],
+        "groups": []
+      },
+      "learned_knowledge": [],
+      "unknowns": [],
+      "why_no_question_needed": null
     },
     {
       "screen_id": "scr-8117",
@@ -1009,7 +2245,94 @@
       ],
       "questions": [],
       "reusable_knowledge_count": 9,
-      "focus": ""
+      "focus": "",
+      "schematic": {
+        "fields": [
+          {
+            "label": "Código",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Nome da Característica",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "Tipo de Característica",
+            "type": "Lista de opções"
+          },
+          {
+            "label": "Tamanho do Texto",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Qtde. Casas Decimais",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Obrigatória ?",
+            "type": "Lista de opções"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Gravar"
+          },
+          {
+            "label": "Cancelar"
+          },
+          {
+            "label": "Excluir"
+          },
+          {
+            "label": "Fechar"
+          }
+        ],
+        "grids": [],
+        "tabs": [],
+        "groups": []
+      },
+      "learned_knowledge": [
+        {
+          "subject": "Pressionar Enter sem valor inicia um novo registro.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Inserir número existente e pressionar Enter abre o registro para edição.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Inserir número inexistente e pressionar Enter cria um novo registro com esse código.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Clicar com o mouse ou pressionar F12 abre a tela de consulta de registros.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Selecionar um registro com Enter ou duplo clique o abre para edição na tela principal.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Salva as informações preenchidas no registro.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Descarta as alterações e fecha a tela sem salvar.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Remove o registro permanentemente do sistema, se não estiver em uso em outras tabelas.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Fecha a tela atual.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        }
+      ],
+      "unknowns": [
+        "'Tipo de Característica' e 'Obrigatória ?' (combobox): dominio fechado, opcoes nao visiveis"
+      ],
+      "why_no_question_needed": "Esta tela segue a mesma estrutura já respondida pela sua equipe em outra tela do lote. Perguntar de novo seria repetir algo que você já ensinou."
     },
     {
       "screen_id": "scr-8118",
@@ -1033,7 +2356,133 @@
       ],
       "questions": [],
       "reusable_knowledge_count": 4,
-      "focus": ""
+      "focus": "",
+      "schematic": {
+        "fields": [
+          {
+            "label": "Código",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Nome",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "ICMS",
+            "type": "numeric_input"
+          },
+          {
+            "label": "PIS/COFINS",
+            "type": "numeric_input"
+          },
+          {
+            "label": "IRPJ/CSLL",
+            "type": "numeric_input"
+          },
+          {
+            "label": "Comissões",
+            "type": "numeric_input"
+          },
+          {
+            "label": "Fretes",
+            "type": "numeric_input"
+          },
+          {
+            "label": "Outros",
+            "type": "numeric_input"
+          },
+          {
+            "label": "Custos Fixos",
+            "type": "numeric_input"
+          },
+          {
+            "label": "Lucratividade Mínima",
+            "type": "numeric_input"
+          },
+          {
+            "label": "Lucratividade Máxima",
+            "type": "numeric_input"
+          },
+          {
+            "label": "Tabela de Preço",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "(sem rótulo)",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Tipo",
+            "type": "Lista de opções"
+          },
+          {
+            "label": "Preço de Venda",
+            "type": "numeric_input"
+          },
+          {
+            "label": "Preço Mínimo",
+            "type": "numeric_input"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Confirmar"
+          },
+          {
+            "label": "Gravar"
+          },
+          {
+            "label": "Cancelar"
+          },
+          {
+            "label": "Excluir"
+          },
+          {
+            "label": "Fechar"
+          }
+        ],
+        "grids": [
+          {
+            "columns": [
+              "(sem rótulo)",
+              "(sem rótulo)",
+              "Código",
+              "Tabela de Preço",
+              "Tipo",
+              "Preço de Venda",
+              "Preço Mínimo"
+            ]
+          }
+        ],
+        "tabs": [],
+        "groups": [
+          "Itens"
+        ]
+      },
+      "learned_knowledge": [
+        {
+          "subject": "Pressionar Enter sem valor inicia um novo registro.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Inserir número existente e pressionar Enter abre o registro para edição.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Inserir número inexistente e pressionar Enter cria um novo registro com esse código.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Clicar com o mouse ou pressionar F12 abre a tela de consulta de registros.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        }
+      ],
+      "unknowns": [
+        "lk_Código e lk_Tabela de Preço: destino desconhecido",
+        "'Tipo' (combobox): dominio fechado",
+        "como os 10 campos percentuais (ICMS, PIS/COFINS etc.) entram no calculo do preco final"
+      ],
+      "why_no_question_needed": "Esta tela segue a mesma estrutura já respondida pela sua equipe em outra tela do lote. Perguntar de novo seria repetir algo que você já ensinou."
     },
     {
       "screen_id": "scr-8119",
@@ -1172,7 +2621,59 @@
         }
       ],
       "reusable_knowledge_count": 0,
-      "focus": "Lista de itens com “Confirmar” e busca em campo de referência. Não assumimos que “Confirmar” e “Gravar” façam a mesma coisa."
+      "focus": "Lista de itens com “Confirmar” e busca em campo de referência. Não assumimos que “Confirmar” e “Gravar” façam a mesma coisa.",
+      "schematic": {
+        "fields": [
+          {
+            "label": "Código",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Nome do Conjunto de Características",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "Característica",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "(sem rótulo)",
+            "type": "Campo de exibição"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Confirmar"
+          },
+          {
+            "label": "Gravar"
+          },
+          {
+            "label": "Cancelar"
+          },
+          {
+            "label": "Excluir"
+          },
+          {
+            "label": "Fechar"
+          }
+        ],
+        "grids": [
+          {
+            "columns": [
+              "(sem rótulo)",
+              "(sem rótulo)",
+              "Código",
+              "Nome"
+            ]
+          }
+        ],
+        "tabs": [],
+        "groups": []
+      },
+      "learned_knowledge": [],
+      "unknowns": [],
+      "why_no_question_needed": null
     },
     {
       "screen_id": "scr-8120",
@@ -1200,7 +2701,123 @@
       ],
       "questions": [],
       "reusable_knowledge_count": 9,
-      "focus": ""
+      "focus": "",
+      "schematic": {
+        "fields": [
+          {
+            "label": "Código",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Nome da Oficina",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "Nome do Proprietário",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "Rua",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "C.E.P.",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "Número",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "Complemento",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "Bairro",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "Cidade",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "(sem rótulo)",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Estado",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Telefone",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "% Comissão",
+            "type": "numeric_input"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Gravar"
+          },
+          {
+            "label": "Cancelar"
+          },
+          {
+            "label": "Excluir"
+          },
+          {
+            "label": "Fechar"
+          }
+        ],
+        "grids": [],
+        "tabs": [],
+        "groups": []
+      },
+      "learned_knowledge": [
+        {
+          "subject": "Pressionar Enter sem valor inicia um novo registro.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Inserir número existente e pressionar Enter abre o registro para edição.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Inserir número inexistente e pressionar Enter cria um novo registro com esse código.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Clicar com o mouse ou pressionar F12 abre a tela de consulta de registros.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Selecionar um registro com Enter ou duplo clique o abre para edição na tela principal.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Salva as informações preenchidas no registro.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Descarta as alterações e fecha a tela sem salvar.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Remove o registro permanentemente do sistema, se não estiver em uso em outras tabelas.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        },
+        {
+          "subject": "Fecha a tela atual.",
+          "origin": "Confirmado anteriormente no Cadastro de Fabricante"
+        }
+      ],
+      "unknowns": [
+        "lk_Código e lk_Cidade: destino desconhecido (Cidade tem palpite provavel)",
+        "a que se refere a '% Comissão' da oficina"
+      ],
+      "why_no_question_needed": "Esta tela segue a mesma estrutura já respondida pela sua equipe em outra tela do lote. Perguntar de novo seria repetir algo que você já ensinou."
     }
   ]
 }
