@@ -1,0 +1,2505 @@
+{
+  "schema": "k42-review-public-data@1.0.0",
+  "generated_by": "tools/review/build_k42_review_portal.py",
+  "generated_for": "2026-10-09",
+  "stage": "K4.2 Human Review Round 2",
+  "storage_key": "syscom-human-review-k42-v1",
+  "export_schema": "syscom-human-review-k42@1.0.0",
+  "export_file_name": "syscom-human-review-k42.json",
+  "reviewer": {
+    "id": "gestor_syscom",
+    "display": "Gestor SYSCOM"
+  },
+  "home": {
+    "total_questions": 23,
+    "estimated_minutes": 20,
+    "optional_not_included": 18
+  },
+  "screens": {
+    "k42-01": {
+      "pilot_id": "k42-01",
+      "screen_id": "scr-8201",
+      "name": "Cadastro de Identificação",
+      "menu_path": "Cadastro",
+      "schematic": {
+        "fields": [
+          {
+            "label": "Código",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Cliente",
+            "type": "Caixa de marcação"
+          },
+          {
+            "label": "Fornecedor",
+            "type": "Caixa de marcação"
+          },
+          {
+            "label": "Fornecedor Agregado",
+            "type": "Caixa de marcação"
+          },
+          {
+            "label": "Funcionário",
+            "type": "Caixa de marcação"
+          },
+          {
+            "label": "Operador",
+            "type": "Caixa de marcação"
+          },
+          {
+            "label": "Vendedor",
+            "type": "Caixa de marcação"
+          },
+          {
+            "label": "Transportadora",
+            "type": "Caixa de marcação"
+          },
+          {
+            "label": "Técnico",
+            "type": "Caixa de marcação"
+          },
+          {
+            "label": "Ativo",
+            "type": "Caixa de marcação"
+          },
+          {
+            "label": "Nome/Razão Social",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "Data Cadastro",
+            "type": "Lista de opções"
+          },
+          {
+            "label": "Tipo de Pessoa",
+            "type": "Lista de opções"
+          },
+          {
+            "label": "Nome Fantasia/Apelido",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "C.N.P.J./C.P.F.",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "Insc. Estadual",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "Data Nascimento",
+            "type": "Lista de opções"
+          },
+          {
+            "label": "Estado Civil",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Campo sem rótulo",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Sexo",
+            "type": "Lista de opções"
+          },
+          {
+            "label": "Inscrição Municipal",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "Contribuinte de ICMS",
+            "type": "Lista de opções"
+          },
+          {
+            "label": "Contato",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "Tel. Residencial",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "Tel. Comercial",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "Ente Governamental",
+            "type": "Lista de opções"
+          },
+          {
+            "label": "FAX",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "Celular",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "E-mail",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "C.E.P.",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "Rua",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "Nº",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "Complemento",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "Bairro",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "Cidade",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Campo sem rótulo",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Estado",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "País",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Observações",
+            "type": "Campo de texto"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Consultar"
+          },
+          {
+            "label": "Gravar"
+          },
+          {
+            "label": "Cancelar"
+          },
+          {
+            "label": "Excluir"
+          },
+          {
+            "label": "Parâmetros"
+          },
+          {
+            "label": "Fechar"
+          }
+        ],
+        "grids": [],
+        "tabs": [
+          "Informação Básica",
+          "Características"
+        ],
+        "groups": [
+          "Classificação"
+        ]
+      },
+      "has_schematic": true,
+      "preview": {
+        "status": "PUBLIC_SAFE_PREVIEW",
+        "src": "assets/screens/k42-01.png",
+        "width": 1027,
+        "height": 762,
+        "alt": "Captura da tela Cadastro de Identificação"
+      }
+    },
+    "k42-02": {
+      "pilot_id": "k42-02",
+      "screen_id": "scr-8202",
+      "name": "Cadastro de Veículo",
+      "menu_path": "Cadastro",
+      "schematic": {
+        "fields": [
+          {
+            "label": "Cliente / Motorista",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Campo sem rótulo",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Placa",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "Modelo",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "Ano",
+            "type": "Campo"
+          },
+          {
+            "label": "Marca",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "Renavam",
+            "type": "Campo de texto"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Gravar"
+          },
+          {
+            "label": "Cancelar"
+          },
+          {
+            "label": "Excluir"
+          },
+          {
+            "label": "Fechar"
+          }
+        ],
+        "grids": [
+          {
+            "columns": [
+              "(sem rótulo)",
+              "Placa",
+              "Modelo",
+              "Ano",
+              "Marca",
+              "Renavam"
+            ]
+          }
+        ],
+        "tabs": [],
+        "groups": []
+      },
+      "has_schematic": true,
+      "preview": {
+        "status": "PUBLIC_SAFE_PREVIEW",
+        "src": "assets/screens/k42-02.png",
+        "width": 895,
+        "height": 649,
+        "alt": "Captura da tela Cadastro de Veículo"
+      }
+    },
+    "k42-04": {
+      "pilot_id": "k42-04",
+      "screen_id": "scr-8204",
+      "name": "Consulta Financeira do Cliente",
+      "menu_path": "Consultas",
+      "schematic": {
+        "fields": [
+          {
+            "label": "Cliente",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Campo sem rótulo",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Data",
+            "type": "Lista de opções"
+          },
+          {
+            "label": "Valor",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Data",
+            "type": "Lista de opções"
+          },
+          {
+            "label": "Valor",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Total Vencido",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Total Vencer",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Total Débito",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Total Compras",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Regra de Crédito",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Limite Crédito",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Campo sem rótulo",
+            "type": "Campo de exibição"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Filtrar"
+          }
+        ],
+        "grids": [],
+        "tabs": [],
+        "groups": [
+          "Última Compra",
+          "Maior Compra",
+          "Situação Financeira",
+          "Observação"
+        ]
+      },
+      "has_schematic": true,
+      "preview": {
+        "status": "PUBLIC_SAFE_PREVIEW",
+        "src": "assets/screens/k42-04.png",
+        "width": 858,
+        "height": 682,
+        "alt": "Captura da tela Consulta Financeira do Cliente"
+      }
+    },
+    "k42-06": {
+      "pilot_id": "k42-06",
+      "screen_id": "scr-8206",
+      "name": "Consulta NFe Destinadas",
+      "menu_path": "Estoque",
+      "schematic": {
+        "fields": [
+          {
+            "label": "Empresa",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Campo sem rótulo",
+            "type": "Campo de exibição"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Consultar"
+          },
+          {
+            "label": "Fechar"
+          }
+        ],
+        "grids": [
+          {
+            "columns": [
+              "Recebimento",
+              "Chave de Acesso",
+              "Situação NF",
+              "Emissão",
+              "Tipo",
+              "Valor NF",
+              "Remetent"
+            ]
+          },
+          {
+            "columns": [
+              "Recebimento",
+              "Chave de Acesso",
+              "Justificativa"
+            ]
+          },
+          {
+            "columns": [
+              "Chave de Acesso",
+              "Correção"
+            ]
+          }
+        ],
+        "tabs": [],
+        "groups": [
+          "NF-e Localizadas",
+          "NF-e Canceladas Localizadas",
+          "Carta de Correção de NF-e Localizadas"
+        ]
+      },
+      "has_schematic": true,
+      "preview": {
+        "status": "PUBLIC_SAFE_PREVIEW",
+        "src": "assets/screens/k42-06.png",
+        "width": 905,
+        "height": 763,
+        "alt": "Captura da tela Consulta NFe Destinadas"
+      }
+    },
+    "k42-07": {
+      "pilot_id": "k42-07",
+      "screen_id": "scr-8207",
+      "name": "Requisição",
+      "menu_path": "Estoque",
+      "schematic": {
+        "fields": [
+          {
+            "label": "Tipo",
+            "type": "Lista de opções"
+          },
+          {
+            "label": "Série",
+            "type": "Campo"
+          },
+          {
+            "label": "Número",
+            "type": "Campo"
+          },
+          {
+            "label": "Data Mov.",
+            "type": "Lista de opções"
+          },
+          {
+            "label": "Data Saída",
+            "type": "Lista de opções"
+          },
+          {
+            "label": "Atendente",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Campo sem rótulo",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Requisitante",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Campo sem rótulo",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Almoxarifado",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Campo sem rótulo",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Almoxarifado Destino",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Campo sem rótulo",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Saldo no Dia",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Saldo Atual",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Item",
+            "type": "Campo"
+          },
+          {
+            "label": "Produto",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Campo sem rótulo",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Unidade",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Campo sem rótulo",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Quantidade",
+            "type": "Campo"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Gravar"
+          },
+          {
+            "label": "Cancelar"
+          },
+          {
+            "label": "Excluir"
+          },
+          {
+            "label": "Fechar"
+          }
+        ],
+        "grids": [
+          {
+            "columns": [
+              "(sem rótulo)",
+              "(sem rótulo)",
+              "Item",
+              "Produto",
+              "(sem rótulo)",
+              "Unidade",
+              "Quantidade"
+            ]
+          }
+        ],
+        "tabs": [],
+        "groups": [
+          "Produtos"
+        ]
+      },
+      "has_schematic": true,
+      "preview": {
+        "status": "PUBLIC_SAFE_PREVIEW",
+        "src": "assets/screens/k42-07.png",
+        "width": 971,
+        "height": 739,
+        "alt": "Captura da tela Requisição"
+      }
+    },
+    "k42-08": {
+      "pilot_id": "k42-08",
+      "screen_id": "scr-8208",
+      "name": "Convênio - Venda",
+      "menu_path": "Faturamento",
+      "schematic": {
+        "fields": [
+          {
+            "label": "Número",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Data Digitação",
+            "type": "Lista de opções"
+          },
+          {
+            "label": "Convênio",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Campo sem rótulo",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Tabela",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Item",
+            "type": "Campo"
+          },
+          {
+            "label": "Produto",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Campo sem rótulo",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Funcionário",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Campo sem rótulo",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Saldo",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Quantidade",
+            "type": "Campo"
+          },
+          {
+            "label": "Valor Unitário",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Desc. (%)",
+            "type": "Campo"
+          },
+          {
+            "label": "Desc. ($)",
+            "type": "Campo"
+          },
+          {
+            "label": "Valor Total",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Total Venda:",
+            "type": "Campo de exibição"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Incluir"
+          },
+          {
+            "label": "Gravar"
+          },
+          {
+            "label": "Cancelar"
+          },
+          {
+            "label": "Excluir"
+          },
+          {
+            "label": "Fechar"
+          }
+        ],
+        "grids": [
+          {
+            "columns": [
+              "(sem rótulo)",
+              "(sem rótulo)",
+              "Item",
+              "Produto",
+              "(sem rótulo)",
+              "Funcionário",
+              "Quant.",
+              "Valor Unit.",
+              "Desc.(%)",
+              "Desc.(R$)",
+              "Total (R$)"
+            ]
+          }
+        ],
+        "tabs": [],
+        "groups": [
+          "Itens"
+        ]
+      },
+      "has_schematic": true,
+      "preview": {
+        "status": "PUBLIC_SAFE_PREVIEW",
+        "src": "assets/screens/k42-08.png",
+        "width": 1119,
+        "height": 766,
+        "alt": "Captura da tela Convênio - Venda"
+      }
+    },
+    "k42-10": {
+      "pilot_id": "k42-10",
+      "screen_id": "scr-8210",
+      "name": "Promoção",
+      "menu_path": "Faturamento",
+      "schematic": {
+        "fields": [
+          {
+            "label": "Produto",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Campo sem rótulo",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Valor Mínimo",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Valor Atual",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Valor em Promoção",
+            "type": "Campo"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Confirmar"
+          },
+          {
+            "label": "Gravar"
+          },
+          {
+            "label": "Cancelar"
+          },
+          {
+            "label": "Excluir"
+          },
+          {
+            "label": "Fechar"
+          }
+        ],
+        "grids": [
+          {
+            "columns": [
+              "(sem rótulo)",
+              "Código",
+              "Produto",
+              "Valor Mínimo",
+              "Valor Atual",
+              "Valor Promoção"
+            ]
+          }
+        ],
+        "tabs": [],
+        "groups": []
+      },
+      "has_schematic": true,
+      "preview": {
+        "status": "PUBLIC_SAFE_PREVIEW",
+        "src": "assets/screens/k42-10.png",
+        "width": 969,
+        "height": 731,
+        "alt": "Captura da tela Promoção"
+      }
+    },
+    "k42-11": {
+      "pilot_id": "k42-11",
+      "screen_id": "scr-8211",
+      "name": "Alterar Tributação de Produtos",
+      "menu_path": "Ferramentas",
+      "schematic": {
+        "fields": [
+          {
+            "label": "N.C.M.",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "Classificação do Produto",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Campo sem rótulo",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Regra Tributação",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Campo sem rótulo",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "CST ICMS",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "Descrição do Produto",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "Campo sem rótulo",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "Tributação",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Campo sem rótulo",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Regra Tributação",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Campo sem rótulo",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Tipo de Calculo de Substituição Tributária",
+            "type": "Lista de opções"
+          },
+          {
+            "label": "M.V.A.",
+            "type": "Campo"
+          },
+          {
+            "label": "Regra Fiscal",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Campo sem rótulo",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "% Nacional",
+            "type": "Campo"
+          },
+          {
+            "label": "% Importado",
+            "type": "Campo"
+          },
+          {
+            "label": "% Estadual",
+            "type": "Campo"
+          },
+          {
+            "label": "% Municipal",
+            "type": "Campo"
+          },
+          {
+            "label": "N.C.M.",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "C.E.S.T.",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "Rec. Contrib. Social",
+            "type": "Lista de opções"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Filtrar"
+          },
+          {
+            "label": "Gravar"
+          },
+          {
+            "label": "Cancelar"
+          },
+          {
+            "label": "Fechar"
+          }
+        ],
+        "grids": [
+          {
+            "columns": [
+              "(sem rótulo)",
+              "Código",
+              "Produto",
+              "(sem rótulo)"
+            ]
+          }
+        ],
+        "tabs": [],
+        "groups": [
+          "Impostos Aproximados da Lei de Transparência"
+        ]
+      },
+      "has_schematic": true,
+      "preview": {
+        "status": "PUBLIC_SAFE_PREVIEW",
+        "src": "assets/screens/k42-11.png",
+        "width": 932,
+        "height": 774,
+        "alt": "Captura da tela Alterar Tributação de Produtos"
+      }
+    },
+    "k42-12": {
+      "pilot_id": "k42-12",
+      "screen_id": "scr-8212",
+      "name": "Lançamento de Contagem para Produto S/ Saldo",
+      "menu_path": "Ferramentas › Inventário",
+      "schematic": {
+        "fields": [
+          {
+            "label": "Almoxarifado",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Campo sem rótulo",
+            "type": "Campo de exibição"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Gravar"
+          },
+          {
+            "label": "Fechar"
+          }
+        ],
+        "grids": [],
+        "tabs": [],
+        "groups": []
+      },
+      "has_schematic": true,
+      "preview": {
+        "status": "PUBLIC_SAFE_PREVIEW",
+        "src": "assets/screens/k42-12.png",
+        "width": 853,
+        "height": 507,
+        "alt": "Captura da tela Lançamento de Contagem para Produto S/ Saldo"
+      }
+    },
+    "k42-14": {
+      "pilot_id": "k42-14",
+      "screen_id": "scr-8214",
+      "name": "Gerenciar Nota Fiscal",
+      "menu_path": "Fiscal",
+      "schematic": {
+        "fields": [
+          {
+            "label": "De",
+            "type": "Lista de opções"
+          },
+          {
+            "label": "Até",
+            "type": "Lista de opções"
+          },
+          {
+            "label": "Tipo",
+            "type": "Lista de opções"
+          },
+          {
+            "label": "Cliente",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Campo sem rótulo",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "C.F.O.P",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Campo sem rótulo",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Nº NF",
+            "type": "Campo"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Filtrar"
+          }
+        ],
+        "grids": [
+          {
+            "columns": [
+              "(sem rótulo)",
+              "NF",
+              "Data Emissão",
+              "Data Saída",
+              "Cliente",
+              "(sem rótulo)",
+              "Total",
+              "Canc.",
+              "Imp"
+            ]
+          }
+        ],
+        "tabs": [],
+        "groups": []
+      },
+      "has_schematic": true,
+      "preview": {
+        "status": "PUBLIC_SAFE_PREVIEW",
+        "src": "assets/screens/k42-14.png",
+        "width": 1074,
+        "height": 721,
+        "alt": "Captura da tela Gerenciar Nota Fiscal"
+      }
+    },
+    "k42-17": {
+      "pilot_id": "k42-17",
+      "screen_id": "scr-8217",
+      "name": "Parâmetro Arno",
+      "menu_path": "Sistema",
+      "schematic": {
+        "fields": [
+          {
+            "label": "Programada",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Campo sem rótulo",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Arno",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Campo sem rótulo",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Embalagem",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Campo sem rótulo",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Fora de Linha",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Campo sem rótulo",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Unidade",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Campo sem rótulo",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Programada",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Campo sem rótulo",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Em Linha",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Campo sem rótulo",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Posto Arno",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Campo sem rótulo",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Atacado",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Campo sem rótulo",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Percentual(%)",
+            "type": "Campo"
+          },
+          {
+            "label": "Margem",
+            "type": "Campo"
+          },
+          {
+            "label": "Atualizar Tabela de Preço Padrão - Venda",
+            "type": "Caixa de marcação"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Gravar"
+          },
+          {
+            "label": "Fechar"
+          }
+        ],
+        "grids": [],
+        "tabs": [
+          "Importação"
+        ],
+        "groups": [
+          "Classificação do Produto para Importação de Peças",
+          "Classificação do Produto para Importação de Peças Programadas",
+          "Classificação do Produto para Importação de Peças em Linha (Garantida)",
+          "Tabela de Preço Arno/Atacado para Importação de Peças",
+          "Percentual / Margem para composição de Preço"
+        ]
+      },
+      "has_schematic": true,
+      "preview": {
+        "status": "PUBLIC_SAFE_PREVIEW",
+        "src": "assets/screens/k42-17.png",
+        "width": 826,
+        "height": 662,
+        "alt": "Captura da tela Parâmetro Arno"
+      }
+    },
+    "k42-22": {
+      "pilot_id": "k42-22",
+      "screen_id": "scr-8222",
+      "name": "Classificação de Produtos",
+      "menu_path": "Tabelas › Estoque",
+      "schematic": {
+        "fields": [
+          {
+            "label": "Código",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Nome",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "Período Revisão",
+            "type": "Campo"
+          },
+          {
+            "label": "Categoria",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Campo sem rótulo",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Definir como título da Categoria",
+            "type": "Caixa de marcação"
+          },
+          {
+            "label": "% Limite Desconto",
+            "type": "Campo"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Gravar"
+          },
+          {
+            "label": "Cancelar"
+          },
+          {
+            "label": "Excluir"
+          },
+          {
+            "label": "Fechar"
+          }
+        ],
+        "grids": [],
+        "tabs": [],
+        "groups": []
+      },
+      "has_schematic": true,
+      "preview": {
+        "status": "PUBLIC_SAFE_PREVIEW",
+        "src": "assets/screens/k42-22.png",
+        "width": 1385,
+        "height": 736,
+        "alt": "Captura da tela Classificação de Produtos"
+      }
+    },
+    "k42-23": {
+      "pilot_id": "k42-23",
+      "screen_id": "scr-8223",
+      "name": "Produtos Similares",
+      "menu_path": "Tabelas › Estoque",
+      "schematic": {
+        "fields": [
+          {
+            "label": "Produto",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Campo sem rótulo",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Produto Similar",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Campo sem rótulo",
+            "type": "Campo de exibição"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Confirmar"
+          },
+          {
+            "label": "Gravar"
+          },
+          {
+            "label": "Cancelar"
+          },
+          {
+            "label": "Excluir"
+          },
+          {
+            "label": "Fechar"
+          }
+        ],
+        "grids": [
+          {
+            "columns": [
+              "(sem rótulo)",
+              "(sem rótulo)",
+              "Produto",
+              "(sem rótulo)"
+            ]
+          }
+        ],
+        "tabs": [],
+        "groups": []
+      },
+      "has_schematic": true,
+      "preview": {
+        "status": "PUBLIC_SAFE_PREVIEW",
+        "src": "assets/screens/k42-23.png",
+        "width": 1583,
+        "height": 850,
+        "alt": "Captura da tela Produtos Similares"
+      }
+    },
+    "k42-24": {
+      "pilot_id": "k42-24",
+      "screen_id": "scr-8224",
+      "name": "Cadastro Tipo de Orçamento",
+      "menu_path": "Tabelas › Faturamento",
+      "schematic": {
+        "fields": [
+          {
+            "label": "Código",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Nome",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "Tipo de Movimentação",
+            "type": "Lista de opções"
+          },
+          {
+            "label": "Gerar Contas a Receber",
+            "type": "Caixa de marcação"
+          },
+          {
+            "label": "Perda de mercadoria",
+            "type": "Caixa de marcação"
+          },
+          {
+            "label": "Conta Financeira",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Campo sem rótulo",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Conta Contábil",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Campo sem rótulo",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Conta Contábil Devolução",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Campo sem rótulo",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Não Atualizar Estoque",
+            "type": "Caixa de marcação"
+          },
+          {
+            "label": "Preço de Compra NFe-Livre",
+            "type": "Caixa de marcação"
+          },
+          {
+            "label": "Consumidor Final",
+            "type": "Caixa de marcação"
+          },
+          {
+            "label": "Transferência de Crédito Acumulado de I.C.M.S.",
+            "type": "Caixa de marcação"
+          },
+          {
+            "label": "Calcular IRRF na N.F.",
+            "type": "Caixa de marcação"
+          },
+          {
+            "label": "Compra Governamental",
+            "type": "Caixa de marcação"
+          },
+          {
+            "label": "Red. Aliquota %",
+            "type": "Campo de exibição"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Gravar"
+          },
+          {
+            "label": "Cancelar"
+          },
+          {
+            "label": "Excluir"
+          },
+          {
+            "label": "Fechar"
+          }
+        ],
+        "grids": [],
+        "tabs": [],
+        "groups": []
+      },
+      "has_schematic": true,
+      "preview": {
+        "status": "PUBLIC_SAFE_PREVIEW",
+        "src": "assets/screens/k42-24.png",
+        "width": 827,
+        "height": 728,
+        "alt": "Captura da tela Cadastro Tipo de Orçamento"
+      }
+    },
+    "k42-32": {
+      "pilot_id": "k42-32",
+      "screen_id": "scr-8232",
+      "name": "Código Fiscal de Operação (CFOP)",
+      "menu_path": "Tabelas › Fiscal",
+      "schematic": {
+        "fields": [
+          {
+            "label": "Código",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Nome de Entrada",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "Nome de Saída",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "C.F.O.P. para Devolução",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Campo sem rótulo",
+            "type": "Campo de exibição"
+          },
+          {
+            "label": "Somar o Frete a Base de Cálculo",
+            "type": "Caixa de marcação"
+          },
+          {
+            "label": "Somar o IPI no Valor para Cálculo de Red. de Base",
+            "type": "Caixa de marcação"
+          },
+          {
+            "label": "Somar Outras Despesas na Base S.T.",
+            "type": "Caixa de marcação"
+          },
+          {
+            "label": "Uso e Consumo",
+            "type": "Caixa de marcação"
+          },
+          {
+            "label": "Todos os Produtos desta Operação terão Crédito de ICMS",
+            "type": "Caixa de marcação"
+          },
+          {
+            "label": "Atualizar C.I.A.P.",
+            "type": "Caixa de marcação"
+          },
+          {
+            "label": "Remessa para Entrega",
+            "type": "Caixa de marcação"
+          },
+          {
+            "label": "Faturamento Antecipado",
+            "type": "Caixa de marcação"
+          },
+          {
+            "label": "Exibir mensagem de Lei da Transparência",
+            "type": "Caixa de marcação"
+          },
+          {
+            "label": "Não Alterar Custo Médio",
+            "type": "Caixa de marcação"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Gravar"
+          },
+          {
+            "label": "Cancelar"
+          },
+          {
+            "label": "Excluir"
+          },
+          {
+            "label": "Fechar"
+          }
+        ],
+        "grids": [],
+        "tabs": [],
+        "groups": [
+          "Configuração"
+        ]
+      },
+      "has_schematic": true,
+      "preview": {
+        "status": "PUBLIC_SAFE_PREVIEW",
+        "src": "assets/screens/k42-32.png",
+        "width": 944,
+        "height": 709,
+        "alt": "Captura da tela Código Fiscal de Operação (CFOP)"
+      }
+    },
+    "k42-33": {
+      "pilot_id": "k42-33",
+      "screen_id": "scr-8233",
+      "name": "Cadastro de Observação da Nota Fiscal",
+      "menu_path": "Tabelas › Fiscal",
+      "schematic": {
+        "fields": [
+          {
+            "label": "Código",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Observação Corpo da Nota",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "Observação Informações Complementares",
+            "type": "Campo de texto"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Gravar"
+          },
+          {
+            "label": "Cancelar"
+          },
+          {
+            "label": "Excluir"
+          },
+          {
+            "label": "Fechar"
+          }
+        ],
+        "grids": [],
+        "tabs": [],
+        "groups": []
+      },
+      "has_schematic": true,
+      "preview": {
+        "status": "PUBLIC_SAFE_PREVIEW",
+        "src": "assets/screens/k42-33.png",
+        "width": 896,
+        "height": 653,
+        "alt": "Captura da tela Cadastro de Observação da Nota Fiscal"
+      }
+    },
+    "k42-34": {
+      "pilot_id": "k42-34",
+      "screen_id": "scr-8234",
+      "name": "Caixa PDV",
+      "menu_path": "Tabelas › Fiscal",
+      "schematic": {
+        "fields": [
+          {
+            "label": "Código",
+            "type": "Campo com busca"
+          },
+          {
+            "label": "Nome",
+            "type": "Campo de texto"
+          },
+          {
+            "label": "Série NFC-e",
+            "type": "Campo"
+          },
+          {
+            "label": "Próxima NFC-e",
+            "type": "Campo"
+          },
+          {
+            "label": "Ativo",
+            "type": "Caixa de marcação"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Gravar"
+          },
+          {
+            "label": "Cancelar"
+          },
+          {
+            "label": "Fechar"
+          }
+        ],
+        "grids": [],
+        "tabs": [],
+        "groups": []
+      },
+      "has_schematic": true,
+      "preview": {
+        "status": "PUBLIC_SAFE_PREVIEW",
+        "src": "assets/screens/k42-34.png",
+        "width": 829,
+        "height": 655,
+        "alt": "Captura da tela Caixa PDV"
+      }
+    },
+    "k4-14": {
+      "pilot_id": "k4-14",
+      "screen_id": "scr-8114",
+      "name": "Montagem do Trio Fechado",
+      "menu_path": "Tabelas › Faturamento",
+      "schematic": {
+        "fields": [],
+        "actions": [
+          {
+            "label": "ícone X de fechar janela"
+          },
+          {
+            "label": "Gravar"
+          },
+          {
+            "label": "Cancelar"
+          },
+          {
+            "label": "Excluir"
+          },
+          {
+            "label": "Fechar"
+          }
+        ],
+        "grids": [
+          {
+            "columns": [
+              "Descrição do Produto",
+              "Valor"
+            ]
+          },
+          {
+            "columns": [
+              "Descrição do Produto",
+              "Valor"
+            ]
+          },
+          {
+            "columns": [
+              "Descrição do Produto",
+              "Valor"
+            ]
+          }
+        ],
+        "tabs": [],
+        "groups": [
+          "(sem rótulo)",
+          "(sem rótulo)",
+          "(sem rótulo)"
+        ]
+      },
+      "has_schematic": true,
+      "preview": {
+        "status": "PUBLIC_SAFE_PREVIEW",
+        "src": "assets/screens/k4-14.png",
+        "width": 1360,
+        "height": 802,
+        "alt": "Captura da tela Montagem do Trio Fechado"
+      }
+    }
+  },
+  "questions": [
+    {
+      "kind": "behavior",
+      "pilot_id": "k42-01",
+      "screen_name": "Cadastro de Identificação",
+      "question_id": "prep-k42-01-1",
+      "question_family_key": "qf:authored:k42-01:1",
+      "mode": "open",
+      "question": "É permitido marcar mais de um papel em \"Classificação\" (por exemplo, Cliente e Fornecedor ao mesmo tempo)?",
+      "why": "Essa regra define como o sistema trata uma pessoa ou empresa. Ela não aparece na tela e não dá para saber só pela imagem.",
+      "ai_knows": "A tela é o cadastro único de pessoas e empresas (cliente, fornecedor, funcionário, vendedor, transportadora e outros papéis). Quais papéis liberam quais telas, a IA ainda não sabe.",
+      "options": [
+        {
+          "code": "EXPLAINED",
+          "label": "SEI EXPLICAR",
+          "field": {
+            "kind": "explanation",
+            "required": true,
+            "label": "Explique do seu jeito. Uma ou duas frases são suficientes.",
+            "export_as": "human_explanation"
+          }
+        },
+        {
+          "code": "UNKNOWN",
+          "label": "NÃO SEI"
+        }
+      ],
+      "provenance": {
+        "prep_id": "prep-k42-01-1",
+        "question_kind": "MUST_ASK_HUMAN",
+        "origin": "BUSINESS_RULE",
+        "source_artifact": "data/k4/scale/K4_2_HUMAN_REVIEW_PREP.json"
+      },
+      "screen_id": "scr-8201",
+      "has_screen_view": true,
+      "position": 1
+    },
+    {
+      "kind": "behavior",
+      "pilot_id": "k42-02",
+      "screen_name": "Cadastro de Veículo",
+      "question_id": "prep-k42-02-2",
+      "question_family_key": "qf:authored:k42-02:2",
+      "mode": "open",
+      "question": "Um veículo pertence a um cliente, a um motorista ou aos dois (campo \"Cliente / Motorista\")?",
+      "why": "O campo se chama \"Cliente / Motorista\", e só quem conhece o processo sabe o que ele representa.",
+      "ai_knows": "A tela cadastra veículos de um cliente ou motorista (placa, modelo, ano, marca e renavam) e mostra a lista dos veículos já ligados a ele. Como o veículo é usado depois, a IA não sabe.",
+      "options": [
+        {
+          "code": "EXPLAINED",
+          "label": "SEI EXPLICAR",
+          "field": {
+            "kind": "explanation",
+            "required": true,
+            "label": "Explique do seu jeito. Uma ou duas frases são suficientes.",
+            "export_as": "human_explanation"
+          }
+        },
+        {
+          "code": "UNKNOWN",
+          "label": "NÃO SEI"
+        }
+      ],
+      "provenance": {
+        "prep_id": "prep-k42-02-2",
+        "question_kind": "MUST_ASK_HUMAN",
+        "origin": "BUSINESS_RULE",
+        "source_artifact": "data/k4/scale/K4_2_HUMAN_REVIEW_PREP.json"
+      },
+      "screen_id": "scr-8202",
+      "has_screen_view": true,
+      "position": 2
+    },
+    {
+      "kind": "behavior",
+      "pilot_id": "k42-04",
+      "screen_name": "Consulta Financeira do Cliente",
+      "question_id": "prep-k42-04-2",
+      "question_family_key": "qf:authored:k42-04:2",
+      "mode": "open",
+      "question": "\"Regra de Crédito\" e \"Limite Crédito\" vêm do cadastro do cliente? Como o limite é comparado ao débito?",
+      "why": "É uma regra de crédito: de onde vem o limite e como ele é comparado. A tela mostra os campos, mas não a regra.",
+      "ai_knows": "A tela consulta a situação financeira de um cliente: última e maior compra, totais vencido, a vencer, débito e compras, regra e limite de crédito e observação. Os valores só aparecem depois de escolher o cliente, e isso não estava na imagem.",
+      "options": [
+        {
+          "code": "EXPLAINED",
+          "label": "SEI EXPLICAR",
+          "field": {
+            "kind": "explanation",
+            "required": true,
+            "label": "Explique do seu jeito. Uma ou duas frases são suficientes.",
+            "export_as": "human_explanation"
+          }
+        },
+        {
+          "code": "UNKNOWN",
+          "label": "NÃO SEI"
+        }
+      ],
+      "provenance": {
+        "prep_id": "prep-k42-04-2",
+        "question_kind": "MUST_ASK_HUMAN",
+        "origin": "BUSINESS_RULE",
+        "source_artifact": "data/k4/scale/K4_2_HUMAN_REVIEW_PREP.json"
+      },
+      "screen_id": "scr-8204",
+      "has_screen_view": true,
+      "position": 3
+    },
+    {
+      "kind": "behavior",
+      "pilot_id": "k42-06",
+      "screen_name": "Consulta NFe Destinadas",
+      "question_id": "prep-k42-06-1",
+      "question_family_key": "qf:authored:k42-06:1",
+      "mode": "open",
+      "question": "O botão \"Consultar\" acessa a Sefaz pela internet e usa certificado digital? Que período ele consulta?",
+      "why": "Isso depende de uma ligação externa (Sefaz e certificado digital), que a imagem da tela não mostra.",
+      "ai_knows": "O subtítulo \"Sefaz\" sugere que a tela consulta esse serviço. Ela tem três listas: notas localizadas, notas canceladas e cartas de correção. O que a consulta retorna e se ela importa notas, a IA não sabe.",
+      "options": [
+        {
+          "code": "EXPLAINED",
+          "label": "SEI EXPLICAR",
+          "field": {
+            "kind": "explanation",
+            "required": true,
+            "label": "Explique do seu jeito. Uma ou duas frases são suficientes.",
+            "export_as": "human_explanation"
+          }
+        },
+        {
+          "code": "UNKNOWN",
+          "label": "NÃO SEI"
+        }
+      ],
+      "provenance": {
+        "prep_id": "prep-k42-06-1",
+        "question_kind": "MUST_ASK_HUMAN",
+        "origin": "ACTION_BEHAVIOR",
+        "source_artifact": "data/k4/scale/K4_2_HUMAN_REVIEW_PREP.json"
+      },
+      "screen_id": "scr-8206",
+      "has_screen_view": true,
+      "position": 4
+    },
+    {
+      "kind": "lookup_alias",
+      "pilot_id": "k42-07",
+      "screen_name": "Requisição",
+      "question_id": "prep-alias-01",
+      "question_family_key": "qf:alias:alias-01",
+      "mode": "lookup_alias",
+      "question": "A busca [...] do campo \"Almoxarifado Destino\" abre o mesmo cadastro usado pelo campo \"Almoxarifado\"?",
+      "why": "A IA só tem o nome do campo como pista. Sua resposta confirma isso sem precisar abrir a tela.",
+      "ai_knows": "Já está confirmado que a busca do campo \"Almoxarifado\" abre o Cadastro de Almoxarifado. A busca de \"Almoxarifado Destino\" ainda não foi observada.",
+      "suspicion": "A IA suspeita que sim: \"Destino\" parece só dizer para que o campo serve.",
+      "options": [
+        {
+          "code": "SAME",
+          "label": "SIM, É A MESMA BUSCA"
+        },
+        {
+          "code": "DIFFERENT",
+          "label": "NÃO, ABRE OUTRA COISA",
+          "field": {
+            "kind": "explanation",
+            "required": true,
+            "label": "Qual é o cadastro correto?",
+            "export_as": "human_explanation"
+          }
+        },
+        {
+          "code": "UNKNOWN",
+          "label": "NÃO SEI"
+        }
+      ],
+      "provenance": {
+        "prep_id": "prep-alias-01",
+        "question_kind": "LOOKUP_ALIAS_CONFIRMATION",
+        "alias_review_id": "alias-01",
+        "lookups_unlocked_count": 1,
+        "source_artifact": "data/k4/scale/K4_2_LOOKUP_ALIAS_REVIEW.json"
+      },
+      "screen_id": "scr-8207",
+      "has_screen_view": true,
+      "position": 5
+    },
+    {
+      "kind": "behavior",
+      "pilot_id": "k42-08",
+      "screen_name": "Convênio - Venda",
+      "question_id": "prep-k42-08-2",
+      "question_family_key": "qf:authored:k42-08:2",
+      "mode": "open",
+      "question": "O \"Funcionário\" de cada item é o titular do convênio ou o vendedor? Por que ele é informado por item e não por venda?",
+      "why": "O papel do funcionário no item muda o significado do campo, e a tela não explica.",
+      "ai_knows": "A tela registra vendas no regime de convênio: número da venda, convênio, tabela e a lista de itens (produto, funcionário, quantidade, valor, descontos), com o total da venda. Como a venda vira cobrança do convênio, a IA não sabe.",
+      "options": [
+        {
+          "code": "EXPLAINED",
+          "label": "SEI EXPLICAR",
+          "field": {
+            "kind": "explanation",
+            "required": true,
+            "label": "Explique do seu jeito. Uma ou duas frases são suficientes.",
+            "export_as": "human_explanation"
+          }
+        },
+        {
+          "code": "UNKNOWN",
+          "label": "NÃO SEI"
+        }
+      ],
+      "provenance": {
+        "prep_id": "prep-k42-08-2",
+        "question_kind": "MUST_ASK_HUMAN",
+        "origin": "BUSINESS_RULE",
+        "source_artifact": "data/k4/scale/K4_2_HUMAN_REVIEW_PREP.json"
+      },
+      "screen_id": "scr-8208",
+      "has_screen_view": true,
+      "position": 6
+    },
+    {
+      "kind": "behavior",
+      "pilot_id": "k42-10",
+      "screen_name": "Promoção",
+      "question_id": "prep-k42-10-1",
+      "question_family_key": "qf:authored:k42-10:1",
+      "mode": "open",
+      "question": "A promoção tem data de início e fim, ou vale até ser removida? Não há campo de período na tela.",
+      "why": "A tela não tem campo de período. Por isso a validade da promoção não dá para saber só pela imagem.",
+      "ai_knows": "A tela cadastra produtos em promoção: ao escolher o produto, aparecem o valor mínimo e o valor atual; informa-se o valor em promoção e a linha entra na lista.",
+      "options": [
+        {
+          "code": "EXPLAINED",
+          "label": "SEI EXPLICAR",
+          "field": {
+            "kind": "explanation",
+            "required": true,
+            "label": "Explique do seu jeito. Uma ou duas frases são suficientes.",
+            "export_as": "human_explanation"
+          }
+        },
+        {
+          "code": "UNKNOWN",
+          "label": "NÃO SEI"
+        }
+      ],
+      "provenance": {
+        "prep_id": "prep-k42-10-1",
+        "question_kind": "MUST_ASK_HUMAN",
+        "origin": "BUSINESS_RULE",
+        "source_artifact": "data/k4/scale/K4_2_HUMAN_REVIEW_PREP.json"
+      },
+      "screen_id": "scr-8210",
+      "has_screen_view": true,
+      "position": 7
+    },
+    {
+      "kind": "behavior",
+      "pilot_id": "k42-11",
+      "screen_name": "Alterar Tributação de Produtos",
+      "question_id": "prep-k42-11-1",
+      "question_family_key": "qf:authored:k42-11:1",
+      "mode": "open",
+      "question": "Ao clicar em \"Gravar\", são alterados todos os produtos listados na tela ou só os selecionados? Existe confirmação antes?",
+      "why": "É uma ação em lote com muito impacto: um engano altera vários produtos de uma vez.",
+      "ai_knows": "A tela altera a tributação de vários produtos de uma vez. Filtra-se por NCM, classificação, regra, CST ICMS ou descrição, e o bloco de baixo traz os dados de tributação (regra, MVA, impostos aproximados, NCM, CEST). A quais produtos isso é aplicado, a IA não sabe.",
+      "options": [
+        {
+          "code": "EXPLAINED",
+          "label": "SEI EXPLICAR",
+          "field": {
+            "kind": "explanation",
+            "required": true,
+            "label": "Explique do seu jeito. Uma ou duas frases são suficientes.",
+            "export_as": "human_explanation"
+          }
+        },
+        {
+          "code": "UNKNOWN",
+          "label": "NÃO SEI"
+        }
+      ],
+      "provenance": {
+        "prep_id": "prep-k42-11-1",
+        "question_kind": "MUST_ASK_HUMAN",
+        "origin": "ACTION_BEHAVIOR",
+        "source_artifact": "data/k4/scale/K4_2_HUMAN_REVIEW_PREP.json"
+      },
+      "screen_id": "scr-8211",
+      "has_screen_view": true,
+      "position": 8
+    },
+    {
+      "kind": "behavior",
+      "pilot_id": "k42-11",
+      "screen_name": "Alterar Tributação de Produtos",
+      "question_id": "prep-k42-11-2",
+      "question_family_key": "qf:authored:k42-11:2",
+      "mode": "open",
+      "question": "Os campos do bloco de baixo substituem os dados dos produtos, ou só os campos preenchidos são aplicados?",
+      "why": "Também é uma alteração em lote com muito impacto: muda se os dados atuais são sobrescritos ou apenas completados.",
+      "ai_knows": "O bloco de baixo traz regra, MVA, impostos aproximados, NCM e CEST. O que acontece com os campos deixados em branco, a IA não sabe.",
+      "options": [
+        {
+          "code": "EXPLAINED",
+          "label": "SEI EXPLICAR",
+          "field": {
+            "kind": "explanation",
+            "required": true,
+            "label": "Explique do seu jeito. Uma ou duas frases são suficientes.",
+            "export_as": "human_explanation"
+          }
+        },
+        {
+          "code": "UNKNOWN",
+          "label": "NÃO SEI"
+        }
+      ],
+      "provenance": {
+        "prep_id": "prep-k42-11-2",
+        "question_kind": "MUST_ASK_HUMAN",
+        "origin": "BUSINESS_RULE",
+        "source_artifact": "data/k4/scale/K4_2_HUMAN_REVIEW_PREP.json"
+      },
+      "screen_id": "scr-8211",
+      "has_screen_view": true,
+      "position": 9
+    },
+    {
+      "kind": "behavior",
+      "pilot_id": "k42-12",
+      "screen_name": "Lançamento de Contagem para Produto S/ Saldo",
+      "question_id": "prep-k42-12-1",
+      "question_family_key": "qf:authored:k42-12:1",
+      "mode": "hypothesis",
+      "question": "O que o botão \"Gravar\" faz nesta tela?",
+      "why": "É uma ação em massa, e a tela só mostra o campo \"Almoxarifado\" e os botões \"Gravar\" e \"Fechar\". O efeito não aparece na imagem.",
+      "ai_knows": "A tela lança a contagem de inventário para os produtos sem saldo de um almoxarifado: escolhe-se o almoxarifado e grava-se. Que produtos entram, com que quantidade e o efeito no inventário, a IA não sabe.",
+      "suspicion": "A IA suspeita que, ao gravar, o sistema cria uma contagem zerada para todos os produtos sem saldo do almoxarifado escolhido.",
+      "options": [
+        {
+          "code": "SAME",
+          "label": "SIM, FUNCIONA ASSIM",
+          "field": {
+            "kind": "detail",
+            "required": false,
+            "label": "Existe alguma condição ou exceção importante?",
+            "export_as": "condition_or_exception"
+          }
+        },
+        {
+          "code": "DIFFERENT",
+          "label": "FUNCIONA DIFERENTE",
+          "field": {
+            "kind": "explanation",
+            "required": true,
+            "label": "Explique como funciona nesta tela.",
+            "export_as": "human_explanation"
+          }
+        },
+        {
+          "code": "UNKNOWN",
+          "label": "NÃO SEI"
+        },
+        {
+          "code": "NOT_APPLICABLE",
+          "label": "NÃO SE APLICA"
+        }
+      ],
+      "provenance": {
+        "prep_id": "prep-k42-12-1",
+        "question_kind": "MUST_ASK_HUMAN",
+        "origin": "ACTION_BEHAVIOR",
+        "source_artifact": "data/k4/scale/K4_2_HUMAN_REVIEW_PREP.json"
+      },
+      "screen_id": "scr-8212",
+      "has_screen_view": true,
+      "position": 10
+    },
+    {
+      "kind": "behavior",
+      "pilot_id": "k42-14",
+      "screen_name": "Gerenciar Nota Fiscal",
+      "question_id": "prep-k42-14-1",
+      "question_family_key": "qf:authored:k42-14:1",
+      "mode": "open",
+      "question": "O que cada item da barra de ferramentas faz com a nota selecionada: Complementar, Devol. Vendas, Transformação e Emissão de NF?",
+      "why": "São quatro ações sobre um documento fiscal, e o efeito delas não aparece na tela.",
+      "ai_knows": "A tela gerencia notas fiscais emitidas: filtra-se por período, tipo, cliente, CFOP e número, e a barra de ferramentas oferece ações sobre a nota escolhida (gerar, imprimir, cancelar, complementar, devolver, transformar, emitir). O efeito de cada ação, a IA não sabe.",
+      "options": [
+        {
+          "code": "EXPLAINED",
+          "label": "SEI EXPLICAR",
+          "field": {
+            "kind": "explanation",
+            "required": true,
+            "label": "Explique do seu jeito. Uma ou duas frases são suficientes.",
+            "export_as": "human_explanation"
+          }
+        },
+        {
+          "code": "UNKNOWN",
+          "label": "NÃO SEI"
+        }
+      ],
+      "provenance": {
+        "prep_id": "prep-k42-14-1",
+        "question_kind": "MUST_ASK_HUMAN",
+        "origin": "ACTION_BEHAVIOR",
+        "source_artifact": "data/k4/scale/K4_2_HUMAN_REVIEW_PREP.json"
+      },
+      "screen_id": "scr-8214",
+      "has_screen_view": true,
+      "position": 11
+    },
+    {
+      "kind": "behavior",
+      "pilot_id": "k42-17",
+      "screen_name": "Parâmetro Arno",
+      "question_id": "prep-k42-17-2",
+      "question_family_key": "qf:authored:k42-17:2",
+      "mode": "open",
+      "question": "Qual é a diferença entre os dois campos \"Programada\": o da faixa de importação e o da faixa de peças programadas?",
+      "why": "Os dois campos têm o mesmo nome em faixas diferentes, e o título do grupo não explica a diferença.",
+      "ai_knows": "A tela configura a importação de peças do fornecedor Arno: quais classificações de produto, tabelas de preço, percentual e margem usar. Como a importação usa esses parâmetros, a IA não sabe.",
+      "options": [
+        {
+          "code": "EXPLAINED",
+          "label": "SEI EXPLICAR",
+          "field": {
+            "kind": "explanation",
+            "required": true,
+            "label": "Explique do seu jeito. Uma ou duas frases são suficientes.",
+            "export_as": "human_explanation"
+          }
+        },
+        {
+          "code": "UNKNOWN",
+          "label": "NÃO SEI"
+        }
+      ],
+      "provenance": {
+        "prep_id": "prep-k42-17-2",
+        "question_kind": "MUST_ASK_HUMAN",
+        "origin": "FIELD_BEHAVIOR",
+        "source_artifact": "data/k4/scale/K4_2_HUMAN_REVIEW_PREP.json"
+      },
+      "screen_id": "scr-8217",
+      "has_screen_view": true,
+      "position": 12
+    },
+    {
+      "kind": "behavior",
+      "pilot_id": "k42-17",
+      "screen_name": "Parâmetro Arno",
+      "question_id": "prep-k42-17-3",
+      "question_family_key": "qf:authored:k42-17:3",
+      "mode": "open",
+      "question": "\"Percentual(%)\" e \"Margem\" se somam ao custo para formar o preço? O que \"Atualizar Tabela de Preço Padrão - Venda\" altera?",
+      "why": "É uma regra de formação de preço, e a tela só mostra os campos.",
+      "ai_knows": "A tela tem os campos \"Percentual(%)\" e \"Margem\" e o item \"Atualizar Tabela de Preço Padrão - Venda\". Como eles entram no cálculo do preço, a IA não sabe.",
+      "options": [
+        {
+          "code": "EXPLAINED",
+          "label": "SEI EXPLICAR",
+          "field": {
+            "kind": "explanation",
+            "required": true,
+            "label": "Explique do seu jeito. Uma ou duas frases são suficientes.",
+            "export_as": "human_explanation"
+          }
+        },
+        {
+          "code": "UNKNOWN",
+          "label": "NÃO SEI"
+        }
+      ],
+      "provenance": {
+        "prep_id": "prep-k42-17-3",
+        "question_kind": "MUST_ASK_HUMAN",
+        "origin": "BUSINESS_RULE",
+        "source_artifact": "data/k4/scale/K4_2_HUMAN_REVIEW_PREP.json"
+      },
+      "screen_id": "scr-8217",
+      "has_screen_view": true,
+      "position": 13
+    },
+    {
+      "kind": "lookup_alias",
+      "pilot_id": "k42-17",
+      "screen_name": "Parâmetro Arno",
+      "question_id": "prep-alias-04",
+      "question_family_key": "qf:alias:alias-04",
+      "mode": "lookup_alias",
+      "question": "As buscas [...] dos campos \"Arno\", \"Embalagem\", \"Fora de Linha\" e \"Em Linha\" abrem a mesma tabela de classificação usada pelo campo \"Classificação do Produto\"?",
+      "why": "Os quatro campos parecem usar a mesma tabela, mas nenhum deles foi testado. Uma resposta confirma os quatro de uma vez.",
+      "ai_knows": "Já está confirmado que a busca do campo \"Classificação do Produto\" abre a tela Classificação de Produtos. As buscas dos quatro campos ainda não foram observadas.",
+      "suspicion": "A IA suspeita que sim: os quatro campos aparecem sob o mesmo cabeçalho de grupo nesta tela.",
+      "options": [
+        {
+          "code": "SAME",
+          "label": "SIM, É A MESMA TABELA"
+        },
+        {
+          "code": "DIFFERENT",
+          "label": "NÃO, ABRE OUTRA COISA",
+          "field": {
+            "kind": "explanation",
+            "required": true,
+            "label": "Quais campos abrem outra coisa, e qual é o cadastro correto?",
+            "export_as": "human_explanation"
+          }
+        },
+        {
+          "code": "UNKNOWN",
+          "label": "NÃO SEI"
+        }
+      ],
+      "provenance": {
+        "prep_id": "prep-alias-04",
+        "question_kind": "LOOKUP_ALIAS_CONFIRMATION",
+        "alias_review_id": "alias-04",
+        "lookups_unlocked_count": 4,
+        "source_artifact": "data/k4/scale/K4_2_LOOKUP_ALIAS_REVIEW.json"
+      },
+      "screen_id": "scr-8217",
+      "has_screen_view": true,
+      "position": 14
+    },
+    {
+      "kind": "behavior",
+      "pilot_id": "k42-22",
+      "screen_name": "Classificação de Produtos",
+      "question_id": "prep-k42-22-1",
+      "question_family_key": "qf:authored:k42-22:1",
+      "mode": "open",
+      "question": "O que é \"Categoria\": uma classificação de nível superior ou outra tabela? Como funciona \"Definir como título da Categoria\"?",
+      "why": "Isso define como o cadastro é organizado, e a tela não explica a relação.",
+      "ai_knows": "A tela mantém classificações de produtos: código, nome, período de revisão, categoria a que pertence, indicação de título de categoria e limite de desconto em percentual. Como a classificação é usada no produto e na venda, a IA não sabe.",
+      "options": [
+        {
+          "code": "EXPLAINED",
+          "label": "SEI EXPLICAR",
+          "field": {
+            "kind": "explanation",
+            "required": true,
+            "label": "Explique do seu jeito. Uma ou duas frases são suficientes.",
+            "export_as": "human_explanation"
+          }
+        },
+        {
+          "code": "UNKNOWN",
+          "label": "NÃO SEI"
+        }
+      ],
+      "provenance": {
+        "prep_id": "prep-k42-22-1",
+        "question_kind": "MUST_ASK_HUMAN",
+        "origin": "BUSINESS_RULE",
+        "source_artifact": "data/k4/scale/K4_2_HUMAN_REVIEW_PREP.json"
+      },
+      "screen_id": "scr-8222",
+      "has_screen_view": true,
+      "position": 15
+    },
+    {
+      "kind": "lookup_alias",
+      "pilot_id": "k42-23",
+      "screen_name": "Produtos Similares",
+      "question_id": "prep-alias-02",
+      "question_family_key": "qf:alias:alias-02",
+      "mode": "lookup_alias",
+      "question": "A busca [...] do campo \"Produto Similar\" abre a mesma procura de produtos usada pelo campo \"Produto\"?",
+      "why": "A IA só tem o nome do campo como pista. Sua resposta confirma isso sem precisar abrir a tela.",
+      "ai_knows": "Já está confirmado que a busca do campo \"Produto\" abre a Procura de Produtos. A busca de \"Produto Similar\" ainda não foi observada.",
+      "suspicion": "A IA suspeita que sim, mas o nome do campo é diferente e isso não foi verificado.",
+      "options": [
+        {
+          "code": "SAME",
+          "label": "SIM, É A MESMA BUSCA"
+        },
+        {
+          "code": "DIFFERENT",
+          "label": "NÃO, ABRE OUTRA COISA",
+          "field": {
+            "kind": "explanation",
+            "required": true,
+            "label": "Qual é a busca ou o cadastro correto?",
+            "export_as": "human_explanation"
+          }
+        },
+        {
+          "code": "UNKNOWN",
+          "label": "NÃO SEI"
+        }
+      ],
+      "provenance": {
+        "prep_id": "prep-alias-02",
+        "question_kind": "LOOKUP_ALIAS_CONFIRMATION",
+        "alias_review_id": "alias-02",
+        "lookups_unlocked_count": 1,
+        "source_artifact": "data/k4/scale/K4_2_LOOKUP_ALIAS_REVIEW.json"
+      },
+      "screen_id": "scr-8223",
+      "has_screen_view": true,
+      "position": 16
+    },
+    {
+      "kind": "behavior",
+      "pilot_id": "k42-24",
+      "screen_name": "Cadastro Tipo de Orçamento",
+      "question_id": "prep-k42-24-1",
+      "question_family_key": "qf:authored:k42-24:1",
+      "mode": "open",
+      "question": "O que cada caixa de marcação (por exemplo, \"Não Atualizar Estoque\" e \"Consumidor Final\") altera na emissão do documento que usa este tipo de orçamento?",
+      "why": "Os efeitos fiscais e de estoque do tipo de orçamento são regras centrais, e a tela só mostra as opções.",
+      "ai_knows": "A tela mantém os tipos de orçamento, cada um com nome, tipo de movimentação e parâmetros de comportamento (contas a receber, estoque, contas financeiras e contábeis, tributação). Quais telas usam o tipo e o efeito de cada parâmetro, a IA não sabe.",
+      "options": [
+        {
+          "code": "EXPLAINED",
+          "label": "SEI EXPLICAR",
+          "field": {
+            "kind": "explanation",
+            "required": true,
+            "label": "Explique do seu jeito. Uma ou duas frases são suficientes.",
+            "export_as": "human_explanation"
+          }
+        },
+        {
+          "code": "UNKNOWN",
+          "label": "NÃO SEI"
+        }
+      ],
+      "provenance": {
+        "prep_id": "prep-k42-24-1",
+        "question_kind": "MUST_ASK_HUMAN",
+        "origin": "BUSINESS_RULE",
+        "source_artifact": "data/k4/scale/K4_2_HUMAN_REVIEW_PREP.json"
+      },
+      "screen_id": "scr-8224",
+      "has_screen_view": true,
+      "position": 17
+    },
+    {
+      "kind": "behavior",
+      "pilot_id": "k42-32",
+      "screen_name": "Código Fiscal de Operação (CFOP)",
+      "question_id": "prep-k42-32-1",
+      "question_family_key": "qf:authored:k42-32:1",
+      "mode": "open",
+      "question": "Como cada opção do grupo \"Configuração\" altera o cálculo do imposto ou o estoque na nota fiscal?",
+      "why": "Cada opção tem efeito fiscal ou de estoque, e a tela mostra só os nomes.",
+      "ai_knows": "A tela mantém os códigos fiscais de operação: um nome para entrada e outro para saída, o CFOP usado em devolução e um conjunto de opções de cálculo e tratamento fiscal. O efeito de cada opção, a IA não sabe.",
+      "options": [
+        {
+          "code": "EXPLAINED",
+          "label": "SEI EXPLICAR",
+          "field": {
+            "kind": "explanation",
+            "required": true,
+            "label": "Explique do seu jeito. Uma ou duas frases são suficientes.",
+            "export_as": "human_explanation"
+          }
+        },
+        {
+          "code": "UNKNOWN",
+          "label": "NÃO SEI"
+        }
+      ],
+      "provenance": {
+        "prep_id": "prep-k42-32-1",
+        "question_kind": "MUST_ASK_HUMAN",
+        "origin": "BUSINESS_RULE",
+        "source_artifact": "data/k4/scale/K4_2_HUMAN_REVIEW_PREP.json"
+      },
+      "screen_id": "scr-8232",
+      "has_screen_view": true,
+      "position": 18
+    },
+    {
+      "kind": "lookup_alias",
+      "pilot_id": "k42-32",
+      "screen_name": "Código Fiscal de Operação (CFOP)",
+      "question_id": "prep-alias-03",
+      "question_family_key": "qf:alias:alias-03",
+      "mode": "lookup_alias",
+      "question": "A busca [...] do campo \"C.F.O.P. para Devolução\" abre o mesmo cadastro de CFOP usado pelo campo \"C.F.O.P.\"?",
+      "why": "A IA só tem o nome do campo como pista. Sua resposta confirma isso sem precisar abrir a tela.",
+      "ai_knows": "Já está confirmado que a busca do campo \"C.F.O.P.\" abre o Cadastro de C.F.O.P. A busca de \"C.F.O.P. para Devolução\" ainda não foi observada.",
+      "suspicion": "A IA suspeita que sim: \"para Devolução\" parece só dizer para que o campo serve.",
+      "options": [
+        {
+          "code": "SAME",
+          "label": "SIM, É O MESMO CADASTRO"
+        },
+        {
+          "code": "DIFFERENT",
+          "label": "NÃO, ABRE OUTRA COISA",
+          "field": {
+            "kind": "explanation",
+            "required": true,
+            "label": "Qual é o cadastro correto?",
+            "export_as": "human_explanation"
+          }
+        },
+        {
+          "code": "UNKNOWN",
+          "label": "NÃO SEI"
+        }
+      ],
+      "provenance": {
+        "prep_id": "prep-alias-03",
+        "question_kind": "LOOKUP_ALIAS_CONFIRMATION",
+        "alias_review_id": "alias-03",
+        "lookups_unlocked_count": 1,
+        "source_artifact": "data/k4/scale/K4_2_LOOKUP_ALIAS_REVIEW.json"
+      },
+      "screen_id": "scr-8232",
+      "has_screen_view": true,
+      "position": 19
+    },
+    {
+      "kind": "behavior",
+      "pilot_id": "k42-33",
+      "screen_name": "Cadastro de Observação da Nota Fiscal",
+      "question_id": "prep-k42-33-1",
+      "question_family_key": "qf:authored:k42-33:1",
+      "mode": "open",
+      "question": "Como a observação é escolhida na emissão da nota: por código, por tipo de orçamento ou por CFOP?",
+      "why": "É uma regra fiscal de escolha da observação, e a tela só cadastra os textos.",
+      "ai_knows": "A tela mantém observações padrão da nota fiscal: um código, um texto para o corpo da nota e outro para as informações complementares. Em que nota cada observação entra, a IA não sabe.",
+      "options": [
+        {
+          "code": "EXPLAINED",
+          "label": "SEI EXPLICAR",
+          "field": {
+            "kind": "explanation",
+            "required": true,
+            "label": "Explique do seu jeito. Uma ou duas frases são suficientes.",
+            "export_as": "human_explanation"
+          }
+        },
+        {
+          "code": "UNKNOWN",
+          "label": "NÃO SEI"
+        }
+      ],
+      "provenance": {
+        "prep_id": "prep-k42-33-1",
+        "question_kind": "MUST_ASK_HUMAN",
+        "origin": "BUSINESS_RULE",
+        "source_artifact": "data/k4/scale/K4_2_HUMAN_REVIEW_PREP.json"
+      },
+      "screen_id": "scr-8233",
+      "has_screen_view": true,
+      "position": 20
+    },
+    {
+      "kind": "behavior",
+      "pilot_id": "k42-34",
+      "screen_name": "Caixa PDV",
+      "question_id": "prep-k42-34-1",
+      "question_family_key": "qf:authored:k42-34:1",
+      "mode": "open",
+      "question": "O número em \"Próxima NFC-e\" é incrementado pelo sistema a cada nota emitida, ou o usuário o controla?",
+      "why": "É a numeração de um documento fiscal. A tela mostra o número, mas não quem o controla.",
+      "ai_knows": "A tela mantém os caixas de PDV: código, nome, série, próximo número de NFC-e e situação ativa. Como o caixa é usado na venda de balcão, a IA não sabe.",
+      "options": [
+        {
+          "code": "EXPLAINED",
+          "label": "SEI EXPLICAR",
+          "field": {
+            "kind": "explanation",
+            "required": true,
+            "label": "Explique do seu jeito. Uma ou duas frases são suficientes.",
+            "export_as": "human_explanation"
+          }
+        },
+        {
+          "code": "UNKNOWN",
+          "label": "NÃO SEI"
+        }
+      ],
+      "provenance": {
+        "prep_id": "prep-k42-34-1",
+        "question_kind": "MUST_ASK_HUMAN",
+        "origin": "BUSINESS_RULE",
+        "source_artifact": "data/k4/scale/K4_2_HUMAN_REVIEW_PREP.json"
+      },
+      "screen_id": "scr-8234",
+      "has_screen_view": true,
+      "position": 21
+    },
+    {
+      "kind": "legacy",
+      "pilot_id": "k4-14",
+      "screen_name": "Montagem do Trio Fechado",
+      "question_id": "prep-legacy-01",
+      "question_family_key": "qf:legacy:k4-14:hq001",
+      "mode": "choice",
+      "question": "O botão \"Excluir\" desta tela realmente faz alguma coisa?",
+      "why": "Na revisão anterior este botão recebeu duas respostas que não combinam entre si. A IA não pode escolher uma delas por conta própria.",
+      "ai_knows": "Uma resposta dizia que \"Excluir\" remove o trio inteiro. A outra dizia \"NAO FUNCIONA PARA NADA\". Na mesma tela, Gravar, Cancelar e Fechar também foram descritos como \"NAO FUNCIONA PARA NADA\".",
+      "options": [
+        {
+          "code": "YES",
+          "label": "SIM",
+          "field": {
+            "kind": "explanation",
+            "required": true,
+            "label": "Explique o que ele faz.",
+            "export_as": "human_explanation"
+          }
+        },
+        {
+          "code": "NO",
+          "label": "NÃO"
+        },
+        {
+          "code": "UNKNOWN",
+          "label": "NÃO SEI"
+        }
+      ],
+      "provenance": {
+        "prep_id": "prep-legacy-01",
+        "question_kind": "LEGACY_PENDING",
+        "legacy_question_id": "k4-14.hq001",
+        "source_artifact": "data/k4/scale/K4_2_HUMAN_REVIEW_PREP.json"
+      },
+      "screen_id": "scr-8114",
+      "has_screen_view": true,
+      "position": 22
+    },
+    {
+      "kind": "legacy",
+      "pilot_id": "k4-14",
+      "screen_name": "Montagem do Trio Fechado",
+      "question_id": "prep-legacy-02",
+      "question_family_key": "qf:legacy:k4-14:hq002",
+      "mode": "choice",
+      "question": "Na tela Montagem do Trio Fechado, o botão \"Fechar\" e o X da janela têm o mesmo efeito?",
+      "why": "A revisão anterior deixou uma dúvida: se \"Fechar\" não funciona e o X faz o mesmo, o X também não funcionaria, o que é incomum para uma janela.",
+      "ai_knows": "Antes, \"Fechar\" foi descrito como \"NAO FUNCIONA PARA NADA\", e o X vermelho da barra de título foi descrito como fazendo o mesmo que \"Fechar\". Pode ser que \"não funciona\" signifique outra coisa; a IA não sabe.",
+      "options": [
+        {
+          "code": "YES",
+          "label": "SIM"
+        },
+        {
+          "code": "NO",
+          "label": "NÃO",
+          "field": {
+            "kind": "explanation",
+            "required": true,
+            "label": "Qual é a diferença entre Fechar e o X da janela?",
+            "export_as": "human_explanation"
+          }
+        },
+        {
+          "code": "UNKNOWN",
+          "label": "NÃO SEI"
+        }
+      ],
+      "provenance": {
+        "prep_id": "prep-legacy-02",
+        "question_kind": "LEGACY_PENDING",
+        "legacy_question_id": "k4-14.hq002",
+        "source_artifact": "data/k4/scale/K4_2_HUMAN_REVIEW_PREP.json"
+      },
+      "screen_id": "scr-8114",
+      "has_screen_view": true,
+      "position": 23
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>SYSCOM · Revisão do Gestor</title>
+<meta name="description" content="Responda apenas os comportamentos que a IA não consegue determinar sozinha.">
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+
+<a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+<header class="topbar" role="banner">
+  <div class="wrap topbar-inner">
+    <button type="button" class="brand brand-home" id="btn-home" title="Voltar ao início" aria-label="SYSCOM, Revisão do Gestor. Voltar ao início">
+      <span class="brand-mark">SYSCOM</span>
+      <span class="brand-sub">Revisão do Gestor · Rodada 2</span>
+    </button>
+    <div class="topbar-actions">
+      <span class="save-status" id="save-status" role="status" aria-live="polite"></span>
+      <button type="button" class="btn btn-outline btn-sm" id="btn-go-summary" hidden>Ver resumo</button>
+    </div>
+  </div>
+</header>
+
+<main id="conteudo" tabindex="-1">
+
+  <noscript>
+    <div class="wrap"><p class="notice notice-error">Esta página precisa de JavaScript para funcionar.</p></div>
+  </noscript>
+
+  <div class="wrap">
+    <p class="notice notice-error" id="load-error" hidden></p>
+    <p class="notice notice-warn" id="storage-warning" hidden>Este navegador não permite salvar automaticamente. Suas respostas ficam apenas nesta aba: exporte a revisão antes de fechar.</p>
+  </div>
+
+  <!-- INÍCIO -->
+  <section class="view" id="view-home" aria-labelledby="home-title" hidden>
+    <div class="hero">
+      <div class="wrap hero-inner">
+        <h1 id="home-title" class="hero-title" tabindex="-1">Você não precisa documentar o sistema.</h1>
+        <p class="hero-subtitle">Responda apenas comportamentos que a IA não consegue determinar sozinha.</p>
+
+        <div class="info-grid">
+          <div class="info-card">
+            <h2>O que preciso fazer?</h2>
+            <p>Responder perguntas curtas, uma de cada vez, sobre como o sistema funciona.</p>
+          </div>
+          <div class="info-card">
+            <h2>Quantas perguntas?</h2>
+            <p><strong class="info-number" id="home-total">—</strong> perguntas, de várias telas.</p>
+          </div>
+          <div class="info-card">
+            <h2>Quanto tempo?</h2>
+            <p>Cerca de <strong class="info-number" id="home-minutes">—</strong> minutos. Você pode parar e continuar depois: suas respostas ficam salvas neste navegador.</p>
+          </div>
+          <div class="info-card">
+            <h2>Por que minhas respostas ajudam?</h2>
+            <p>Cada resposta confirma ou corrige o que a IA entendeu das telas. Assim a documentação fica certa, sem você precisar escrever mais do que o necessário.</p>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <button type="button" class="btn btn-primary btn-lg" id="btn-start">COMEÇAR REVISÃO</button>
+          <button type="button" class="btn btn-ghost" id="btn-restart" hidden>Recomeçar do zero</button>
+        </div>
+        <p class="resume-note" id="resume-note" hidden></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PERGUNTA -->
+  <section class="view" id="view-question" aria-labelledby="question-title" hidden>
+    <div class="wrap wrap-narrow">
+      <div class="progress" id="progress">
+        <div class="progress-text">
+          <span id="progress-label">Pergunta 1 de 1</span>
+          <span id="progress-answered"></span>
+        </div>
+        <div class="progress-track" role="progressbar" aria-label="Progresso da revisão" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progress-bar">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+      </div>
+
+      <article class="question-card" id="question-card">
+        <!-- preenchido por app.js -->
+      </article>
+
+      <div class="review-actions">
+        <button type="button" class="btn btn-outline" id="btn-prev">← Voltar</button>
+        <button type="button" class="btn btn-outline" id="btn-skip">Pular / Não sei</button>
+        <button type="button" class="btn btn-primary" id="btn-next">Próxima →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESUMO FINAL -->
+  <section class="view" id="view-summary" aria-labelledby="summary-title" hidden>
+    <div class="wrap wrap-narrow">
+      <h1 id="summary-title" class="summary-title" tabindex="-1">Resumo da revisão</h1>
+      <p class="summary-lead" id="summary-lead"></p>
+
+      <div class="summary-grid" id="summary-grid">
+        <!-- preenchido por app.js -->
+      </div>
+
+      <div class="pending-box" id="pending-box" hidden>
+        <h2>Pendências ainda abertas</h2>
+        <ul class="pending-list" id="pending-list"></ul>
+      </div>
+
+      <div class="summary-actions">
+        <button type="button" class="btn btn-primary btn-lg" id="btn-export">EXPORTAR REVISÃO</button>
+        <button type="button" class="btn btn-outline" id="btn-copy">Copiar para a área de transferência</button>
+        <button type="button" class="btn btn-ghost" id="btn-back-questions">Voltar às perguntas</button>
+      </div>
+      <p class="action-feedback" id="action-feedback" role="status" aria-live="polite"></p>
+
+      <p class="optional-note" id="optional-note"></p>
+    </div>
+  </section>
+
+</main>
+
+<!-- VER TELA -->
+<div class="modal-overlay" id="screen-modal-overlay" hidden>
+  <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="screen-modal-title">
+    <div class="modal-header">
+      <div>
+        <h2 id="screen-modal-title">—</h2>
+        <p class="modal-path" id="screen-modal-path"></p>
+      </div>
+      <button type="button" class="modal-close" id="screen-modal-close" aria-label="Fechar">×</button>
+    </div>
+    <div class="modal-body" id="screen-modal-body"></div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline" id="screen-modal-close-btn">Fechar</button>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="wrap">
+    <p>SYSCOM · Projeto de Documentação Inteligente</p>
+    <p>As capturas de tela desta página são versões sanitizadas: nomes de empresas e dados reais foram ocultados.</p>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
