@@ -3,7 +3,7 @@
   "generated_by": "tools/review/build_k42_review_portal.py",
   "generated_for": "2026-10-09",
   "stage": "K4.2 Human Review Round 2",
-  "storage_key": "syscom-human-review-k42-v1",
+  "storage_key": "syscom-human-review-k42-v2",
   "export_schema": "syscom-human-review-k42@1.0.0",
   "export_file_name": "syscom-human-review-k42.json",
   "reviewer": {
@@ -216,6 +216,241 @@
         "width": 1027,
         "height": 762,
         "alt": "Captura da tela Cadastro de Identificação"
+      },
+      "gallery": {
+        "title": "Outras abas e estados desta tela",
+        "intro": "Capturas de abas, listas e janelas desta mesma tela. Elas mostram o que aparece em cada estado, não as regras do sistema.",
+        "groups": [
+          {
+            "key": "overview",
+            "label": "Visão geral"
+          },
+          {
+            "key": "cliente",
+            "label": "Cliente"
+          },
+          {
+            "key": "fornecedor",
+            "label": "Fornecedor"
+          },
+          {
+            "key": "funcionario",
+            "label": "Funcionário"
+          },
+          {
+            "key": "operador",
+            "label": "Operador"
+          },
+          {
+            "key": "vendedor",
+            "label": "Vendedor"
+          },
+          {
+            "key": "transportadora",
+            "label": "Transportadora"
+          },
+          {
+            "key": "parametros",
+            "label": "Parâmetros"
+          },
+          {
+            "key": "buscas",
+            "label": "Buscas / Lookups"
+          }
+        ],
+        "items": [
+          {
+            "id": "k42-01-late-01",
+            "group": "overview",
+            "title": "Tela aberta, sem papel marcado",
+            "caption": "Cadastro de Identificação recém-aberto pelo menu Cadastro. Nenhum papel está marcado em “Classificação” (só “Ativo”). As abas visíveis são Informação Básica e Características.",
+            "src": "assets/screens/k42-01-late-01.png",
+            "width": 1707,
+            "height": 820,
+            "alt": "Captura: Tela aberta, sem papel marcado"
+          },
+          {
+            "id": "k42-01-late-02",
+            "group": "cliente",
+            "title": "Cliente marcado: Informação Básica",
+            "caption": "Com Cliente marcado, aparecem três abas: Informação Básica, Informações do Cliente e Características. A aba Informação Básica mostra Nome/Razão Social, Data Cadastro, Tipo de Pessoa, documentos, Estado Civil, Sexo, Contribuinte de ICMS, Ente Governamental, contatos, endereço e Observações.",
+            "src": "assets/screens/k42-01-late-02.png",
+            "width": 853,
+            "height": 666,
+            "alt": "Captura: Cliente marcado: Informação Básica"
+          },
+          {
+            "id": "k42-01-late-03",
+            "group": "cliente",
+            "title": "Cliente marcado: Informações do Cliente",
+            "caption": "Aba Informações do Cliente: Tipo de Documento, Nº Doc./U.F./Órgão, Vendedor, Tipo de Orçamento, Código Original, Desc. p/ Venda (%), Classificação do Cliente, E-mail para Boletos, Regra de Crédito e Limite Crédito (caixa acinzentada). Há abas de endereço (Correspondência, Cobrança e Entrega), abas Como Chegar, Observação e Foto/Imagem, e duas caixas de marcação: Não imprimir promissória e Solicitar Nº de Ordem de Compra na Venda.",
+            "src": "assets/screens/k42-01-late-03.png",
+            "width": 862,
+            "height": 680,
+            "alt": "Captura: Cliente marcado: Informações do Cliente"
+          },
+          {
+            "id": "k42-01-late-04",
+            "group": "cliente",
+            "title": "Cliente marcado: Características",
+            "caption": "Aba Características, com o campo “Conjunto de Características” e um botão de busca [...]. A busca abre a janela Tabela de Conjuntos de Características (colunas Código e Nome), que aparece sem registros (“Não existem registros!”).",
+            "src": "assets/screens/k42-01-late-04.png",
+            "width": 1411,
+            "height": 722,
+            "alt": "Captura: Cliente marcado: Características"
+          },
+          {
+            "id": "k42-01-late-05",
+            "group": "cliente",
+            "title": "Cliente: lista Sexo",
+            "caption": "Lista “Sexo” aberta, com as opções MASCULINO e FEMININO.",
+            "src": "assets/screens/k42-01-late-05.png",
+            "width": 870,
+            "height": 672,
+            "alt": "Captura: Cliente: lista Sexo"
+          },
+          {
+            "id": "k42-01-late-06",
+            "group": "cliente",
+            "title": "Cliente: lista Contribuinte de ICMS",
+            "caption": "Lista “Contribuinte de ICMS” aberta, com as opções NÃO, SIM e ISENTO.",
+            "src": "assets/screens/k42-01-late-06.png",
+            "width": 888,
+            "height": 679,
+            "alt": "Captura: Cliente: lista Contribuinte de ICMS"
+          },
+          {
+            "id": "k42-01-late-07",
+            "group": "cliente",
+            "title": "Cliente: lista Ente Governamental",
+            "caption": "Lista “Ente Governamental” aberta, com as opções UNIÃO, ESTADO, DISTRITO FEDERAL e MUNICÍPIO.",
+            "src": "assets/screens/k42-01-late-07.png",
+            "width": 856,
+            "height": 667,
+            "alt": "Captura: Cliente: lista Ente Governamental"
+          },
+          {
+            "id": "k42-01-late-08",
+            "group": "fornecedor",
+            "title": "Cliente e Fornecedor marcados: Informações do Fornecedor",
+            "caption": "Com Cliente e Fornecedor marcados, aparece também a aba Informações do Fornecedor: Isento de I.C.M.S., Classificação do Fornecedor, C.N.H., ANTT, Site e nove caixas de marcação de tributação (todas marcadas nesta captura).",
+            "src": "assets/screens/k42-01-late-08.png",
+            "width": 857,
+            "height": 688,
+            "alt": "Captura: Cliente e Fornecedor marcados: Informações do Fornecedor"
+          },
+          {
+            "id": "k42-01-late-09",
+            "group": "fornecedor",
+            "title": "Fornecedor: lista Isento de I.C.M.S.",
+            "caption": "Lista “Isento de I.C.M.S.” aberta, com as opções Não e Sim.",
+            "src": "assets/screens/k42-01-late-09.png",
+            "width": 891,
+            "height": 688,
+            "alt": "Captura: Fornecedor: lista Isento de I.C.M.S."
+          },
+          {
+            "id": "k42-01-late-10",
+            "group": "funcionario",
+            "title": "Funcionário marcado: Informações do Funcionário",
+            "caption": "Com Cliente, Fornecedor, Fornecedor Agregado e Funcionário marcados, aparece a aba Informações do Funcionário: Data de Admissão, Data de Demissão, Salário/Hora, Nº CTPS, Série CTPS, Data Emissão, Crachá e Função (com busca). Fornecedor Agregado marcado não mostra, nesta captura, uma aba com o próprio nome.",
+            "src": "assets/screens/k42-01-late-10.png",
+            "width": 901,
+            "height": 688,
+            "alt": "Captura: Funcionário marcado: Informações do Funcionário"
+          },
+          {
+            "id": "k42-01-late-11",
+            "group": "operador",
+            "title": "Operador marcado: Informações do Operador",
+            "caption": "Com cinco papéis marcados (Cliente, Fornecedor, Fornecedor Agregado, Funcionário e Operador), aparece a aba Informações do Operador: Login, campos de acesso, Regra (com busca) e dados de e-mail. A faixa de abas ganha setas de rolagem.",
+            "src": "assets/screens/k42-01-late-11.png",
+            "width": 894,
+            "height": 709,
+            "alt": "Captura: Operador marcado: Informações do Operador"
+          },
+          {
+            "id": "k42-01-late-12",
+            "group": "vendedor",
+            "title": "Vendedor marcado: Informações do Vendedor",
+            "caption": "Com seis papéis marcados (de Cliente a Vendedor), aparece a aba Informações do Vendedor: Comissão À Vista, Comissão Sobre Serviço e Comissão À Prazo, em percentual.",
+            "src": "assets/screens/k42-01-late-12.png",
+            "width": 881,
+            "height": 687,
+            "alt": "Captura: Vendedor marcado: Informações do Vendedor"
+          },
+          {
+            "id": "k42-01-late-13",
+            "group": "transportadora",
+            "title": "Transportadora marcada: aba Informações do Fornecedor",
+            "caption": "Com Cliente, Operador, Vendedor e Transportadora marcados (e Fornecedor desmarcado), a aba Informações do Fornecedor está visível e traz, além dos campos já vistos, a seção Placas: Placa do Veículo, ANTT, botão Incluir e uma lista de placas, vazia.",
+            "src": "assets/screens/k42-01-late-13.png",
+            "width": 861,
+            "height": 675,
+            "alt": "Captura: Transportadora marcada: aba Informações do Fornecedor"
+          },
+          {
+            "id": "k42-01-late-14",
+            "group": "parametros",
+            "title": "Botão Parâmetros: Parâmetros do Sistema",
+            "caption": "O botão Parâmetros abre a janela Parâmetros do Sistema, em três blocos: Informação básica (Estado Civil, Cidade e a caixa “Informar Mensagem no Cadastro com o mesmo C.P.F. \\ C.N.P.J.”), Informações do cliente (Tipo de Documento, Contribuinte de ICMS, Classificação do Cliente, Regra de Crédito e Limite Crédito) e Informações do fornecedor (Classificação do Fornecedor). Na tela ao fundo, os oito papéis aparecem marcados.",
+            "src": "assets/screens/k42-01-late-14.png",
+            "width": 1445,
+            "height": 742,
+            "alt": "Captura: Botão Parâmetros: Parâmetros do Sistema"
+          },
+          {
+            "id": "k42-01-late-15",
+            "group": "parametros",
+            "title": "Parâmetros: lista Contribuinte de ICMS",
+            "caption": "Nos Parâmetros, a lista “Contribuinte de ICMS” mostra só as opções NÃO e SIM (no cadastro principal a lista mostra também ISENTO).",
+            "src": "assets/screens/k42-01-late-15.png",
+            "width": 1284,
+            "height": 668,
+            "alt": "Captura: Parâmetros: lista Contribuinte de ICMS"
+          },
+          {
+            "id": "k42-01-late-16",
+            "group": "parametros",
+            "title": "Parâmetros: lista Regra de Crédito",
+            "caption": "Lista “Regra de Crédito” aberta, com uma opção em branco e as opções Limitar crédito do cliente, Não permitir vendas a Prazo e Vendas a Prazo somente com cheque.",
+            "src": "assets/screens/k42-01-late-16.png",
+            "width": 1274,
+            "height": 682,
+            "alt": "Captura: Parâmetros: lista Regra de Crédito"
+          },
+          {
+            "id": "k42-01-late-17",
+            "group": "parametros",
+            "title": "Parâmetros: lista Tipo de Documento",
+            "caption": "Lista “Tipo de Documento” aberta, com barra de rolagem. Itens visíveis: CC - Certidão de Casamento, CN - Certidão de Nascimento, CP - Carteira Profissional, CT - Carteira de Trabalho, IM - Inscrição Municipal, RG - Identidade, OD - Outro Documento e PP - PIS/PASEP.",
+            "src": "assets/screens/k42-01-late-17.png",
+            "width": 1305,
+            "height": 665,
+            "alt": "Captura: Parâmetros: lista Tipo de Documento"
+          },
+          {
+            "id": "k42-01-late-18",
+            "group": "buscas",
+            "title": "Parâmetros: busca de Cidade",
+            "caption": "A busca [...] do campo “Cidade”, nos Parâmetros, abre a janela Cadastro de Cidade: lista com Código e Cidade e uma linha de filtro (“Digite aqui o que você quer procurar”).",
+            "src": "assets/screens/k42-01-late-18.png",
+            "width": 1300,
+            "height": 920,
+            "alt": "Captura: Parâmetros: busca de Cidade"
+          },
+          {
+            "id": "k42-01-late-19",
+            "group": "buscas",
+            "title": "Parâmetros: busca de Estado Civil",
+            "caption": "A busca [...] do campo “Estado Civil”, nos Parâmetros, abre a janela Cadastro de Estado Civil, com Código e Nome: 1 CASADO(A), 4 DIVORCIADO(A), 5 PESSOA JURÍDICA, 2 SOLTEIRO(A) e 3 VIUVO(A).",
+            "src": "assets/screens/k42-01-late-19.png",
+            "width": 1330,
+            "height": 872,
+            "alt": "Captura: Parâmetros: busca de Estado Civil"
+          }
+        ],
+        "withheld": 0
       }
     },
     "k42-02": {
@@ -1633,9 +1868,9 @@
       "question_id": "prep-k42-01-1",
       "question_family_key": "qf:authored:k42-01:1",
       "mode": "open",
-      "question": "É permitido marcar mais de um papel em \"Classificação\" (por exemplo, Cliente e Fornecedor ao mesmo tempo)?",
-      "why": "Essa regra define como o sistema trata uma pessoa ou empresa. Ela não aparece na tela e não dá para saber só pela imagem.",
-      "ai_knows": "A tela é o cadastro único de pessoas e empresas (cliente, fornecedor, funcionário, vendedor, transportadora e outros papéis). Quais papéis liberam quais telas, a IA ainda não sabe.",
+      "question": "As capturas mostram vários papéis marcados ao mesmo tempo em \"Classificação\". Ao gravar, o sistema aceita mais de um papel no mesmo cadastro, ou alguma combinação é bloqueada ou não deve ser usada?",
+      "why": "As capturas mostram a tela com vários papéis marcados juntos e as abas de cada papel aparecendo. O que elas não mostram é o que acontece ao gravar e se existe alguma regra de uso.",
+      "ai_knows": "A tela é o cadastro único de pessoas e empresas. Nas capturas, com Cliente, Fornecedor, Funcionário, Operador ou Vendedor marcados, aparece uma aba com o nome do papel (Informações do Cliente, do Fornecedor, do Funcionário, do Operador e do Vendedor). Em uma captura com Transportadora marcada e Fornecedor desmarcado, a aba Informações do Fornecedor aparece com uma seção de placas. Em outra captura, os oito papéis estão marcados juntos. Se a gravação aceita isso e se alguma combinação tem restrição, a IA não sabe.",
       "options": [
         {
           "code": "EXPLAINED",
@@ -1656,7 +1891,30 @@
         "prep_id": "prep-k42-01-1",
         "question_kind": "MUST_ASK_HUMAN",
         "origin": "BUSINESS_RULE",
-        "source_artifact": "data/k4/scale/K4_2_HUMAN_REVIEW_PREP.json"
+        "source_artifact": "data/k4/scale/K4_2_HUMAN_REVIEW_PREP.json",
+        "late_evidence": {
+          "decision": "PARTIALLY_RESOLVED",
+          "evidence_level": "OBSERVED",
+          "manifest": "data/k4/scale/K4_2_CADASTRO_IDENTIFICACAO_LATE_EVIDENCE.json",
+          "fact_ids": [
+            "F01",
+            "F02",
+            "F03",
+            "F04",
+            "F05",
+            "F06",
+            "F07",
+            "F08"
+          ],
+          "evidence_ids": [
+            "k42-01-late-08",
+            "k42-01-late-10",
+            "k42-01-late-11",
+            "k42-01-late-12",
+            "k42-01-late-13",
+            "k42-01-late-14"
+          ]
+        }
       },
       "screen_id": "scr-8201",
       "has_screen_view": true,
@@ -1707,7 +1965,7 @@
       "mode": "open",
       "question": "\"Regra de Crédito\" e \"Limite Crédito\" vêm do cadastro do cliente? Como o limite é comparado ao débito?",
       "why": "É uma regra de crédito: de onde vem o limite e como ele é comparado. A tela mostra os campos, mas não a regra.",
-      "ai_knows": "A tela consulta a situação financeira de um cliente: última e maior compra, totais vencido, a vencer, débito e compras, regra e limite de crédito e observação. Os valores só aparecem depois de escolher o cliente, e isso não estava na imagem.",
+      "ai_knows": "A tela consulta a situação financeira de um cliente: última e maior compra, totais vencido, a vencer, débito e compras, regra e limite de crédito e observação. Os valores só aparecem depois de escolher o cliente, e isso não estava na imagem. No Cadastro de Identificação (aba Informações do Cliente), as capturas mostram os campos \"Regra de Crédito\" e \"Limite Crédito\"; a lista de Regra de Crédito tem as opções Limitar crédito do cliente, Não permitir vendas a Prazo e Vendas a Prazo somente com cheque. Se esta consulta lê esses campos e como o limite é comparado ao débito, a IA não sabe.",
       "options": [
         {
           "code": "EXPLAINED",
@@ -1728,7 +1986,20 @@
         "prep_id": "prep-k42-04-2",
         "question_kind": "MUST_ASK_HUMAN",
         "origin": "BUSINESS_RULE",
-        "source_artifact": "data/k4/scale/K4_2_HUMAN_REVIEW_PREP.json"
+        "source_artifact": "data/k4/scale/K4_2_HUMAN_REVIEW_PREP.json",
+        "late_evidence": {
+          "decision": "STILL_REQUIRES_HUMAN",
+          "evidence_level": "OBSERVED",
+          "manifest": "data/k4/scale/K4_2_CADASTRO_IDENTIFICACAO_LATE_EVIDENCE.json",
+          "fact_ids": [
+            "F12"
+          ],
+          "evidence_ids": [
+            "k42-01-late-03",
+            "k42-01-late-14",
+            "k42-01-late-16"
+          ]
+        }
       },
       "screen_id": "scr-8204",
       "has_screen_view": true,

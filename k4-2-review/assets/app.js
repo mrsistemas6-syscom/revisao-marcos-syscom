@@ -4,7 +4,7 @@
   'use strict';
 
   // Chave própria desta revisão. NÃO reutiliza a chave da revisão anterior (K4.1).
-  var STORAGE_KEY = 'syscom-human-review-k42-v1';
+  var STORAGE_KEY = 'syscom-human-review-k42-v2';
   var EXPORT_SCHEMA = 'syscom-human-review-k42@1.0.0';
   var EXPORT_FILE = 'syscom-human-review-k42.json';
   var SOURCE = 'human_review_k42';
@@ -526,6 +526,117 @@
     return sec;
   }
 
+  // "Outras abas e estados desta tela": galeria de capturas sanitizadas (só telas que têm várias).
+  // Imagem principal + Anterior/Próxima + miniaturas agrupadas por contexto, tudo dentro do modal.
+  function gallerySection(g) {
+    if (!g || !(g.items || []).length) return null;
+    var idx = 0;
+    var labels = {};
+    var groupPos = {};
+    (g.groups || []).forEach(function (grp, gi) { labels[grp.key] = grp.label; groupPos[grp.key] = gi; });
+    // Anterior/Próxima e as miniaturas seguem a MESMA ordem: a dos grupos, e dentro do grupo a dos dados.
+    var items = g.items.map(function (it, i) { return { it: it, i: i }; }).sort(function (a, b) {
+      var d = (groupPos[a.it.group] || 0) - (groupPos[b.it.group] || 0);
+      return d !== 0 ? d : a.i - b.i;
+    }).map(function (x) { return x.it; });
+
+    var sec = el('section', { class: 'modal-section gallery', id: 'gallery', 'aria-label': g.title });
+    sec.appendChild(el('h3', { text: g.title }));
+    if (g.intro) sec.appendChild(el('p', { class: 'knows-text', text: g.intro }));
+
+    var img = el('img', { class: 'gallery-img', id: 'gallery-img', src: items[0].src, alt: items[0].alt,
+                          width: String(items[0].width), height: String(items[0].height) });
+    var zoomBtn = el('button', { type: 'button', class: 'preview-zoom', id: 'gallery-zoom',
+                                 'aria-pressed': 'false', 'aria-describedby': 'gallery-hint' }, [img]);
+    var wrap = el('div', { class: 'preview-wrap gallery-wrap', id: 'gallery-wrap' }, [zoomBtn]);
+    var hint = el('p', { class: 'preview-hint', id: 'gallery-hint', text: 'Clique na imagem para ampliar.' });
+    var counter = el('p', { class: 'gallery-counter', id: 'gallery-counter' });
+    var title = el('h4', { class: 'gallery-title', id: 'gallery-title' });
+    var caption = el('p', { class: 'gallery-caption', id: 'gallery-caption' });
+    var meta = el('div', { class: 'gallery-meta', role: 'status', 'aria-live': 'polite' }, [counter, title, caption]);
+    var prev = el('button', { type: 'button', class: 'btn btn-outline btn-sm', id: 'gallery-prev', text: '← Anterior' });
+    var next = el('button', { type: 'button', class: 'btn btn-outline btn-sm', id: 'gallery-next', text: 'Próxima →' });
+    var nav = el('div', { class: 'gallery-nav' }, [prev, next]);
+
+    var thumbs = [];
+    var groupsBox = el('div', { class: 'gallery-groups', role: 'group', 'aria-label': 'Miniaturas das capturas' });
+    var order = (g.groups || []).map(function (grp) { return grp.key; });
+    order.forEach(function (key) {
+      var row = el('div', { class: 'gallery-thumb-row' });
+      items.forEach(function (it, i) {
+        if (it.group !== key) return;
+        var timg = el('img', { src: it.src, alt: '', loading: 'lazy', width: String(it.width), height: String(it.height) });
+        var tb = el('button', { type: 'button', class: 'gallery-thumb', 'aria-label': (i + 1) + '. ' + it.title,
+                                title: it.title, 'data-index': String(i) }, [timg]);
+        tb.addEventListener('click', function () { select(i, true); });
+        thumbs[i] = tb;
+        row.appendChild(tb);
+      });
+      groupsBox.appendChild(el('div', { class: 'gallery-group' }, [
+        el('span', { class: 'gallery-group-label', text: labels[key] || key }), row
+      ]));
+    });
+
+    function select(i, focusThumb) {
+      idx = Math.min(Math.max(i, 0), items.length - 1);
+      var it = items[idx];
+      wrap.classList.remove('zoomed');
+      zoomBtn.setAttribute('aria-pressed', 'false');
+      hint.textContent = 'Clique na imagem para ampliar.';
+      img.setAttribute('src', it.src);
+      img.setAttribute('alt', it.alt);
+      img.setAttribute('width', String(it.width));
+      img.setAttribute('height', String(it.height));
+      counter.textContent = (idx + 1) + ' de ' + items.length + ' · ' + (labels[it.group] || it.group);
+      title.textContent = it.title;
+      caption.textContent = it.caption;
+      prev.disabled = idx === 0;
+      next.disabled = idx === items.length - 1;
+      thumbs.forEach(function (tb, k) {
+        if (!tb) return;
+        var on = k === idx;
+        tb.classList.toggle('active', on);
+        tb.setAttribute('tabindex', on ? '0' : '-1');
+        if (on) tb.setAttribute('aria-current', 'true'); else tb.removeAttribute('aria-current');
+      });
+      var active = thumbs[idx];
+      if (active) {
+        if (focusThumb) active.focus({ preventScroll: true });
+        if (active.scrollIntoView) active.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+      }
+    }
+
+    zoomBtn.addEventListener('click', function () {
+      var on = !wrap.classList.contains('zoomed');
+      wrap.classList.toggle('zoomed', on);
+      zoomBtn.setAttribute('aria-pressed', on ? 'true' : 'false');
+      hint.textContent = on
+        ? 'Tamanho real. Role para ver o resto. Clique na imagem para voltar.'
+        : 'Clique na imagem para ampliar.';
+    });
+    img.addEventListener('error', function () {
+      caption.textContent = 'Não consegui carregar esta captura.';
+    });
+    prev.addEventListener('click', function () { select(idx - 1, false); });
+    next.addEventListener('click', function () { select(idx + 1, false); });
+    // Setas do teclado dentro da galeria (não interfere no resto do portal).
+    sec.addEventListener('keydown', function (e) {
+      if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+      if (e.target && e.target.tagName === 'TEXTAREA') return;
+      e.preventDefault();
+      select(idx + (e.key === 'ArrowRight' ? 1 : -1), document.activeElement && document.activeElement.classList.contains('gallery-thumb'));
+    });
+
+    sec.appendChild(wrap);
+    sec.appendChild(hint);
+    sec.appendChild(meta);
+    sec.appendChild(nav);
+    sec.appendChild(groupsBox);
+    sec.appendChild(el('p', { class: 'modal-note', text: 'Versão sanitizada: o nome da empresa e dados reais foram ocultados.' }));
+    select(0, false);
+    return sec;
+  }
+
   // "O que a IA já sabe": resumos já existentes das perguntas desta tela (sem repetir).
   function knowsSection(pilotId) {
     var seen = {}, notes = [];
@@ -547,6 +658,8 @@
     var body = $('screen-modal-body');
     clear(body);
     body.appendChild(previewSection(s));
+    var gal = s.gallery ? gallerySection(s.gallery) : null;
+    if (gal) body.appendChild(gal);
     var sc = s.schematic;
     var box = el('div', { class: 'sch-box' });
     [

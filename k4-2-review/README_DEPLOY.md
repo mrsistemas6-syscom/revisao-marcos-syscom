@@ -19,11 +19,17 @@ Esta pasta (`site/k4-2-review/`) é independente do portal anterior
   (nomes de campos, botões, abas e colunas) e o resumo "O que a IA já sabe".
 - **SYSCOM** no topo volta à Home sem apagar respostas; a Home oferece
   CONTINUAR REVISÃO quando há progresso salvo.
+- A tela **Cadastro de Identificação** tem, no VER TELA, a seção **Outras abas e
+  estados desta tela**: uma galeria de 19 capturas (miniaturas agrupadas por
+  contexto, Anterior, Próxima e ampliação dentro do modal), com a legenda do que
+  cada captura mostra. A galeria mostra estados da tela; não explica regras.
 
 ## Capturas de tela (`assets/screens/`)
 
 São versões **sanitizadas** (PUBLIC_SAFE_PREVIEW), uma por tela, geradas por
 `tools/review/build_k42_screen_previews.py` a partir das capturas já existentes.
+As 19 capturas da galeria do Cadastro de Identificação (série `k42-01-late`) vêm
+de `tools/review/build_k42_late_evidence.py`, com as mesmas regras.
 O nome da empresa na barra de título (e no campo Empresa de uma tela) é coberto
 por uma faixa cinza; o resto da imagem é idêntico ao original. O PNG é regravado
 sem metadados. O arquivo original nunca é copiado.
@@ -31,7 +37,8 @@ sem metadados. O arquivo original nunca é copiado.
 Se uma captura não puder ser sanitizada com segurança, ela não é copiada: a tela
 fica só com a representação esquemática e é registrada como
 `SCREEN_PREVIEW_WITHHELD` (hoje: nenhuma). Antes de publicar, vale uma conferência
-humana rápida das 18 imagens: a inspeção feita até aqui foi da IA.
+humana rápida das 18 imagens das telas e das 19 da galeria: a inspeção feita até
+aqui foi da IA.
 
 ## Como testar localmente
 
@@ -48,11 +55,13 @@ falhar, porque o navegador bloqueia o `fetch()` de `data/review-data.json` em
 ## Autosave
 
 As respostas ficam no `localStorage` do navegador, na chave
-`syscom-human-review-k42-v1`. É uma chave nova: a revisão anterior (K4.1) não é
-lida nem sobrescrita. "Recomeçar do zero" apaga só esta chave.
+`syscom-human-review-k42-v2`. É uma chave nova: a revisão anterior (K4.1) não é
+lida nem sobrescrita. "Recomeçar do zero" apaga só esta chave. (A `v1` foi
+aposentada quando a pergunta 1 foi reescrita com as novas capturas; o gestor
+ainda não tinha começado, então não há resposta a migrar.)
 
 Para limpar manualmente: ferramentas do navegador, aba Application (ou
-Armazenamento), Local Storage, remover `syscom-human-review-k42-v1`.
+Armazenamento), Local Storage, remover `syscom-human-review-k42-v2`.
 
 ## Como as respostas funcionam
 

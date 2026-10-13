@@ -214,3 +214,25 @@ button.brand:hover .brand-mark { text-decoration: underline; }
 .preview-img { display: block; max-width: 100%; height: auto; margin: 0 auto; }
 .preview-wrap.zoomed .preview-img { max-width: none; margin: 0; }
 .preview-hint { margin-top: 0.4rem; font-size: 0.82rem; color: var(--gray-600); }
+
+/* VER TELA: galeria "Outras abas e estados desta tela" (telas com várias capturas) */
+.gallery-img { display: block; max-width: 100%; height: auto; margin: 0 auto; }
+.preview-wrap.zoomed .gallery-img { max-width: none; margin: 0; }
+.gallery-meta { margin-top: 0.6rem; }
+.gallery-counter { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--gray-600); }
+.gallery-title { font-size: 1rem; margin: 0.15rem 0 0.3rem; color: var(--gray-900); }
+.gallery-caption { font-size: 0.9rem; color: var(--gray-700); }
+.gallery-nav { display: flex; gap: 0.6rem; margin-top: 0.7rem; }
+.gallery-nav .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.gallery-groups { display: flex; flex-direction: column; gap: 0.7rem; margin-top: 1rem; }
+.gallery-group-label { display: block; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--gray-600); margin-bottom: 0.3rem; }
+.gallery-thumb-row { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+.gallery-thumb { padding: 0; border: 2px solid var(--gray-300); border-radius: 0.4rem; background: var(--gray-100); cursor: pointer; overflow: hidden; line-height: 0; }
+.gallery-thumb img { display: block; height: 3.4rem; width: auto; max-width: 7rem; object-fit: cover; object-position: top left; }
+.gallery-thumb:hover { border-color: var(--gray-600); }
+.gallery-thumb.active { border-color: var(--primary); box-shadow: 0 0 0 2px rgb(29 78 216 / 0.25); }
+.gallery-thumb:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; }
+@media (max-width: 720px) {
+  .gallery-nav .btn { flex: 1; }
+  .gallery-thumb img { height: 2.8rem; max-width: 5.5rem; }
+}
